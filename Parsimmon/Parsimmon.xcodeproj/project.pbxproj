@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B670057B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
 		B670057D1807D79500CFF860 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057C1807D79500CFF860 /* CoreGraphics.framework */; };
-		B670057F1807D79500CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057E1807D79500CFF860 /* UIKit.framework */; };
 		B67005851807D79500CFF860 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67005831807D79500CFF860 /* InfoPlist.strings */; };
 		B67005871807D79500CFF860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005861807D79500CFF860 /* main.m */; };
 		B670058B1807D79500CFF860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B670058A1807D79500CFF860 /* AppDelegate.m */; };
@@ -18,10 +17,10 @@
 		B67005931807D79500CFF860 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67005921807D79500CFF860 /* Images.xcassets */; };
 		B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005991807D79500CFF860 /* XCTest.framework */; };
 		B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
-		B670059C1807D79500CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057E1807D79500CFF860 /* UIKit.framework */; };
 		B67005A41807D79500CFF860 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67005A21807D79500CFF860 /* InfoPlist.strings */; };
 		B67005A61807D79500CFF860 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005A51807D79500CFF860 /* ExampleTests.m */; };
 		B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */; };
+		B67005B31808595600CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005B21808595600CFF860 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 		B67005771807D79500CFF860 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670057A1807D79500CFF860 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B670057C1807D79500CFF860 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B670057E1807D79500CFF860 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B67005821807D79500CFF860 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		B67005841807D79500CFF860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B67005861807D79500CFF860 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +54,7 @@
 		B67005A51807D79500CFF860 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTokenizer.h; sourceTree = "<group>"; };
 		B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizer.m; sourceTree = "<group>"; };
+		B67005B21808595600CFF860 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67005B31808595600CFF860 /* UIKit.framework in Frameworks */,
 				B670057D1807D79500CFF860 /* CoreGraphics.framework in Frameworks */,
-				B670057F1807D79500CFF860 /* UIKit.framework in Frameworks */,
 				B670057B1807D79500CFF860 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */,
-				B670059C1807D79500CFF860 /* UIKit.framework in Frameworks */,
 				B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,9 +103,9 @@
 		B67005791807D79500CFF860 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B67005B21808595600CFF860 /* UIKit.framework */,
 				B670057A1807D79500CFF860 /* Foundation.framework */,
 				B670057C1807D79500CFF860 /* CoreGraphics.framework */,
-				B670057E1807D79500CFF860 /* UIKit.framework */,
 				B67005991807D79500CFF860 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -533,6 +531,7 @@
 				B67005A91807D79500CFF860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B67005AA1807D79500CFF860 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +540,7 @@
 				B67005AC1807D79500CFF860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
