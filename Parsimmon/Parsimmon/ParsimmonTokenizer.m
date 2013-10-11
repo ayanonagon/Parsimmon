@@ -24,4 +24,22 @@
 
 @implementation ParsimmonTokenizer
 
++ (NSArray *)tokenizeWordsInText:(NSString *)text
+{
+    NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;
+    return [self tokenizeText:text options:options];
+}
+
++ (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options
+{
+    NSMutableArray *tokens = [NSMutableArray array];
+    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: [NSLinguisticTagger availableTagSchemesForLanguage:@"en"] options:options];
+    tagger.string = text;
+    [tagger enumerateTagsInRange:NSMakeRange(0, [text length]) scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass options:options usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+        NSString *token = [text substringWithRange:tokenRange];
+        [tokens addObject:token];
+    }];
+    return tokens;
+}
+
 @end

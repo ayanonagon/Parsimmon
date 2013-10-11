@@ -24,4 +24,7 @@
 
 @interface ParsimmonTokenizer : NSObject
 
++ (NSArray *)tokenizeWordsInText:(NSString *)text;
++ (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+
 @end
