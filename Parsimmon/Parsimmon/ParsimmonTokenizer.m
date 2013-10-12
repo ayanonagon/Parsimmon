@@ -52,7 +52,7 @@
 {
     NSMutableArray *tokens = [NSMutableArray array];
     NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
-options:options];
+                                                                        options:options];
     tagger.string = text;
     [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
                           scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass

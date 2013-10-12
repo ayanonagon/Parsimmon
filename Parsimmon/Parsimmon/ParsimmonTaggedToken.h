@@ -27,7 +27,13 @@
 @property (copy, nonatomic, readonly) NSString *token;
 @property (copy, nonatomic, readonly) NSString *tag;
 
-- (id) init __unavailable;
+/**
+ Creates a parsimmon tagged token instance.
+ @param token The token
+ @param tag The tag
+ @return The initialized tagged token
+ */
 - (instancetype)initWithToken:(NSString *)token tag:(NSString *)tag;
+- (id) init __unavailable;
 
 @end
