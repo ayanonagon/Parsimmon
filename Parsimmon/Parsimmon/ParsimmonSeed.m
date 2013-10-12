@@ -45,7 +45,7 @@
 - (NSLinguisticTagger *)linguisticTaggerWithOptions:(NSLinguisticTaggerOptions)options
 {
     return [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
-                                           options:options];
+                                                  options:options];
 }
 
 - (NSLinguisticTaggerOptions)defaultLinguisticTaggerOptions

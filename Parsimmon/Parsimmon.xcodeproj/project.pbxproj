@@ -173,14 +173,22 @@
 				B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */,
 				B67005B91809CD5600CFF860 /* ParsimmonTagger.h */,
 				B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */,
-				B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */,
-				B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */,
 				B67005BF180A05FC00CFF860 /* ParsimmonStemmer.h */,
 				B67005C0180A05FC00CFF860 /* ParsimmonStemmer.m */,
+				B67005C6180A19BD00CFF860 /* Seedlings */,
+			);
+			path = Parsimmon;
+			sourceTree = "<group>";
+		};
+		B67005C6180A19BD00CFF860 /* Seedlings */ = {
+			isa = PBXGroup;
+			children = (
+				B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */,
+				B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */,
 				B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */,
 				B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */,
 			);
-			path = Parsimmon;
+			name = Seedlings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
