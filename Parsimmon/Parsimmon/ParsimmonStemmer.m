@@ -1,4 +1,4 @@
-// ParsimmonTokenizer.h
+// ParsimmonStemmer.m
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -20,24 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
+#import "ParsimmonStemmer.h"
 
-@interface ParsimmonTokenizer : ParsimmonSeed
+@implementation ParsimmonStemmer
 
-/**
- Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tokenize
- @return The tokens
- */
-- (NSArray *)tokenizeWordsInText:(NSString *)text;
+- (NSArray *)stemText:(NSString *)text
+{
+    return [self stemText:text options:self.defaultLinguisticTaggerOptions];
+}
 
-/**
- Returns the tokens for the input text using the specified linguistic tagger options.
- @param text Text to tokenize
- @param options Linguistic tagger options
- @return The tokens
- */
-- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSArray *)stemText:(NSString *)text options:(NSLinguisticTaggerOptions)options
+{
+    NSMutableArray *tags = [NSMutableArray array];
+    NSLinguisticTagger *tagger = [self linguisticTaggerWithOptions:options];
+    tagger.string = text;
+    [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
+                          scheme:NSLinguisticTagSchemeLemma
+                         options:options
+                      usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                          [tags addObject:tag];
+                      }
+     ];
+    return tags;
+}
 
 @end

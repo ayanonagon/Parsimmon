@@ -22,37 +22,17 @@
 
 #import "ParsimmonTokenizer.h"
 
-@interface ParsimmonTokenizer ()
-@property (copy, nonatomic) NSString *language;
-@end
-
 @implementation ParsimmonTokenizer
-
-- (instancetype)init
-{
-    return [self initWithLanguage:@"en"];
-}
-
-- (instancetype)initWithLanguage:(NSString *)language
-{
-    self = [super init];
-    if (self) {
-        self.language = language;
-    }
-    return self;
-}
 
 - (NSArray *)tokenizeWordsInText:(NSString *)text
 {
-    NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;
-    return [self tokenizeText:text options:options];
+    return [self tokenizeText:text options:self.defaultLinguisticTaggerOptions];
 }
 
 - (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options
 {
     NSMutableArray *tokens = [NSMutableArray array];
-    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
-                                                                        options:options];
+    NSLinguisticTagger *tagger = [self linguisticTaggerWithOptions:options];
     tagger.string = text;
     [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
                           scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass

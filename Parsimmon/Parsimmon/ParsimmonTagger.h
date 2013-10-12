@@ -21,21 +21,9 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "ParsimmonSeed.h"
 
-@interface ParsimmonTagger : NSObject
-
-/**
- Creates a parsimmon tagger instance for the English language.
- @return The initialized tagger
- */
-- (instancetype)init;
-
-/**
- Creates a parsimmon tagger instance for the sepecified language.
- @param language The language to use
- @return The initialized tagger
- */
-- (instancetype)initWithLanguage:(NSString *)language;
+@interface ParsimmonTagger : ParsimmonSeed
 
 /**
  Returns the tagged tokens for the input text, omitting any whitespace, punctuation, and other symbols.

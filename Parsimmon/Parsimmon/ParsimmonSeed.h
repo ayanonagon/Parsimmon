@@ -1,4 +1,4 @@
-// ParsimmonTokenizer.h
+// ParsimmonSeed.h
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -21,23 +21,35 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
 
-@interface ParsimmonTokenizer : ParsimmonSeed
+@interface ParsimmonSeed : NSObject
+
+@property (assign, nonatomic) NSLinguisticTaggerOptions linguisticTaggerOptions;
 
 /**
- Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tokenize
- @return The tokens
+ Creates a parsimmon seed for the English language.
+ @return The initialized seed
  */
-- (NSArray *)tokenizeWordsInText:(NSString *)text;
+- (instancetype)init;
 
 /**
- Returns the tokens for the input text using the specified linguistic tagger options.
- @param text Text to tokenize
+ Creates a parsimmon seed instance for the specified language.
+ @param language The language to use
+ @return The initialized seed
+ */
+- (instancetype)initWithLanguage:(NSString *)language;
+
+/**
+ Returns a linguistic tagger in its language for specified options.
  @param options Linguistic tagger options
- @return The tokens
+ @return The linguistic tagger
  */
-- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSLinguisticTagger *)linguisticTaggerWithOptions:(NSLinguisticTaggerOptions)options;
+
+/**
+ Returns the default linguistic tagger options for subclasses to use.
+ @return The default linguistic tagger options
+ */
+- (NSLinguisticTaggerOptions)defaultLinguisticTaggerOptions;
 
 @end

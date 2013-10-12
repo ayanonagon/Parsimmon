@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ParsimmonTokenizer.h"
-#import "ParsimmonTagger.h"
 
 @implementation AppDelegate
 

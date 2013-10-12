@@ -1,4 +1,4 @@
-// ParsimmonTokenizer.h
+// ParsimmonStemmer.h
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -23,21 +23,21 @@
 #import <Foundation/Foundation.h>
 #import "ParsimmonSeed.h"
 
-@interface ParsimmonTokenizer : ParsimmonSeed
+@interface ParsimmonStemmer : ParsimmonSeed
 
 /**
- Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tokenize
- @return The tokens
+ Returns the stemmed tokens for the input text, omitting any whitespace, punctuation, and other symbols.
+ @param text Text to stem
+ @return The stemmed tokens
  */
-- (NSArray *)tokenizeWordsInText:(NSString *)text;
+- (NSArray *)stemText:(NSString *)text;
 
 /**
- Returns the tokens for the input text using the specified linguistic tagger options.
- @param text Text to tokenize
+ Returns the stemmed tokens for the input text using the specified linguistic tagger options.
+ @param text Text to stem
  @param options Linguistic tagger options
- @return The tokens
+ @return The stemmed tokens
  */
-- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSArray *)stemText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end

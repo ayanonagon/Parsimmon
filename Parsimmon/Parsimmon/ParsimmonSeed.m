@@ -1,4 +1,4 @@
-// ParsimmonTokenizer.h
+// ParsimmonSeed.m
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -20,24 +20,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
 #import "ParsimmonSeed.h"
 
-@interface ParsimmonTokenizer : ParsimmonSeed
+@interface ParsimmonSeed ()
+@property (copy, nonatomic) NSString *language;
+@end
 
-/**
- Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tokenize
- @return The tokens
- */
-- (NSArray *)tokenizeWordsInText:(NSString *)text;
+@implementation ParsimmonSeed
 
-/**
- Returns the tokens for the input text using the specified linguistic tagger options.
- @param text Text to tokenize
- @param options Linguistic tagger options
- @return The tokens
- */
-- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (instancetype)init
+{
+    return [self initWithLanguage:@"en"];
+}
+
+- (instancetype)initWithLanguage:(NSString *)language
+{
+    self = [super init];
+    if (self) {
+        self.language = language;
+    }
+    return self;
+}
+
+- (NSLinguisticTagger *)linguisticTaggerWithOptions:(NSLinguisticTaggerOptions)options
+{
+    return [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
+                                           options:options];
+}
+
+- (NSLinguisticTaggerOptions)defaultLinguisticTaggerOptions
+{
+    if (!_linguisticTaggerOptions) {
+        _linguisticTaggerOptions = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;
+    }
+    return _linguisticTaggerOptions;
+}
 
 @end

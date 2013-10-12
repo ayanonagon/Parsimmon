@@ -23,37 +23,17 @@
 #import "ParsimmonTagger.h"
 #import "ParsimmonTaggedToken.h"
 
-@interface ParsimmonTagger ()
-@property (copy, nonatomic) NSString *language;
-@end
-
 @implementation ParsimmonTagger
-
-- (instancetype)init
-{
-    return [self initWithLanguage:@"en"];
-}
-
-- (instancetype)initWithLanguage:(NSString *)language
-{
-    self = [super init];
-    if (self) {
-        self.language = language;
-    }
-    return self;
-}
 
 - (NSArray *)tagWordsInText:(NSString *)text
 {
-    NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;
-    return [self tagText:text options:options];
+    return [self tagText:text options:self.defaultLinguisticTaggerOptions];
 }
 
 - (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options
 {
     NSMutableArray *taggedTokens = [NSMutableArray array];
-    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
-                                                                        options:options];
+    NSLinguisticTagger *tagger = [self linguisticTaggerWithOptions:options];
     tagger.string = text;
     [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
                           scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass
