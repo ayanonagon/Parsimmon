@@ -43,7 +43,6 @@
     return self;
 }
 
-
 - (NSArray *)tagWordsInText:(NSString *)text
 {
     NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;

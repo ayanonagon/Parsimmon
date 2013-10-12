@@ -28,18 +28,11 @@
 
 @implementation ParsimmonTokenizer
 
-/**
- Creates a parsimmon tagger instance for the English language.
- */
 - (instancetype)init
 {
     return [self initWithLanguage:@"en"];
 }
 
-/**
- Creates a parsimmon tagger instance for the specified language.
- @param language The language to use
- */
 - (instancetype)initWithLanguage:(NSString *)language
 {
     self = [super init];
