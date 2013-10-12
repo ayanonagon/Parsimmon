@@ -25,16 +25,31 @@
 @interface ParsimmonTokenizer : NSObject
 
 /**
+ Creates a parsimmon tokenizer instance for the English language.
+ @return The initialized tokenizer
+ */
+- (instancetype)init;
+
+/**
+ Creates a parsimmon tokenizer instance for the specified language.
+ @param language The language to use
+ @return The initialized tokenizer
+ */
+- (instancetype)initWithLanguage:(NSString *)language;
+
+/**
  Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
  @param text The text to tokenize
+ @return The tokens
  */
-+ (NSArray *)tokenizeWordsInText:(NSString *)text;
+- (NSArray *)tokenizeWordsInText:(NSString *)text;
 
 /**
  Returns the tokens for the input text using the specified linguistic tagger options.
  @param text Text to tokenize
  @param options Linguistic tagger options
+ @return The tokens
  */
-+ (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end

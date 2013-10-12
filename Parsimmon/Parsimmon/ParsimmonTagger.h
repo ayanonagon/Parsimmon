@@ -25,16 +25,31 @@
 @interface ParsimmonTagger : NSObject
 
 /**
+ Creates a parsimmon tagger instance for the English language.
+ @return The initialized tagger
+ */
+- (instancetype)init;
+
+/**
+ Creates a parsimmon tagger instance for the sepecified language.
+ @param language The language to use
+ @return The initialized tagger
+ */
+- (instancetype)initWithLanguage:(NSString *)language;
+
+/**
  Returns the tagged tokens for the input text, omitting any whitespace, punctuation, and other symbols.
  @param text The text to tag
+ @return The tagged tokens
  */
-+ (NSArray *)tagWordsInText:(NSString *)text;
+- (NSArray *)tagWordsInText:(NSString *)text;
 
 /**
  Returns the tagged tokens for the input text using the specified linguistic tagger options.
  @param text Text to tag
  @param options Linguistic tagger options
+ @return The tagged tokens
  */
-+ (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end

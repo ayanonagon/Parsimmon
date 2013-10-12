@@ -22,18 +22,44 @@
 
 #import "ParsimmonTokenizer.h"
 
+@interface ParsimmonTokenizer ()
+@property (copy, nonatomic) NSString *language;
+@end
+
 @implementation ParsimmonTokenizer
 
-+ (NSArray *)tokenizeWordsInText:(NSString *)text
+/**
+ Creates a parsimmon tagger instance for the English language.
+ */
+- (instancetype)init
+{
+    return [self initWithLanguage:@"en"];
+}
+
+/**
+ Creates a parsimmon tagger instance for the specified language.
+ @param language The language to use
+ */
+- (instancetype)initWithLanguage:(NSString *)language
+{
+    self = [super init];
+    if (self) {
+        self.language = language;
+    }
+    return self;
+}
+
+- (NSArray *)tokenizeWordsInText:(NSString *)text
 {
     NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerOmitOther;
     return [self tokenizeText:text options:options];
 }
 
-+ (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options
+- (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options
 {
     NSMutableArray *tokens = [NSMutableArray array];
-    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: [NSLinguisticTagger availableTagSchemesForLanguage:@"en"] options:options];
+    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:[NSLinguisticTagger availableTagSchemesForLanguage:self.language]
+options:options];
     tagger.string = text;
     [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
                           scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass
