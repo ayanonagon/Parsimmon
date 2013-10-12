@@ -15,11 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    ParsimmonTokenizer *tokenizer = [[ParsimmonTokenizer alloc] init];
-    NSLog(@"%@", [tokenizer tokenizeWordsInText:@"What is the weather in San Francisco?"]);
-
-    ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
-    NSLog(@"%@", [tagger tagWordsInText:@"What is the weather in San Francisco?"]);
     return YES;
 }
 							

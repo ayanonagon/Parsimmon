@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)parsimmonAction:(id)sender;
+
 @end
