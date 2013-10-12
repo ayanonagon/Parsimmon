@@ -24,7 +24,17 @@
 
 @interface ParsimmonTagger : NSObject
 
+/**
+ Returns the tagged tokens for the input text, omitting any whitespace, punctuation, and other symbols.
+ @param text The text to tag
+ */
 + (NSArray *)tagWordsInText:(NSString *)text;
+
+/**
+ Returns the tagged tokens for the input text using the specified linguistic tagger options.
+ @param text Text to tag
+ @param options Linguistic tagger options
+ */
 + (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end

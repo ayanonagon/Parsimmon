@@ -31,7 +31,7 @@
 + (NSArray *)tokenizeWordsInText:(NSString *)text;
 
 /**
- Returns the token for the input text using the specified linguistic tagger options.
+ Returns the tokens for the input text using the specified linguistic tagger options.
  @param text Text to tokenize
  @param options Linguistic tagger options
  */

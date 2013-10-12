@@ -23,8 +23,8 @@
 #import "ParsimmonTaggedToken.h"
 
 @interface ParsimmonTaggedToken ()
-@property (copy, nonatomic) NSString *token;
-@property (copy, nonatomic) NSString *tag;
+@property (copy, nonatomic, readwrite) NSString *token;
+@property (copy, nonatomic, readwrite) NSString *tag;
 @end
 
 @implementation ParsimmonTaggedToken
