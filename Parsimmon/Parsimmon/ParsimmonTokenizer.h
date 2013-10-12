@@ -24,7 +24,17 @@
 
 @interface ParsimmonTokenizer : NSObject
 
+/**
+ Returns the tokens for the input text, omitting any whitespace, punctuation, and other symbols.
+ @param text The text to tokenize
+ */
 + (NSArray *)tokenizeWordsInText:(NSString *)text;
+
+/**
+ Returns the token for the input text using the specified linguistic tagger options.
+ @param text Text to tokenize
+ @param options Linguistic tagger options
+ */
 + (NSArray *)tokenizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end
