@@ -21,6 +21,8 @@
 		B67005A61807D79500CFF860 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005A51807D79500CFF860 /* ExampleTests.m */; };
 		B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */; };
 		B67005B31808595600CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005B21808595600CFF860 /* UIKit.framework */; };
+		B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */; };
+		B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTokenizer.h; sourceTree = "<group>"; };
 		B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizer.m; sourceTree = "<group>"; };
 		B67005B21808595600CFF860 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B67005B91809CD5600CFF860 /* ParsimmonTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTagger.h; sourceTree = "<group>"; };
+		B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTagger.m; sourceTree = "<group>"; };
+		B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTaggedToken.h; sourceTree = "<group>"; };
+		B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTaggedToken.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,10 @@
 			children = (
 				B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */,
 				B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */,
+				B67005B91809CD5600CFF860 /* ParsimmonTagger.h */,
+				B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */,
+				B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */,
+				B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */,
 			);
 			path = Parsimmon;
 			sourceTree = "<group>";
@@ -263,6 +273,8 @@
 				B67005911807D79500CFF860 /* ViewController.m in Sources */,
 				B670058B1807D79500CFF860 /* AppDelegate.m in Sources */,
 				B67005871807D79500CFF860 /* main.m in Sources */,
+				B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */,
+				B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
