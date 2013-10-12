@@ -7,12 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "ParsimmonTokenizer.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%@", [ParsimmonTokenizer tokenizeWordsInText:@"What is the weather in San Francisco?"]);
     return YES;
 }
 							
