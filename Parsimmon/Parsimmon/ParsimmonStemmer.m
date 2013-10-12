@@ -40,7 +40,7 @@
                       usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
                           [tags addObject:tag];
                       }
-     ];
+    ];
     return tags;
 }
 

@@ -41,7 +41,7 @@
                           NSString *token = [text substringWithRange:tokenRange];
                           [tokens addObject:token];
                       }
-     ];
+    ];
     return tokens;
 }
 

@@ -43,7 +43,7 @@
                           ParsimmonTaggedToken *taggedToken = [[ParsimmonTaggedToken alloc] initWithToken:token tag:tag];
                           [taggedTokens addObject:taggedToken];
                       }
-     ];
+    ];
     return taggedTokens;
 }
 
