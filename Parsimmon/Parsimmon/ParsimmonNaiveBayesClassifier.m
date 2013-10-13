@@ -27,6 +27,8 @@
 @property (strong, nonatomic) ParsimmonTokenizer *tokenizer;
 @property (strong, nonatomic) NSMutableDictionary *wordOccurences;
 @property (strong, nonatomic) NSMutableDictionary *categoryOccurences;
+@property (assign, nonatomic) NSUInteger trainingCount;
+@property (assign, nonatomic) NSUInteger wordCount;
 @end
 
 @implementation ParsimmonNaiveBayesClassifier
@@ -56,13 +58,38 @@
     NSArray *words = [self removeDuplicates:tokens];
     for (NSString *word in words) {
         [self incrementWord:word category:category];
+        self.wordCount += 1;
     }
     [self incrementCategory:category];
+    self.trainingCount += 1;
 }
 
 - (NSString *)classify:(NSString *)text
 {
-    return nil;
+    return [self classifyWithTokens:[self.tokenizer tokenizeWordsInText:text]];
+}
+
+- (NSString *)classifyWithTokens:(NSArray *)tokens
+{
+    // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
+    float maxScore = 0;
+    NSString *bestCategory;
+    for (NSString *category in [self.categoryOccurences allKeys]) {
+        float currentCategoryScore = 0;
+        float pCategory = [self pCategory:category]; // P(C=cat)
+        currentCategoryScore += log(pCategory); // log(P(C=cat))
+        for (NSString *token in tokens) { //sum_token
+            // P(W=token|C=cat) = P(C=cat|W=token) * P(W=token) / P(C=token) [Bayes Theorem]
+            float pWordGivenCategory = [self pCategory:category givenWord:token] * [self pWord:token] / pCategory;
+            currentCategoryScore += log(pWordGivenCategory); // log(P(W=token|C=cat))
+        }
+        // Update the argmax if necessary
+        if (currentCategoryScore >= maxScore) {
+            maxScore = currentCategoryScore;
+            bestCategory = category;
+        }
+    }
+    return bestCategory;
 }
 
 - (void)incrementWord:(NSString *)word category:(NSString *)category;
@@ -86,6 +113,78 @@
     self.categoryOccurences[category] = @(categoryCount + 1);
 }
 
+#pragma mark - Probabilities
+
+/**
+ Returns P(C=category|W=word).
+ @param category The category
+ @param word The word
+ @return P(C=category|W=word)
+ */
+- (float)pCategory:(NSString *)category givenWord:(NSString *)word
+{
+    if (!self.wordOccurences[word]) {
+        return 0;
+    }
+    if (!self.wordOccurences[word][category]) {
+        return 0;
+    }
+    return ([self.wordOccurences[word][category] floatValue])/[self totalOccurencesOfWord:word];
+}
+
+/**
+ Returns P(W=word).
+ @param word The word
+ @return P(W=word)
+ */
+- (float)pWord:(NSString *)word
+{
+    return [self totalOccurencesOfWord:word]/self.wordCount;
+}
+
+/**
+ Return P(C=category).
+ @param category The category.
+ @return P(C=category)
+ */
+- (float)pCategory:(NSString *)category
+{
+    return [self totalOccurencesOfCategory:category]/self.trainingCount;
+}
+
+#pragma mark - Counting
+
+- (float)totalOccurencesOfWord:(NSString *)word
+{
+    if (!self.wordOccurences[word]) {
+        return 0;
+    }
+    float totalOccurencesOfWord = 0;
+    for (NSString *category in self.wordOccurences[word]) {
+        totalOccurencesOfWord += [self.wordOccurences[word][category] floatValue];
+    }
+    return totalOccurencesOfWord;
+}
+
+- (float)totalOccurencesOfCategory:(NSString *)category
+{
+    if (!self.categoryOccurences[category]) {
+        return 0;
+    }
+    return [self.categoryOccurences[category] floatValue];
+}
+
+#pragma mark - Helpers
+
+- (NSArray *)removeDuplicates:(NSArray *)array
+{
+    NSSet *set = [NSSet setWithArray:array];
+    return [set allObjects];
+}
+
+
+#pragma mark - Properties
+
 - (NSMutableDictionary *)wordOccurences
 {
     if (!_wordOccurences) {
@@ -100,12 +199,6 @@
         _categoryOccurences = [NSMutableDictionary new];
     }
     return _categoryOccurences;
-}
-
-- (NSArray *)removeDuplicates:(NSArray *)array
-{
-    NSSet *set = [NSSet setWithArray:array];
-    return [set allObjects];
 }
 
 @end
