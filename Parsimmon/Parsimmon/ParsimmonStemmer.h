@@ -30,7 +30,7 @@
  @param text Text to stem
  @return The stemmed tokens
  */
-- (NSArray *)stemText:(NSString *)text;
+- (NSArray *)stemWordsInText:(NSString *)text;
 
 /**
  Returns the stemmed tokens for the input text using the specified linguistic tagger options.

@@ -24,7 +24,7 @@
 
 @implementation ParsimmonStemmer
 
-- (NSArray *)stemText:(NSString *)text
+- (NSArray *)stemWordsInText:(NSString *)text
 {
     return [self stemText:text options:self.defaultLinguisticTaggerOptions];
 }
@@ -38,7 +38,9 @@
                           scheme:NSLinguisticTagSchemeLemma
                          options:options
                       usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
-                          [tags addObject:tag];
+                          if (tag) {
+                              [tags addObject:tag];
+                          }
                       }
     ];
     return tags;
