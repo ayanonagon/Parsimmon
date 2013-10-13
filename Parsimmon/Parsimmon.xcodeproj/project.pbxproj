@@ -25,6 +25,7 @@
 		B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */; };
 		B67005C1180A05FC00CFF860 /* ParsimmonStemmer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C0180A05FC00CFF860 /* ParsimmonStemmer.m */; };
 		B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */; };
+		B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonSeed.h; sourceTree = "<group>"; };
 		B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonSeed.m; sourceTree = "<group>"; };
 		B6700608180A2A5A00CFF860 /* Parsimmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parsimmon.h; sourceTree = "<group>"; };
+		B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNaiveBayesClassifier.h; sourceTree = "<group>"; };
+		B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNaiveBayesClassifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 				B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */,
 				B67005BF180A05FC00CFF860 /* ParsimmonStemmer.h */,
 				B67005C0180A05FC00CFF860 /* ParsimmonStemmer.m */,
+				B6B05E05180A858000D7F34F /* Classifiers */,
 				B67005C6180A19BD00CFF860 /* Seedlings */,
 			);
 			path = Parsimmon;
@@ -191,6 +195,15 @@
 				B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */,
 			);
 			name = Seedlings;
+			sourceTree = "<group>";
+		};
+		B6B05E05180A858000D7F34F /* Classifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */,
+				B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */,
+			);
+			name = Classifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +309,7 @@
 				B67005871807D79500CFF860 /* main.m in Sources */,
 				B67005C1180A05FC00CFF860 /* ParsimmonStemmer.m in Sources */,
 				B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */,
+				B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */,
 				B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,4 @@
-// ParsimmonStemmer.h
+// ParsimmonNaiveBayesClassifier.h
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -21,24 +21,25 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
 
-#warning This is really a lemmatizer
-@interface ParsimmonStemmer : ParsimmonSeed
+@class ParsimmonTokenizer;
+@interface ParsimmonNaiveBayesClassifier : NSObject
 
-/**
- Returns the stemmed tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text Text to stem
- @return The stemmed tokens
- */
-- (NSArray *)stemWordsInText:(NSString *)text;
+- (instancetype)init;
+- (instancetype)initWithTokenizer:(ParsimmonTokenizer *)tokenizer;
 
 /**
- Returns the stemmed tokens for the input text using the specified linguistic tagger options.
- @param text Text to stem
- @param options Linguistic tagger options
- @return The stemmed tokens
+ Trains the classifier with text and its category.
+ @param text The text
+ @param category The category of the text
  */
-- (NSArray *)stemText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (void)trainWithText:(NSString *)text category:(NSString *)category;
+
+/**
+ Classifies the given text based on its training data.
+ @param text The text to classify
+ @return The category classification
+ */
+- (NSString *)classify:(NSString *)text;
 
 @end
