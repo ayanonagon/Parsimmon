@@ -9,6 +9,8 @@ Toolkit
 
 The Parsimmon toolkit currently consists of three components: tokenizer, tagger, and stemmer.
 
+To start using Parsimmon:
+<pre><code>#import "Parsimmon.h"</code></pre>
 
 ###Tokenizer
 
