@@ -7,7 +7,7 @@ Parsimmon is a wee Objective-C linguistics toolkit for iOS.
 Toolkit
 ----
 
-The Parsimmon toolkit currently consists of three components: tokenizer, tagger, and stemmer.
+The Parsimmon toolkit currently consists of three components: tokenizer, tagger, and lemmatizer.
 
 To start using Parsimmon:
 <pre><code>#import "Parsimmon.h"</code></pre>
@@ -54,10 +54,10 @@ NSLog(@"%@", taggedTokens);
 </code></pre>
 
 
-### Stemmer
-<pre><code>ParsimmonStemmer *stemmer = [[ParsimmonStemmer alloc] init];
-NSArray *stemmedTokens = [stemmer stemWordsInText:@"Diane, I'm holding in my hand a small box of chocolate bunnies."];
-NSLog(@"%@", stemmedTokens);
+### Lemmatizer
+<pre><code>ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
+NSArray *lemmatizedTokens = [lemmatizer lemmatizeWordsInText:@"Diane, I'm holding in my hand a small box of chocolate bunnies."];
+NSLog(@"%@", lemmatizedTokens);
 </code></pre>
 
 <pre><code>(

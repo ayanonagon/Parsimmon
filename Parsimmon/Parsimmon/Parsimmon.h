@@ -22,4 +22,4 @@
 
 #import "ParsimmonTokenizer.h"
 #import "ParsimmonTagger.h"
-#import "ParsimmonStemmer.h"
+#import "ParsimmonLemmatizer.h"

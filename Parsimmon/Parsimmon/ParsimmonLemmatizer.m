@@ -1,5 +1,5 @@
-// ParsimmonStemmer.h
-// 
+// ParsimmonLemmatizer.m
+//
 // Copyright (c) 2013 Ayaka Nonaka
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,25 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
+#import "ParsimmonLemmatizer.h"
 
-#warning This is really a lemmatizer
-@interface ParsimmonStemmer : ParsimmonSeed
+@implementation ParsimmonLemmatizer
 
-/**
- Returns the stemmed tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text Text to stem
- @return The stemmed tokens
- */
-- (NSArray *)stemWordsInText:(NSString *)text;
+- (NSArray *)lemmatizeWordsInText:(NSString *)text
+{
+    return [self lemmatizeText:text options:self.defaultLinguisticTaggerOptions];
+}
 
-/**
- Returns the stemmed tokens for the input text using the specified linguistic tagger options.
- @param text Text to stem
- @param options Linguistic tagger options
- @return The stemmed tokens
- */
-- (NSArray *)stemText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (NSArray *)lemmatizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options
+{
+    NSMutableArray *tags = [NSMutableArray array];
+    NSLinguisticTagger *tagger = [self linguisticTaggerWithOptions:options];
+    tagger.string = text;
+    [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
+                          scheme:NSLinguisticTagSchemeLemma
+                         options:options
+                      usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                          if (tag) {
+                              [tags addObject:tag];
+                          }
+                      }
+    ];
+    return tags;
+}
 
 @end

@@ -1,4 +1,4 @@
-// ParsimmonStemmer.m
+// ParsimmonLemmatizer.h
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -20,30 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ParsimmonStemmer.h"
+#import <Foundation/Foundation.h>
+#import "ParsimmonSeed.h"
 
-@implementation ParsimmonStemmer
+@interface ParsimmonLemmatizer : ParsimmonSeed
 
-- (NSArray *)stemWordsInText:(NSString *)text
-{
-    return [self stemText:text options:self.defaultLinguisticTaggerOptions];
-}
+/**
+ Returns the lemmatized tokens for the input text, omitting any whitespace, punctuation, and other symbols.
+ @param text Text to lemmatized
+ @return The lemmatized tokens
+ */
+- (NSArray *)lemmatizeWordsInText:(NSString *)text;
 
-- (NSArray *)stemText:(NSString *)text options:(NSLinguisticTaggerOptions)options
-{
-    NSMutableArray *tags = [NSMutableArray array];
-    NSLinguisticTagger *tagger = [self linguisticTaggerWithOptions:options];
-    tagger.string = text;
-    [tagger enumerateTagsInRange:NSMakeRange(0, [text length])
-                          scheme:NSLinguisticTagSchemeLemma
-                         options:options
-                      usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
-                          if (tag) {
-                              [tags addObject:tag];
-                          }
-                      }
-    ];
-    return tags;
-}
+/**
+ Returns the lemmatized tokens for the input text using the specified linguistic tagger options.
+ @param text Text to lemmatized
+ @param options Linguistic tagger options
+ @return The lemmatized tokens
+ */
+- (NSArray *)lemmatizeText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
 
 @end
