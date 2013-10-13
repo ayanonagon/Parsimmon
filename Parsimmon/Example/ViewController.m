@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ParsimmonTagger.h"
+#import "Parsimmon.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;

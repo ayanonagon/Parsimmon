@@ -67,6 +67,7 @@
 		B67005C0180A05FC00CFF860 /* ParsimmonStemmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonStemmer.m; sourceTree = "<group>"; };
 		B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonSeed.h; sourceTree = "<group>"; };
 		B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonSeed.m; sourceTree = "<group>"; };
+		B6700608180A2A5A00CFF860 /* Parsimmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parsimmon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +170,7 @@
 		B67005AD1807D7F600CFF860 /* Parsimmon */ = {
 			isa = PBXGroup;
 			children = (
+				B6700608180A2A5A00CFF860 /* Parsimmon.h */,
 				B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */,
 				B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */,
 				B67005B91809CD5600CFF860 /* ParsimmonTagger.h */,
