@@ -93,6 +93,33 @@ bunny
 </code></pre>
 
 
+### Naive Bayes Classifier
+
+<pre><code>ParsimmonNaiveBayesClassifier *classifier = [[ParsimmonNaiveBayesClassifier alloc] init];
+
+// Train the classifier with some ham examples.
+[classifier trainWithText:@"nom nom ham" category:@"ham"];
+[classifier trainWithText:@"make sure to get the ham" category:@"ham"];
+[classifier trainWithText:@"please put the eggs in the frige" category:@"ham"];
+
+// Train the classifier with some spam examples.
+[classifier trainWithText:@"spammy spam spam" category:@"spam"];
+[classifier trainWithText:@"what does the fox say?" category:@"spam"];
+[classifier trainWithText:@"and fish go blub" category:@"spam"];
+
+// Classify some new text. Is it ham or spam?
+// In practice, you'd want to train with more examples first.
+NSString *firstExample = @"use the eggs in the fridge.";
+NSString *secondExample = @"what does the fish say?";
+NSLog(@"'%@' => %@", firstExample, [classifier classify:firstExample]);
+NSLog(@"'%@' => %@", secondExample, [classifier classify:secondExample]);
+</code></pre>
+
+<pre><code>'use the eggs in the fridge.' => ham
+'what does the fish say?' => spam
+</code></pre>
+
+
 Version
 ----
 
