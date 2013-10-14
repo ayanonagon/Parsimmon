@@ -18,24 +18,29 @@ Installation
 
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Just add the following line to your Podfile:
 
-<pre><code>pod 'Parsimmon'</code></pre>
-
+```ruby
+pod 'Parsimmon'
+```
 
 Examples
 ----
 
 To start using Parsimmon:
-<pre><code>#import "Parsimmon.h"</code></pre>
+```obj-c
+#import "Parsimmon.h"</code></pre>
+```
 
 
 ###Tokenizer
 
-<pre><code>ParsimmonTokenizer *tokenizer = [[ParsimmonTokenizer alloc] init];
+```obj-c
+ParsimmonTokenizer *tokenizer = [[ParsimmonTokenizer alloc] init];
 NSArray *tokens = [tokenizer tokenizeWordsInText:@"The quick brown fox jumps over the lazy dog"];
 NSLog(@"%@", tokens);
-</code></pre>
+```
 
-<pre><code>(
+```
+(
 The,
 quick,
 brown,
@@ -46,17 +51,19 @@ the,
 lazy,
 dog
 )
-</code></pre>
+```
 
 
 ###Tagger
 
-<pre><code>ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
+```obj-c
+ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
 NSArray *taggedTokens = [tagger tagWordsInText:@"The quick brown fox jumps over the lazy dog"];
 NSLog(@"%@", taggedTokens);
-</code></pre>
+```
 
-<pre><code>(
+```
+(
 "('The', Determiner)",
 "('quick', Adjective)",
 "('brown', Adjective)",
@@ -67,16 +74,18 @@ NSLog(@"%@", taggedTokens);
 "('lazy', Adjective)",
 "('dog', Noun)"
 )
-</code></pre>
+```
 
 
 ### Lemmatizer
-<pre><code>ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
+
+```obj-c
+ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
 NSArray *lemmatizedTokens = [lemmatizer lemmatizeWordsInText:@"Diane, I'm holding in my hand a small box of chocolate bunnies."];
 NSLog(@"%@", lemmatizedTokens);
-</code></pre>
+```
 
-<pre><code>(
+```
 diane,
 i,
 hold,
@@ -90,12 +99,13 @@ of,
 chocolate,
 bunny
 )
-</code></pre>
+```
 
 
 ### Naive Bayes Classifier
 
-<pre><code>ParsimmonNaiveBayesClassifier *classifier = [[ParsimmonNaiveBayesClassifier alloc] init];
+```obj-c
+ParsimmonNaiveBayesClassifier *classifier = [[ParsimmonNaiveBayesClassifier alloc] init];
 
 // Train the classifier with some ham examples.
 [classifier trainWithText:@"nom nom ham" category:@"ham"];
@@ -113,11 +123,12 @@ NSString *firstExample = @"use the eggs in the fridge.";
 NSString *secondExample = @"what does the fish say?";
 NSLog(@"'%@' => %@", firstExample, [classifier classify:firstExample]);
 NSLog(@"'%@' => %@", secondExample, [classifier classify:secondExample]);
-</code></pre>
+```
 
-<pre><code>'use the eggs in the fridge.' => ham
+```
+'use the eggs in the fridge.' => ham
 'what does the fish say?' => spam
-</code></pre>
+```
 
 
 Version
