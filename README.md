@@ -110,7 +110,7 @@ ParsimmonNaiveBayesClassifier *classifier = [[ParsimmonNaiveBayesClassifier allo
 // Train the classifier with some ham examples.
 [classifier trainWithText:@"nom nom ham" category:@"ham"];
 [classifier trainWithText:@"make sure to get the ham" category:@"ham"];
-[classifier trainWithText:@"please put the eggs in the frige" category:@"ham"];
+[classifier trainWithText:@"please put the eggs in the fridge" category:@"ham"];
 
 // Train the classifier with some spam examples.
 [classifier trainWithText:@"spammy spam spam" category:@"spam"];
