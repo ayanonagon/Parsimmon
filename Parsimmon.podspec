@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # pod customization goes in here
   s.name     = 'Parsimmon'
-  s.version  = '0.1.0'
+  s.version  = '0.2.0'
   s.license  = { :type => 'MIT' }
   s.homepage = 'http://www.parsimmon.com'
   s.summary  = 'Linguistics toolkit for iOS'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
   s.source = {
     :git => 'https://github.com/ayanonagon/Parsimmon.git',
-    :tag => '0.1.0'
+    :tag => '0.2.0'
   }
   s.source_files = 'Parsimmon/Parsimmon/*.{h,m}'
 end
