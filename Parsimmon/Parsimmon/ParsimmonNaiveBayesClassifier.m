@@ -50,6 +50,9 @@
     return self;
 }
 
+
+#pragma mark - Training
+
 - (void)trainWithText:(NSString *)text category:(NSString *)category
 {
     [self trainWithTokens:[self.tokenizer tokenizeWordsInText:text] category:category];
@@ -64,6 +67,9 @@
     [self incrementCategory:category];
     self.trainingCount += 1;
 }
+
+
+#pragma mark - Classifying
 
 - (NSString *)classify:(NSString *)text
 {
@@ -94,28 +100,6 @@
         }
     }
     return bestCategory;
-}
-
-- (void)incrementWord:(NSString *)word category:(NSString *)category;
-{
-    if (!self.wordOccurences[word]) {
-        self.wordOccurences[word] = [NSMutableDictionary new];
-        self.wordCount += 1;
-    }
-    if (!self.wordOccurences[word][category]) {
-        self.wordOccurences[word][category] = @0;
-    }
-    NSUInteger wordCategoryCount = [self.wordOccurences[word][category] integerValue];
-    self.wordOccurences[word][category] = @(wordCategoryCount + 1);
-}
-
-- (void)incrementCategory:(NSString *)category
-{
-    if (!self.categoryOccurences[category]) {
-        self.categoryOccurences[category] = @0;
-    }
-    NSUInteger categoryCount = [self.categoryOccurences[category] integerValue];
-    self.categoryOccurences[category] = @(categoryCount + 1);
 }
 
 
@@ -160,6 +144,28 @@
 
 
 #pragma mark - Counting
+
+- (void)incrementWord:(NSString *)word category:(NSString *)category
+{
+    if (!self.wordOccurences[word]) {
+        self.wordOccurences[word] = [NSMutableDictionary new];
+        self.wordCount += 1;
+    }
+    if (!self.wordOccurences[word][category]) {
+        self.wordOccurences[word][category] = @0;
+    }
+    NSUInteger wordCategoryCount = [self.wordOccurences[word][category] integerValue];
+    self.wordOccurences[word][category] = @(wordCategoryCount + 1);
+}
+
+- (void)incrementCategory:(NSString *)category
+{
+    if (!self.categoryOccurences[category]) {
+        self.categoryOccurences[category] = @0;
+    }
+    NSUInteger categoryCount = [self.categoryOccurences[category] integerValue];
+    self.categoryOccurences[category] = @(categoryCount + 1);
+}
 
 - (float)totalOccurencesOfWord:(NSString *)word
 {
