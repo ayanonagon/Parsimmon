@@ -13,7 +13,7 @@
 		B67005871807D79500CFF860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005861807D79500CFF860 /* main.m */; };
 		B670058B1807D79500CFF860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B670058A1807D79500CFF860 /* AppDelegate.m */; };
 		B670058E1807D79500CFF860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B670058C1807D79500CFF860 /* Main.storyboard */; };
-		B67005911807D79500CFF860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005901807D79500CFF860 /* ViewController.m */; };
+		B67005911807D79500CFF860 /* TaggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005901807D79500CFF860 /* TaggerViewController.m */; };
 		B67005931807D79500CFF860 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67005921807D79500CFF860 /* Images.xcassets */; };
 		B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005991807D79500CFF860 /* XCTest.framework */; };
 		B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
@@ -26,6 +26,7 @@
 		B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */; };
 		B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */; };
 		B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */; };
+		B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E35180B633F00D7F34F /* ClassifierViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,8 @@
 		B67005891807D79500CFF860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B670058A1807D79500CFF860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B670058D1807D79500CFF860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B670058F1807D79500CFF860 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B67005901807D79500CFF860 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B670058F1807D79500CFF860 /* TaggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaggerViewController.h; sourceTree = "<group>"; };
+		B67005901807D79500CFF860 /* TaggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaggerViewController.m; sourceTree = "<group>"; };
 		B67005921807D79500CFF860 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67005981807D79500CFF860 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67005991807D79500CFF860 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -71,6 +72,8 @@
 		B6700608180A2A5A00CFF860 /* Parsimmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parsimmon.h; sourceTree = "<group>"; };
 		B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNaiveBayesClassifier.h; sourceTree = "<group>"; };
 		B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNaiveBayesClassifier.m; sourceTree = "<group>"; };
+		B6B05E34180B633F00D7F34F /* ClassifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierViewController.h; sourceTree = "<group>"; };
+		B6B05E35180B633F00D7F34F /* ClassifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifierViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +133,14 @@
 		B67005801807D79500CFF860 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				B6B05E1E180B620100D7F34F /* Data */,
 				B67005891807D79500CFF860 /* AppDelegate.h */,
 				B670058A1807D79500CFF860 /* AppDelegate.m */,
 				B670058C1807D79500CFF860 /* Main.storyboard */,
-				B670058F1807D79500CFF860 /* ViewController.h */,
-				B67005901807D79500CFF860 /* ViewController.m */,
+				B670058F1807D79500CFF860 /* TaggerViewController.h */,
+				B67005901807D79500CFF860 /* TaggerViewController.m */,
+				B6B05E34180B633F00D7F34F /* ClassifierViewController.h */,
+				B6B05E35180B633F00D7F34F /* ClassifierViewController.m */,
 				B67005921807D79500CFF860 /* Images.xcassets */,
 				B67005811807D79500CFF860 /* Supporting Files */,
 			);
@@ -204,6 +210,13 @@
 				B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */,
 			);
 			name = Classifiers;
+			sourceTree = "<group>";
+		};
+		B6B05E1E180B620100D7F34F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +317,12 @@
 			files = (
 				B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */,
 				B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */,
-				B67005911807D79500CFF860 /* ViewController.m in Sources */,
+				B67005911807D79500CFF860 /* TaggerViewController.m in Sources */,
 				B670058B1807D79500CFF860 /* AppDelegate.m in Sources */,
 				B67005871807D79500CFF860 /* main.m in Sources */,
 				B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */,
 				B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */,
+				B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */,
 				B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */,
 				B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */,
 			);

@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  TaggerViewController.m
 //  Example
 //
 //  Created by Ayaka Nonaka on 10/10/13.
 //
 //
 
-#import "ViewController.h"
+#import "TaggerViewController.h"
 #import "Parsimmon.h"
 
-@interface ViewController ()
+@interface TaggerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UITextView *outputTextView;
 
 @property (strong, nonatomic) ParsimmonTagger *tagger;
 @end
 
-@implementation ViewController
+@implementation TaggerViewController
 
 - (void)viewDidLoad
 {

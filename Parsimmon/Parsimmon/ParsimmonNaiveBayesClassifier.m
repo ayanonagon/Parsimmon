@@ -23,6 +23,8 @@
 #import "ParsimmonNaiveBayesClassifier.h"
 #import "ParsimmonTokenizer.h"
 
+#define kParsimmonNaiveBayesClassifierMinValue 0.000001
+
 @interface ParsimmonNaiveBayesClassifier ()
 @property (strong, nonatomic) ParsimmonTokenizer *tokenizer;
 @property (strong, nonatomic) NSMutableDictionary *wordOccurences;
@@ -72,19 +74,19 @@
 - (NSString *)classifyWithTokens:(NSArray *)tokens
 {
     // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
-    float maxScore = 0;
+    float maxScore = NSIntegerMin;
     NSString *bestCategory;
     for (NSString *category in [self.categoryOccurences allKeys]) {
         float currentCategoryScore = 0;
         float pCategory = [self pCategory:category]; // P(C=cat)
         currentCategoryScore += log(pCategory); // log(P(C=cat))
-        for (NSString *token in tokens) { //sum_token
+        for (NSString *token in tokens) { // sum_token
             // P(W=token|C=cat) = P(C=cat|W=token) * P(W=token) / P(C=token) [Bayes Theorem]
             float pWordGivenCategory = [self pCategory:category givenWord:token] * [self pWord:token] / pCategory;
             currentCategoryScore += log(pWordGivenCategory); // log(P(W=token|C=cat))
         }
         // Update the argmax if necessary
-        if (currentCategoryScore >= maxScore) {
+        if (currentCategoryScore > maxScore) {
             maxScore = currentCategoryScore;
             bestCategory = category;
         }
@@ -124,12 +126,12 @@
 - (float)pCategory:(NSString *)category givenWord:(NSString *)word
 {
     if (!self.wordOccurences[word]) {
-        return 0;
+        return kParsimmonNaiveBayesClassifierMinValue;
     }
     if (!self.wordOccurences[word][category]) {
-        return 0;
+        return kParsimmonNaiveBayesClassifierMinValue;
     }
-    return ([self.wordOccurences[word][category] floatValue])/[self totalOccurencesOfWord:word];
+    return ([self.wordOccurences[word][category] floatValue]) / [self totalOccurencesOfWord:word];
 }
 
 /**
@@ -139,7 +141,8 @@
  */
 - (float)pWord:(NSString *)word
 {
-    return [self totalOccurencesOfWord:word]/self.wordCount;
+    float pWord = [self totalOccurencesOfWord:word] / self.wordCount;
+    return MAX(pWord, kParsimmonNaiveBayesClassifierMinValue);
 }
 
 /**
@@ -149,7 +152,7 @@
  */
 - (float)pCategory:(NSString *)category
 {
-    return [self totalOccurencesOfCategory:category]/self.trainingCount;
+    return [self totalOccurencesOfCategory:category] / self.trainingCount;
 }
 
 #pragma mark - Counting
