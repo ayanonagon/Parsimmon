@@ -25,8 +25,11 @@
 @class ParsimmonTokenizer;
 @interface ParsimmonNaiveBayesClassifier : NSObject
 
+/**
+ Creates a parsimmon naive bayes classifier instance that uses the default tokenizer.
+ @return The initialized classifier
+ */
 - (instancetype)init;
-- (instancetype)initWithTokenizer:(ParsimmonTokenizer *)tokenizer;
 
 /**
  Trains the classifier with text and its category.
@@ -36,10 +39,25 @@
 - (void)trainWithText:(NSString *)text category:(NSString *)category;
 
 /**
+ Trains the classifier with tokenized text and its category.
+ This is useful if you wish to use your own tokenization method.
+ @param tokens The tokenized text
+ @param category The category of the text
+ */
+- (void)trainWithTokens:(NSArray *)tokens category:(NSString *)category;
+
+/**
  Classifies the given text based on its training data.
  @param text The text to classify
  @return The category classification
  */
 - (NSString *)classify:(NSString *)text;
+
+/**
+ Classifies the given tokenized text based on its training data.
+ @param text The tokenized text to classify
+ @return The category classification
+*/
+- (NSString *)classifyTokens:(NSArray *)tokens;
 
 @end

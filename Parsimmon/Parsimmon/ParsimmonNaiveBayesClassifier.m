@@ -68,10 +68,10 @@
 
 - (NSString *)classify:(NSString *)text
 {
-    return [self classifyWithTokens:[self.tokenizer tokenizeWordsInText:text]];
+    return [self classifyTokens:[self.tokenizer tokenizeWordsInText:text]];
 }
 
-- (NSString *)classifyWithTokens:(NSArray *)tokens
+- (NSString *)classifyTokens:(NSArray *)tokens
 {
     // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
     float maxScore = NSIntegerMin;

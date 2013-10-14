@@ -27,7 +27,7 @@
 @property (assign, nonatomic) NSLinguisticTaggerOptions linguisticTaggerOptions;
 
 /**
- Creates a parsimmon seed for the English language.
+ Creates a parsimmon seed instance for the English language.
  @return The initialized seed
  */
 - (instancetype)init;
