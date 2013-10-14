@@ -222,9 +222,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B67005761807D79500CFF860 /* Example */ = {
+		B67005761807D79500CFF860 /* Parsimmon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Parsimmon" */;
 			buildPhases = (
 				B67005731807D79500CFF860 /* Sources */,
 				B67005741807D79500CFF860 /* Frameworks */,
@@ -234,7 +234,7 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = Parsimmon;
 			productName = Example;
 			productReference = B67005771807D79500CFF860 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -283,7 +283,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B67005761807D79500CFF860 /* Example */,
+				B67005761807D79500CFF860 /* Parsimmon */,
 				B67005971807D79500CFF860 /* ExampleTests */,
 			);
 		};
@@ -341,7 +341,7 @@
 /* Begin PBXTargetDependency section */
 		B670059E1807D79500CFF860 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B67005761807D79500CFF860 /* Example */;
+			target = B67005761807D79500CFF860 /* Parsimmon */;
 			targetProxy = B670059D1807D79500CFF860 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -586,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Parsimmon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67005A81807D79500CFF860 /* Debug */,
