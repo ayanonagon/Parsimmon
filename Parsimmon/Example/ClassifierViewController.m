@@ -29,6 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Training
 
 - (void)train
@@ -56,6 +57,7 @@
         [self.classifier trainWithText:spam category:@"spam"];
     }
 }
+
 
 #pragma mark - Actions
 

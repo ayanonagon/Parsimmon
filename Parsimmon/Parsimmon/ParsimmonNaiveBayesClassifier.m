@@ -115,6 +115,7 @@
     self.categoryOccurences[category] = @(categoryCount + 1);
 }
 
+
 #pragma mark - Probabilities
 
 /**
@@ -155,6 +156,7 @@
     return [self totalOccurencesOfCategory:category] / self.trainingCount;
 }
 
+
 #pragma mark - Counting
 
 - (float)totalOccurencesOfWord:(NSString *)word
@@ -176,6 +178,7 @@
     }
     return [self.categoryOccurences[category] floatValue];
 }
+
 
 #pragma mark - Helpers
 
