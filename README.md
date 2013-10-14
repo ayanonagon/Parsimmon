@@ -6,11 +6,27 @@ Parsimmon is a wee Objective-C linguistics toolkit for iOS.
 
 Toolkit
 ----
+Currently available tools:
+- Tokenizer
+- Tagger
+- Lemmatizer
+- Naive Bayes Classifier
 
-The Parsimmon toolkit currently consists of three components: tokenizer, tagger, and lemmatizer.
+
+Installation
+----
+
+The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Just add the following line to your Podfile:
+
+<pre><code>pod 'Parsimmon'</code></pre>
+
+
+Examples
+----
 
 To start using Parsimmon:
 <pre><code>#import "Parsimmon.h"</code></pre>
+
 
 ###Tokenizer
 
