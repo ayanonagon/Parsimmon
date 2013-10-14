@@ -27,7 +27,7 @@ Examples
 
 To start using Parsimmon:
 ```obj-c
-#import "Parsimmon.h"</code></pre>
+#import "Parsimmon.h"
 ```
 
 
