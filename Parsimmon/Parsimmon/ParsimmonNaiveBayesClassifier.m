@@ -79,17 +79,17 @@
 - (NSString *)classifyTokens:(NSArray *)tokens
 {
     // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
-    float maxScore = NSIntegerMin;
+    CGFloat maxScore = NSIntegerMin;
     NSString *bestCategory;
     for (NSString *category in [self.categoryOccurences allKeys]) {
-        float currentCategoryScore = 0;
-        float pCategory = [self pCategory:category]; // P(C=cat)
+        CGFloat currentCategoryScore = 0;
+        CGFloat pCategory = [self pCategory:category]; // P(C=cat)
         currentCategoryScore += log(pCategory); // log(P(C=cat))
         for (NSString *token in tokens) { // sum_token
             // P(W=token|C=cat) = P(C=cat|W=token) * P(W=token) / P(C=token) [Bayes Theorem]
-            float numerator = [self pCategory:category givenWord:token] * [self pWord:token];
+            CGFloat numerator = [self pCategory:category givenWord:token] * [self pWord:token];
             // Do some smoothing
-            float pWordGivenCategory = (numerator + kParsimmonSmoothingParameter) /
+            CGFloat pWordGivenCategory = (numerator + kParsimmonSmoothingParameter) /
                     (pCategory + kParsimmonSmoothingParameter * self.wordCount);
             currentCategoryScore += log(pWordGivenCategory); // log(P(W=token|C=cat))
         }
@@ -111,7 +111,7 @@
  @param word The word
  @return P(C=category|W=word)
  */
-- (float)pCategory:(NSString *)category givenWord:(NSString *)word
+- (CGFloat)pCategory:(NSString *)category givenWord:(NSString *)word
 {
     if (!self.wordOccurences[word]) {
         return 0;
@@ -127,7 +127,7 @@
  @param word The word
  @return P(W=word)
  */
-- (float)pWord:(NSString *)word
+- (CGFloat)pWord:(NSString *)word
 {
     return [self totalOccurencesOfWord:word] / self.wordCount;
 }
@@ -137,7 +137,7 @@
  @param category The category.
  @return P(C=category)
  */
-- (float)pCategory:(NSString *)category
+- (CGFloat)pCategory:(NSString *)category
 {
     return [self totalOccurencesOfCategory:category] / self.trainingCount;
 }
@@ -167,19 +167,19 @@
     self.categoryOccurences[category] = @(categoryCount + 1);
 }
 
-- (float)totalOccurencesOfWord:(NSString *)word
+- (CGFloat)totalOccurencesOfWord:(NSString *)word
 {
     if (!self.wordOccurences[word]) {
         return 0;
     }
-    float totalOccurencesOfWord = 0;
+    CGFloat totalOccurencesOfWord = 0;
     for (NSString *category in self.wordOccurences[word]) {
         totalOccurencesOfWord += [self.wordOccurences[word][category] floatValue];
     }
     return totalOccurencesOfWord;
 }
 
-- (float)totalOccurencesOfCategory:(NSString *)category
+- (CGFloat)totalOccurencesOfCategory:(NSString *)category
 {
     if (!self.categoryOccurences[category]) {
         return 0;
