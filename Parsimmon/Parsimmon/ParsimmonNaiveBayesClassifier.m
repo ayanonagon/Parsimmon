@@ -79,7 +79,7 @@
 - (NSString *)classifyTokens:(NSArray *)tokens
 {
     // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
-    CGFloat maxScore = NSIntegerMin;
+    CGFloat maxScore = -CGFLOAT_MAX;
     NSString *bestCategory;
     for (NSString *category in [self.categoryOccurences allKeys]) {
         CGFloat currentCategoryScore = 0;
