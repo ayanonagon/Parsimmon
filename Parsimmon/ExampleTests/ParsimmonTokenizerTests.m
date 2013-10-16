@@ -48,8 +48,6 @@
     NSArray *tokens = [tokenizer tokenizeWordsInText:testStringOne];
     
     XCTAssertEqualObjects(tokens, expectedTokens, @"Failed to tokenize words in text");
-    
-    
 }
 
 @end
