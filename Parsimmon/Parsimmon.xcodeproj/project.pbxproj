@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AE5AFCC180DE015002241FE /* ParsimmonTokenizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */; };
+		3AE5AFCD180DE163002241FE /* ParsimmonTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */; };
+		3AE5AFCE180DE163002241FE /* ParsimmonTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */; };
+		3AE5AFCF180DE163002241FE /* ParsimmonLemmatizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */; };
+		3AE5AFD0180DE163002241FE /* ParsimmonNaiveBayesClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */; };
+		3AE5AFD1180DE163002241FE /* ParsimmonTaggedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */; };
+		3AE5AFD2180DE163002241FE /* ParsimmonSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */; };
+		3AE5AFD3180DE163002241FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B670058A1807D79500CFF860 /* AppDelegate.m */; };
+		3AE5AFD4180DE163002241FE /* TaggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005901807D79500CFF860 /* TaggerViewController.m */; };
+		3AE5AFD5180DE163002241FE /* ClassifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E35180B633F00D7F34F /* ClassifierViewController.m */; };
 		B670057B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
 		B670057D1807D79500CFF860 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057C1807D79500CFF860 /* CoreGraphics.framework */; };
 		B67005851807D79500CFF860 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67005831807D79500CFF860 /* InfoPlist.strings */; };
@@ -40,7 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B67005771807D79500CFF860 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizerTests.m; sourceTree = "<group>"; };
+		B67005771807D79500CFF860 /* Parsimmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parsimmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670057A1807D79500CFF860 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B670057C1807D79500CFF860 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B67005821807D79500CFF860 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
@@ -113,7 +124,7 @@
 		B67005781807D79500CFF860 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B67005771807D79500CFF860 /* Example.app */,
+				B67005771807D79500CFF860 /* Parsimmon.app */,
 				B67005981807D79500CFF860 /* ExampleTests.xctest */,
 			);
 			name = Products;
@@ -161,6 +172,7 @@
 		B670059F1807D79500CFF860 /* ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */,
 				B67005A51807D79500CFF860 /* ExampleTests.m */,
 				B67005A01807D79500CFF860 /* Supporting Files */,
 			);
@@ -236,7 +248,7 @@
 			);
 			name = Parsimmon;
 			productName = Example;
-			productReference = B67005771807D79500CFF860 /* Example.app */;
+			productReference = B67005771807D79500CFF860 /* Parsimmon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B67005971807D79500CFF860 /* ExampleTests */ = {
@@ -332,6 +344,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE5AFCD180DE163002241FE /* ParsimmonTokenizer.m in Sources */,
+				3AE5AFCE180DE163002241FE /* ParsimmonTagger.m in Sources */,
+				3AE5AFCF180DE163002241FE /* ParsimmonLemmatizer.m in Sources */,
+				3AE5AFD0180DE163002241FE /* ParsimmonNaiveBayesClassifier.m in Sources */,
+				3AE5AFD1180DE163002241FE /* ParsimmonTaggedToken.m in Sources */,
+				3AE5AFD2180DE163002241FE /* ParsimmonSeed.m in Sources */,
+				3AE5AFD3180DE163002241FE /* AppDelegate.m in Sources */,
+				3AE5AFD4180DE163002241FE /* TaggerViewController.m in Sources */,
+				3AE5AFD5180DE163002241FE /* ClassifierViewController.m in Sources */,
+				3AE5AFCC180DE015002241FE /* ParsimmonTokenizerTests.m in Sources */,
 				B67005A61807D79500CFF860 /* ExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +507,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -535,7 +557,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
