@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A57BA891811D1BD003F0163 /* ParsimmonTaggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A57BA881811D1BD003F0163 /* ParsimmonTaggerTests.m */; };
 		3AE5AFCC180DE015002241FE /* ParsimmonTokenizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */; };
 		3AE5AFCD180DE163002241FE /* ParsimmonTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */; };
 		3AE5AFCE180DE163002241FE /* ParsimmonTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A57BA881811D1BD003F0163 /* ParsimmonTaggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTaggerTests.m; sourceTree = "<group>"; };
 		3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizerTests.m; sourceTree = "<group>"; };
 		B67005771807D79500CFF860 /* Parsimmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parsimmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670057A1807D79500CFF860 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */,
+				3A57BA881811D1BD003F0163 /* ParsimmonTaggerTests.m */,
 				B67005A51807D79500CFF860 /* ExampleTests.m */,
 				B67005A01807D79500CFF860 /* Supporting Files */,
 			);
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A57BA891811D1BD003F0163 /* ParsimmonTaggerTests.m in Sources */,
 				3AE5AFCD180DE163002241FE /* ParsimmonTokenizer.m in Sources */,
 				3AE5AFCE180DE163002241FE /* ParsimmonTagger.m in Sources */,
 				3AE5AFCF180DE163002241FE /* ParsimmonLemmatizer.m in Sources */,
