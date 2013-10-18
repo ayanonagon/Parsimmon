@@ -39,6 +39,35 @@
     return self;
 }
 
+- (NSUInteger)hash
+{
+    NSUInteger hash = self.token.hash ^ self.tag.hash;
+    
+    return hash;
+}
+
+- (BOOL)isEqual:(id)object
+{
+    BOOL isEqual = NO;
+    
+    if ([object isKindOfClass:[self class]])
+    {
+        isEqual = [self isEqualToTaggedToken:object];
+    }
+    return isEqual;
+}
+
+- (BOOL)isEqualToTaggedToken:(ParsimmonTaggedToken *)taggedToken
+{
+    BOOL isEqualToTaggedToken;
+    
+    isEqualToTaggedToken = ([self.token isEqualToString:taggedToken.token] &&
+                            [self.tag isEqualToString:taggedToken.tag]);
+    
+    return isEqualToTaggedToken;
+}
+
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"('%@', %@)", self.token, self.tag];

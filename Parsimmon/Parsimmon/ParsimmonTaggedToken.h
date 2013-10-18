@@ -36,4 +36,6 @@
 - (instancetype)initWithToken:(NSString *)token tag:(NSString *)tag;
 - (id) init __unavailable;
 
+- (BOOL)isEqualToTaggedToken:(ParsimmonTaggedToken *)taggedToken;
+
 @end
