@@ -39,6 +39,15 @@
     return self;
 }
 
+
+#pragma mark - NSObject
+
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"('%@', %@)", self.token, self.tag];
+}
+
 - (NSUInteger)hash
 {
     NSUInteger hash = self.token.hash ^ self.tag.hash;
@@ -59,18 +68,8 @@
 
 - (BOOL)isEqualToTaggedToken:(ParsimmonTaggedToken *)taggedToken
 {
-    BOOL isEqualToTaggedToken;
-    
-    isEqualToTaggedToken = ([self.token isEqualToString:taggedToken.token] &&
-                            [self.tag isEqualToString:taggedToken.tag]);
-    
-    return isEqualToTaggedToken;
-}
-
-
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"('%@', %@)", self.token, self.tag];
+    return ([self.token isEqualToString:taggedToken.token] &&
+            [self.tag isEqualToString:taggedToken.tag]);
 }
 
 @end
