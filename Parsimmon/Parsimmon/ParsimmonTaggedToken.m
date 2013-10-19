@@ -59,8 +59,7 @@
 {
     BOOL isEqual = NO;
     
-    if ([object isKindOfClass:[self class]])
-    {
+    if ([object isKindOfClass:[self class]]){
         isEqual = [self isEqualToTaggedToken:object];
     }
     return isEqual;
