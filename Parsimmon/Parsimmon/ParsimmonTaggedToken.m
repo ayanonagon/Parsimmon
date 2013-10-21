@@ -42,7 +42,6 @@
 
 #pragma mark - NSObject
 
-
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"('%@', %@)", self.token, self.tag];
@@ -58,8 +57,8 @@
 - (BOOL)isEqual:(id)object
 {
     BOOL isEqual = NO;
-    
-    if ([object isKindOfClass:[self class]]){
+
+    if ([object isKindOfClass:[self class]]) {
         isEqual = [self isEqualToTaggedToken:object];
     }
     return isEqual;
