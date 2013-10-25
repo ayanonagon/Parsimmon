@@ -50,7 +50,6 @@
     NSArray *lemmatizedTokenStrings = [lemmatizer lemmatizeWordsInText:testString];
     
     XCTAssertEqualObjects(expectedOutput, lemmatizedTokenStrings, @"Failed to lematize words in text");
-    
 }
 
 @end
