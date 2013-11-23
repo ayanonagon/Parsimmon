@@ -28,12 +28,6 @@
     [self.view addGestureRecognizer:tap];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)parsimmonAction:(id)sender
 {
     NSArray *taggedTokens = [self.tagger tagWordsInText:self.inputTextField.text];
