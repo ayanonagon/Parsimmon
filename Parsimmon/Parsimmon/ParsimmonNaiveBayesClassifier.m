@@ -27,8 +27,8 @@
 
 @interface ParsimmonNaiveBayesClassifier ()
 @property (strong, nonatomic) ParsimmonTokenizer *tokenizer;
-@property (strong, nonatomic) NSMutableDictionary *wordOccurences;
-@property (strong, nonatomic) NSMutableDictionary *categoryOccurences;
+@property (strong, nonatomic) NSMutableDictionary *wordOccurrences;
+@property (strong, nonatomic) NSMutableDictionary *categoryOccurrences;
 @property (assign, nonatomic) NSUInteger trainingCount;
 @property (assign, nonatomic) NSUInteger wordCount;
 @end
@@ -81,7 +81,7 @@
     // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
     CGFloat maxScore = -CGFLOAT_MAX;
     NSString *bestCategory;
-    for (NSString *category in [self.categoryOccurences allKeys]) {
+    for (NSString *category in [self.categoryOccurrences allKeys]) {
         CGFloat currentCategoryScore = 0;
         CGFloat pCategory = [self pCategory:category]; // P(C=cat)
         currentCategoryScore += log(pCategory); // log(P(C=cat))
@@ -113,13 +113,13 @@
  */
 - (CGFloat)pCategory:(NSString *)category givenWord:(NSString *)word
 {
-    if (!self.wordOccurences[word]) {
+    if (!self.wordOccurrences[word]) {
         return 0;
     }
-    if (!self.wordOccurences[word][category]) {
+    if (!self.wordOccurrences[word][category]) {
         return 0;
     }
-    return ([self.wordOccurences[word][category] floatValue]) / [self totalOccurencesOfWord:word];
+    return ([self.wordOccurrences[word][category] floatValue]) / [self totalOccurrencesOfWord:word];
 }
 
 /**
@@ -129,7 +129,7 @@
  */
 - (CGFloat)pWord:(NSString *)word
 {
-    return [self totalOccurencesOfWord:word] / self.wordCount;
+    return [self totalOccurrencesOfWord:word] / self.wordCount;
 }
 
 /**
@@ -139,7 +139,7 @@
  */
 - (CGFloat)pCategory:(NSString *)category
 {
-    return [self totalOccurencesOfCategory:category] / self.trainingCount;
+    return [self totalOccurrencesOfCategory:category] / self.trainingCount;
 }
 
 
@@ -147,44 +147,44 @@
 
 - (void)incrementWord:(NSString *)word category:(NSString *)category
 {
-    if (!self.wordOccurences[word]) {
-        self.wordOccurences[word] = [NSMutableDictionary new];
+    if (!self.wordOccurrences[word]) {
+        self.wordOccurrences[word] = [NSMutableDictionary new];
         self.wordCount += 1;
     }
-    if (!self.wordOccurences[word][category]) {
-        self.wordOccurences[word][category] = @0;
+    if (!self.wordOccurrences[word][category]) {
+        self.wordOccurrences[word][category] = @0;
     }
-    NSUInteger wordCategoryCount = [self.wordOccurences[word][category] integerValue];
-    self.wordOccurences[word][category] = @(wordCategoryCount + 1);
+    NSUInteger wordCategoryCount = [self.wordOccurrences[word][category] integerValue];
+    self.wordOccurrences[word][category] = @(wordCategoryCount + 1);
 }
 
 - (void)incrementCategory:(NSString *)category
 {
-    if (!self.categoryOccurences[category]) {
-        self.categoryOccurences[category] = @0;
+    if (!self.categoryOccurrences[category]) {
+        self.categoryOccurrences[category] = @0;
     }
-    NSUInteger categoryCount = [self.categoryOccurences[category] integerValue];
-    self.categoryOccurences[category] = @(categoryCount + 1);
+    NSUInteger categoryCount = [self.categoryOccurrences[category] integerValue];
+    self.categoryOccurrences[category] = @(categoryCount + 1);
 }
 
-- (CGFloat)totalOccurencesOfWord:(NSString *)word
+- (CGFloat)totalOccurrencesOfWord:(NSString *)word
 {
-    if (!self.wordOccurences[word]) {
+    if (!self.wordOccurrences[word]) {
         return 0;
     }
-    CGFloat totalOccurencesOfWord = 0;
-    for (NSString *category in self.wordOccurences[word]) {
-        totalOccurencesOfWord += [self.wordOccurences[word][category] floatValue];
+    CGFloat totalOccurrencesOfWord = 0;
+    for (NSString *category in self.wordOccurrences[word]) {
+        totalOccurrencesOfWord += [self.wordOccurrences[word][category] floatValue];
     }
-    return totalOccurencesOfWord;
+    return totalOccurrencesOfWord;
 }
 
-- (CGFloat)totalOccurencesOfCategory:(NSString *)category
+- (CGFloat)totalOccurrencesOfCategory:(NSString *)category
 {
-    if (!self.categoryOccurences[category]) {
+    if (!self.categoryOccurrences[category]) {
         return 0;
     }
-    return [self.categoryOccurences[category] floatValue];
+    return [self.categoryOccurrences[category] floatValue];
 }
 
 
@@ -199,20 +199,20 @@
 
 #pragma mark - Properties
 
-- (NSMutableDictionary *)wordOccurences
+- (NSMutableDictionary *)wordOccurrences
 {
-    if (!_wordOccurences) {
-        _wordOccurences = [NSMutableDictionary new];
+    if (!_wordOccurrences) {
+        _wordOccurrences = [NSMutableDictionary new];
     }
-    return _wordOccurences;
+    return _wordOccurrences;
 }
 
-- (NSMutableDictionary *)categoryOccurences
+- (NSMutableDictionary *)categoryOccurrences
 {
-    if (!_categoryOccurences) {
-        _categoryOccurences = [NSMutableDictionary new];
+    if (!_categoryOccurrences) {
+        _categoryOccurrences = [NSMutableDictionary new];
     }
-    return _categoryOccurences;
+    return _categoryOccurrences;
 }
 
 @end
