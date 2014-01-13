@@ -37,6 +37,9 @@
 		B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */; };
 		B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */; };
 		B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */; };
+		B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */; };
+		B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD518837CF6000F61BA /* ParsimmonNode.m */; };
+		B6A43FD81883B537000F61BA /* ParsimmonDecisionTreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD71883B537000F61BA /* ParsimmonDecisionTreeTests.m */; };
 		B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */; };
 		B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E35180B633F00D7F34F /* ClassifierViewController.m */; };
 /* End PBXBuildFile section */
@@ -85,6 +88,11 @@
 		B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonSeed.h; sourceTree = "<group>"; };
 		B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonSeed.m; sourceTree = "<group>"; };
 		B6700608180A2A5A00CFF860 /* Parsimmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parsimmon.h; sourceTree = "<group>"; };
+		B6A43FD118837077000F61BA /* ParsimmonDecisionTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonDecisionTree.h; sourceTree = "<group>"; };
+		B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonDecisionTree.m; sourceTree = "<group>"; };
+		B6A43FD418837CF6000F61BA /* ParsimmonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNode.h; sourceTree = "<group>"; };
+		B6A43FD518837CF6000F61BA /* ParsimmonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNode.m; sourceTree = "<group>"; };
+		B6A43FD71883B537000F61BA /* ParsimmonDecisionTreeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonDecisionTreeTests.m; sourceTree = "<group>"; };
 		B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNaiveBayesClassifier.h; sourceTree = "<group>"; };
 		B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNaiveBayesClassifier.m; sourceTree = "<group>"; };
 		B6B05E34180B633F00D7F34F /* ClassifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierViewController.h; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				3A94479B1819BAA000267A40 /* ParsimmonLemmatizerTests.m */,
 				3AE5AFCB180DE015002241FE /* ParsimmonTokenizerTests.m */,
 				3A57BA881811D1BD003F0163 /* ParsimmonTaggerTests.m */,
+				B6A43FD71883B537000F61BA /* ParsimmonDecisionTreeTests.m */,
 				B67005A51807D79500CFF860 /* ExampleTests.m */,
 				B67005A01807D79500CFF860 /* Supporting Files */,
 			);
@@ -226,6 +235,10 @@
 			children = (
 				B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */,
 				B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */,
+				B6A43FD118837077000F61BA /* ParsimmonDecisionTree.h */,
+				B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */,
+				B6A43FD418837CF6000F61BA /* ParsimmonNode.h */,
+				B6A43FD518837CF6000F61BA /* ParsimmonNode.m */,
 			);
 			name = Classifiers;
 			sourceTree = "<group>";
@@ -335,7 +348,9 @@
 			files = (
 				B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */,
 				B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */,
+				B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */,
 				B67005911807D79500CFF860 /* TaggerViewController.m in Sources */,
+				B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */,
 				B670058B1807D79500CFF860 /* AppDelegate.m in Sources */,
 				B67005871807D79500CFF860 /* main.m in Sources */,
 				B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */,
@@ -362,6 +377,7 @@
 				3AE5AFD5180DE163002241FE /* ClassifierViewController.m in Sources */,
 				3AE5AFCC180DE015002241FE /* ParsimmonTokenizerTests.m in Sources */,
 				B67005A61807D79500CFF860 /* ExampleTests.m in Sources */,
+				B6A43FD81883B537000F61BA /* ParsimmonDecisionTreeTests.m in Sources */,
 				3A94479C1819BAA000267A40 /* ParsimmonLemmatizerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
