@@ -11,6 +11,7 @@ Currently available tools:
 - Tagger
 - Lemmatizer
 - Naive Bayes Classifier
+- Decision Tree (alpha)
 
 
 Installation
