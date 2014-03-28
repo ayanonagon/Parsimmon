@@ -76,7 +76,7 @@
     ParsimmonNode *node = [[ParsimmonNode alloc] init];
 
     // Check for the two base cases.
-    NSArray *firstDatum = [data firstObject];
+    NSArray *firstDatum = data[0];
     NSArray *firstDatumFeatureValues = [self subarrayOfArray:firstDatum atIndices:remainingFeatures];
     NSNumber *firstDatumClassification = [firstDatum lastObject];
 
