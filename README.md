@@ -1,8 +1,6 @@
 Parsimmon
 =========
 
-[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
-
 Parsimmon is a wee Objective-C linguistics toolkit for iOS.
 
 
