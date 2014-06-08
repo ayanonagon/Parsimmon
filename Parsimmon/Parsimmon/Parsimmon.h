@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "ParsimmonTokenizer.h"
 #import "ParsimmonTagger.h"
 #import "ParsimmonLemmatizer.h"
 #import "ParsimmonNaiveBayesClassifier.h"

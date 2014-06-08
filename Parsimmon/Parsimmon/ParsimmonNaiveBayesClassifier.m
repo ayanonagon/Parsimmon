@@ -21,7 +21,8 @@
 // THE SOFTWARE.
 
 #import "ParsimmonNaiveBayesClassifier.h"
-#import "ParsimmonTokenizer.h"
+#import "ParsimmonSeed.h"
+#import "Parsimmon-Swift.h"
 
 #define kParsimmonSmoothingParameter 1
 
@@ -55,7 +56,7 @@
 
 - (void)trainWithText:(NSString *)text category:(NSString *)category
 {
-    [self trainWithTokens:[self.tokenizer tokenizeWordsInText:text] category:category];
+    [self trainWithTokens:[self.tokenizer tokenize:text] category:category];
 }
 
 - (void)trainWithTokens:(NSArray *)tokens category:(NSString *)category
@@ -73,7 +74,7 @@
 
 - (NSString *)classify:(NSString *)text
 {
-    return [self classifyTokens:[self.tokenizer tokenizeWordsInText:text]];
+    return [self classifyTokens:[self.tokenizer tokenize:text]];
 }
 
 - (NSString *)classifyTokens:(NSArray *)tokens
