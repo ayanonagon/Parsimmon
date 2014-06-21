@@ -41,4 +41,11 @@
     XCTAssertEqualObjects([taggedToken description], @"('The', Determiner)");
 }
 
+- (void)testHash
+{
+    ParsimmonTaggedToken *taggedToken = [[ParsimmonTaggedToken alloc] initWithToken:@"quick" tag:@"Adjective"];
+    NSUInteger expectedHash = [@"quick" hash] ^ [@"Adjective" hash];
+    XCTAssertEqual([taggedToken hash], expectedHash);
+}
+
 @end
