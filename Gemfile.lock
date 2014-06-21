@@ -1,3 +1,10 @@
+PATH
+  remote: ../slather
+  specs:
+    slather (0.0.235)
+      clamp (~> 0.6)
+      xcodeproj (~> 0.17)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -8,9 +15,6 @@ GEM
     colored (1.2)
     i18n (0.6.9)
     multi_json (1.10.1)
-    slather (0.0.234)
-      clamp (~> 0.6)
-      xcodeproj (~> 0.17)
     xcodeproj (0.17.0)
       activesupport (~> 3.0)
       colored (~> 1.2)
@@ -19,4 +23,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  slather
+  slather!
