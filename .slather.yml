@@ -1,5 +1,5 @@
 coverage_service: coveralls
 xcodeproj: Parsimmon/Parsimmon.xcodeproj
 ignore:
-  - Example/*
-  - ParsimmonTests/*
+  - Parsimmon/Example/*
+  - Parsimmon/ParsimmonTests/*
