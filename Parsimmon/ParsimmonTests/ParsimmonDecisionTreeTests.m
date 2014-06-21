@@ -1,4 +1,4 @@
-//  ParsimmonDecisionTreeTests.m
+// ParsimmonDecisionTreeTests.m
 //
 // Copyright (c) 2014 Ayaka Nonaka
 //
@@ -25,7 +25,6 @@
 #import "ParsimmonNode.h"
 
 @interface ParsimmonDecisionTreeTests : XCTestCase
-
 @end
 
 @implementation ParsimmonDecisionTreeTests
@@ -47,16 +46,16 @@
     XCTAssertEqual(@0, decisionTree.root.rightChild.rightChild.value, @"Failed 1 XOR 1 case.");
 
     NSString *zeroZero = [decisionTree classify:@[@0, @0]];
-    XCTAssertEqual(@"zero", zeroZero, @"Failed 0 XOR 0 case classification.");
+    XCTAssertEqualObjects(@"zero", zeroZero, @"Failed 0 XOR 0 case classification.");
 
     NSString *zeroOne = [decisionTree classify:@[@0, @1]];
-    XCTAssertEqual(@"one", zeroOne, @"Failed 0 XOR 1 case classification.");
+    XCTAssertEqualObjects(@"one", zeroOne, @"Failed 0 XOR 1 case classification.");
 
     NSString *oneZero = [decisionTree classify:@[@1, @0]];
-    XCTAssertEqual(@"one", oneZero, @"Failed 1 XOR 0 case classification.");
+    XCTAssertEqualObjects(@"one", oneZero, @"Failed 1 XOR 0 case classification.");
 
     NSString *oneOne = [decisionTree classify:@[@1, @1]];
-    XCTAssertEqual(@"zero", oneOne, @"Failed 1 XOR 1 case classification.");
+    XCTAssertEqualObjects(@"zero", oneOne, @"Failed 1 XOR 1 case classification.");
 }
 
 @end
