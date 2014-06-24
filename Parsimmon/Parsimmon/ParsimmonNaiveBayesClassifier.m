@@ -46,6 +46,8 @@
     self = [super init];
     if (self) {
         self.tokenizer = tokenizer;
+        self.wordOccurrences = [NSMutableDictionary dictionary];
+        self.categoryOccurrences = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -181,9 +183,6 @@
 
 - (CGFloat)totalOccurrencesOfCategory:(NSString *)category
 {
-    if (!self.categoryOccurrences[category]) {
-        return 0;
-    }
     return [self.categoryOccurrences[category] floatValue];
 }
 
@@ -194,25 +193,6 @@
 {
     NSSet *set = [NSSet setWithArray:array];
     return [set allObjects];
-}
-
-
-#pragma mark - Properties
-
-- (NSMutableDictionary *)wordOccurrences
-{
-    if (!_wordOccurrences) {
-        _wordOccurrences = [NSMutableDictionary new];
-    }
-    return _wordOccurrences;
-}
-
-- (NSMutableDictionary *)categoryOccurrences
-{
-    if (!_categoryOccurrences) {
-        _categoryOccurrences = [NSMutableDictionary new];
-    }
-    return _categoryOccurrences;
 }
 
 @end
