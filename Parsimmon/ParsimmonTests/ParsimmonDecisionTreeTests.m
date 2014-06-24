@@ -58,4 +58,39 @@
     XCTAssertEqualObjects(@"zero", oneOne, @"Failed 1 XOR 1 case classification.");
 }
 
+- (void)testEmptyTree
+{
+    ParsimmonDecisionTree *decisionTree = [[ParsimmonDecisionTree alloc] init];
+    [decisionTree build];
+    XCTAssertNil([decisionTree classify:@[]]);
+}
+
+- (void)testAllSameFeatureValues
+{
+    ParsimmonDecisionTree *decisionTree = [[ParsimmonDecisionTree alloc] init];
+    [decisionTree setFeatureNames:@[@"has four legs", @"has whiskers", @"is cute"]];
+    [decisionTree setClassificationNames:@[@"cat", @"dog"]];
+
+    // Start off with more cat samples
+    [decisionTree addSample:@[@1, @1, @1] forClassification:@0]; // cat
+    [decisionTree addSample:@[@1, @1, @1] forClassification:@0]; // cat
+    [decisionTree addSample:@[@1, @1, @1] forClassification:@1]; // dog
+
+    [decisionTree build];
+
+    NSString *anotherSample = [decisionTree classify:@[@1, @1, @1]];
+    XCTAssertEqualObjects(anotherSample, @"cat");
+
+    // Add some more dog samples
+    [decisionTree addSample:@[@1, @1, @1] forClassification:@1]; // dog
+    [decisionTree addSample:@[@1, @1, @1] forClassification:@1]; // dog
+
+    [decisionTree build];
+
+    NSString *yetAnotherSample = [decisionTree classify:@[@1, @1, @1]];
+    XCTAssertEqualObjects(yetAnotherSample, @"dog");
+}
+
+
+
 @end

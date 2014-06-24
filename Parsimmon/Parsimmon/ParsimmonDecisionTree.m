@@ -40,6 +40,7 @@
     self = [super init];
     if (self) {
         self.maxDepth = PARSIMMON_DECISION_TREE_DEFAULT_MAX_DEPTH;
+        self.data = [NSMutableArray array];
     }
     return self;
 }
@@ -73,6 +74,10 @@
                       remainingFeatures:(NSArray *)remainingFeatures
                                maxDepth:(NSUInteger)maxDepth
 {
+    if (![data count]) {
+        return nil;
+    }
+
     ParsimmonNode *node = [[ParsimmonNode alloc] init];
 
     // Check for the two base cases.
@@ -232,17 +237,6 @@
         }
     }
     return (CGFloat)count / xCount;
-}
-
-
-#pragma mark - Properties
-
-- (NSMutableArray *)data
-{
-    if (!_data) {
-        _data = [NSMutableArray new];
-    }
-    return _data;
 }
 
 
