@@ -1,6 +1,7 @@
 language: objective-c
 before_install:
 - gem i cocoapods --no-ri --no-rdoc
+- gem i slather --no-ri --no-rdoc
 - brew uninstall xctool; brew install xctool --HEAD;
 xcode_project: Parsimmon/Parsimmon.xcodeproj
 xcode_scheme: Parsimmon
