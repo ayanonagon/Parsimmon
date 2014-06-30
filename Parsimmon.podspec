@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/ayanonagon/Parsimmon.git',
     :tag => '0.3.0'
   }
-  s.source_files = 'Parsimmon/Parsimmon/*.{h,m}'
+  s.source_files = 'Parsimmon/*.{h,m}'
 end
