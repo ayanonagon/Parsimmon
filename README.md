@@ -90,6 +90,7 @@ NSLog(@"%@", lemmatizedTokens);
 ```
 
 ```
+(
 diane,
 i,
 hold,
