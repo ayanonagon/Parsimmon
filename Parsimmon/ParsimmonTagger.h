@@ -31,6 +31,7 @@
     NSLog(@"%@", taggedTokens);
 
  Output:
+
     (
     "('The', Determiner)",
     "('quick', Adjective)",
@@ -42,6 +43,7 @@
     "('lazy', Adjective)",
     "('dog', Noun)"
     )
+
  */
 @interface ParsimmonTagger : ParsimmonSeed
 

@@ -31,6 +31,7 @@
     NSLog(@"%@", lemmatizedTokens);
 
  Output:
+
     (
     diane,
     i,
@@ -45,6 +46,7 @@
     chocolate,
     bunny
     )
+
  */
 @interface ParsimmonLemmatizer : ParsimmonSeed
 
