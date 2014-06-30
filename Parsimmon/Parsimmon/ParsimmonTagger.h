@@ -23,6 +23,26 @@
 #import <Foundation/Foundation.h>
 #import "ParsimmonSeed.h"
 
+/**
+ ## Sample usage
+
+    ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
+    NSArray *taggedTokens = [tagger tagWordsInText:@"The quick brown fox jumps over the lazy dog"];
+    NSLog(@"%@", taggedTokens);
+
+ Output:
+    (
+    "('The', Determiner)",
+    "('quick', Adjective)",
+    "('brown', Adjective)",
+    "('fox', Noun)",
+    "('jumps', Noun)",
+    "('over', Preposition)",
+    "('the', Determiner)",
+    "('lazy', Adjective)",
+    "('dog', Noun)"
+    )
+ */
 @interface ParsimmonTagger : ParsimmonSeed
 
 /**

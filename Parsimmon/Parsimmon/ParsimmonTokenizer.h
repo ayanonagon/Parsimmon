@@ -23,6 +23,26 @@
 #import <Foundation/Foundation.h>
 #import "ParsimmonSeed.h"
 
+/**
+ ## Sample usage
+
+    ParsimmonTokenizer *tokenizer = [[ParsimmonTokenizer alloc] init];
+    NSArray *tokens = [tokenizer tokenizeWordsInText:@"The quick brown fox jumps over the lazy dog"];
+    NSLog(@"%@", tokens);
+
+ Output:
+    (
+    The,
+    quick,
+    brown,
+    fox,
+    jumps,
+    over,
+    the,
+    lazy,
+    dog
+    )
+ */
 @interface ParsimmonTokenizer : ParsimmonSeed
 
 /**

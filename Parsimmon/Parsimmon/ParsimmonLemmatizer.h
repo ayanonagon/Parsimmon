@@ -23,6 +23,29 @@
 #import <Foundation/Foundation.h>
 #import "ParsimmonSeed.h"
 
+/**
+ ## Sample usage
+
+    ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
+    NSArray *lemmatizedTokens = [lemmatizer lemmatizeWordsInText:@"Diane, I'm holding in my hand a small box of chocolate bunnies."];
+    NSLog(@"%@", lemmatizedTokens);
+
+ Output:
+    (
+    diane,
+    i,
+    hold,
+    in,
+    my,
+    hand,
+    a,
+    small,
+    box,
+    of,
+    chocolate,
+    bunny
+    )
+ */
 @interface ParsimmonLemmatizer : ParsimmonSeed
 
 /**
