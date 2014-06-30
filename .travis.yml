@@ -3,7 +3,7 @@ before_install:
 - gem i cocoapods --no-ri --no-rdoc
 - gem i slather --no-ri --no-rdoc
 - brew uninstall xctool; brew install xctool --HEAD;
-xcode_project: Parsimmon.xcodeproj
+xcode_workspace: Parsimmon.xcworkspace
 xcode_scheme: Parsimmon
 xcode_sdk: iphonesimulator
 after_success: slather

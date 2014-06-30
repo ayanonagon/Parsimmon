@@ -15,8 +15,22 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B67005761807D79500CFF860"
-               BuildableName = "Parsimmon.app"
-               BlueprintName = "Parsimmon"
+               BuildableName = "ParsimmonSample.app"
+               BlueprintName = "ParsimmonSample"
+               ReferencedContainer = "container:Parsimmon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B67005971807D79500CFF860"
+               BuildableName = "ParsimmonTests.xctest"
+               BlueprintName = "ParsimmonTests"
                ReferencedContainer = "container:Parsimmon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67005761807D79500CFF860"
-            BuildableName = "Parsimmon.app"
-            BlueprintName = "Parsimmon"
+            BuildableName = "ParsimmonSample.app"
+            BlueprintName = "ParsimmonSample"
             ReferencedContainer = "container:Parsimmon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67005761807D79500CFF860"
-            BuildableName = "Parsimmon.app"
-            BlueprintName = "Parsimmon"
+            BuildableName = "ParsimmonSample.app"
+            BlueprintName = "ParsimmonSample"
             ReferencedContainer = "container:Parsimmon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67005761807D79500CFF860"
-            BuildableName = "Parsimmon.app"
-            BlueprintName = "Parsimmon"
+            BuildableName = "ParsimmonSample.app"
+            BlueprintName = "ParsimmonSample"
             ReferencedContainer = "container:Parsimmon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7619A8B5F8E4EB0B7C3BE7A /* libPods-ParsimmonSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EA72EF97D2465D88980DDF /* libPods-ParsimmonSample.a */; };
 		B63E18C418E618160006BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BC18E618160006BD3E /* InfoPlist.strings */; };
 		B63E18C518E618160006BD3E /* ParsimmonTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BE18E618160006BD3E /* ParsimmonTests-Info.plist */; };
 		B63E18CB18E6196A0006BD3E /* ParsimmonDecisionTreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B63E18C018E618160006BD3E /* ParsimmonDecisionTreeTests.m */; };
@@ -23,38 +24,23 @@
 		B67005931807D79500CFF860 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67005921807D79500CFF860 /* Images.xcassets */; };
 		B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005991807D79500CFF860 /* XCTest.framework */; };
 		B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
-		B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */; };
-		B67005B31808595600CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005B21808595600CFF860 /* UIKit.framework */; };
-		B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */; };
-		B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */; };
-		B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */; };
-		B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */; };
 		B692A4A919555E3800344E36 /* ParsimmonNaiveBayesClassifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B692A4A819555E3800344E36 /* ParsimmonNaiveBayesClassifierTests.m */; };
 		B692A4AB1955622A00344E36 /* ParsimmonTaggedTokenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B692A4AA1955622A00344E36 /* ParsimmonTaggedTokenTests.m */; };
-		B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */; };
-		B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD518837CF6000F61BA /* ParsimmonNode.m */; };
-		B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */; };
 		B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E35180B633F00D7F34F /* ClassifierViewController.m */; };
+		DA8FA680BF5141D0884B10A6 /* libPods-ParsimmonTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2D5B71225F48349024B6BF /* libPods-ParsimmonTests.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B670059D1807D79500CFF860 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B670056D1807D77000CFF860 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B67005761807D79500CFF860;
-			remoteInfo = Example;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		573A71070DB348678F8D1DDB /* Pods-ParsimmonTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonTests.xcconfig"; path = "Pods/Pods-ParsimmonTests.xcconfig"; sourceTree = "<group>"; };
+		89EA72EF97D2465D88980DDF /* libPods-ParsimmonSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParsimmonSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		970011C4F728421780A2C70E /* Pods-ParsimmonSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonSample.xcconfig"; path = "Pods/Pods-ParsimmonSample.xcconfig"; sourceTree = "<group>"; };
 		B63E18BD18E618160006BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B63E18BE18E618160006BD3E /* ParsimmonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ParsimmonTests-Info.plist"; sourceTree = "<group>"; };
 		B63E18C018E618160006BD3E /* ParsimmonDecisionTreeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonDecisionTreeTests.m; sourceTree = "<group>"; };
 		B63E18C118E618160006BD3E /* ParsimmonLemmatizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonLemmatizerTests.m; sourceTree = "<group>"; };
 		B63E18C218E618160006BD3E /* ParsimmonTaggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTaggerTests.m; sourceTree = "<group>"; };
 		B63E18C318E618160006BD3E /* ParsimmonTokenizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizerTests.m; sourceTree = "<group>"; };
-		B67005771807D79500CFF860 /* Parsimmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parsimmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67005771807D79500CFF860 /* ParsimmonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParsimmonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670057A1807D79500CFF860 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B670057C1807D79500CFF860 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B67005821807D79500CFF860 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
@@ -69,28 +55,11 @@
 		B67005921807D79500CFF860 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67005981807D79500CFF860 /* ParsimmonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParsimmonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67005991807D79500CFF860 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTokenizer.h; sourceTree = "<group>"; };
-		B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTokenizer.m; sourceTree = "<group>"; };
-		B67005B21808595600CFF860 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B67005B91809CD5600CFF860 /* ParsimmonTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTagger.h; sourceTree = "<group>"; };
-		B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTagger.m; sourceTree = "<group>"; };
-		B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonTaggedToken.h; sourceTree = "<group>"; };
-		B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTaggedToken.m; sourceTree = "<group>"; };
-		B67005BF180A05FC00CFF860 /* ParsimmonLemmatizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonLemmatizer.h; sourceTree = "<group>"; };
-		B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonLemmatizer.m; sourceTree = "<group>"; };
-		B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonSeed.h; sourceTree = "<group>"; };
-		B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonSeed.m; sourceTree = "<group>"; };
-		B6700608180A2A5A00CFF860 /* Parsimmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parsimmon.h; sourceTree = "<group>"; };
 		B692A4A819555E3800344E36 /* ParsimmonNaiveBayesClassifierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNaiveBayesClassifierTests.m; sourceTree = "<group>"; };
 		B692A4AA1955622A00344E36 /* ParsimmonTaggedTokenTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonTaggedTokenTests.m; sourceTree = "<group>"; };
-		B6A43FD118837077000F61BA /* ParsimmonDecisionTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonDecisionTree.h; sourceTree = "<group>"; };
-		B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonDecisionTree.m; sourceTree = "<group>"; };
-		B6A43FD418837CF6000F61BA /* ParsimmonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNode.h; sourceTree = "<group>"; };
-		B6A43FD518837CF6000F61BA /* ParsimmonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNode.m; sourceTree = "<group>"; };
-		B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNaiveBayesClassifier.h; sourceTree = "<group>"; };
-		B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNaiveBayesClassifier.m; sourceTree = "<group>"; };
 		B6B05E34180B633F00D7F34F /* ClassifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierViewController.h; sourceTree = "<group>"; };
 		B6B05E35180B633F00D7F34F /* ClassifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifierViewController.m; sourceTree = "<group>"; };
+		ED2D5B71225F48349024B6BF /* libPods-ParsimmonTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParsimmonTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67005B31808595600CFF860 /* UIKit.framework in Frameworks */,
 				B670057D1807D79500CFF860 /* CoreGraphics.framework in Frameworks */,
 				B670057B1807D79500CFF860 /* Foundation.framework in Frameworks */,
+				A7619A8B5F8E4EB0B7C3BE7A /* libPods-ParsimmonSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +79,7 @@
 			files = (
 				B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */,
 				B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */,
+				DA8FA680BF5141D0884B10A6 /* libPods-ParsimmonTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,18 +104,19 @@
 		B670056C1807D77000CFF860 = {
 			isa = PBXGroup;
 			children = (
-				B67005AD1807D7F600CFF860 /* Parsimmon */,
 				B63E18BB18E618160006BD3E /* ParsimmonTests */,
 				B67005801807D79500CFF860 /* Example */,
 				B67005791807D79500CFF860 /* Frameworks */,
 				B67005781807D79500CFF860 /* Products */,
+				970011C4F728421780A2C70E /* Pods-ParsimmonSample.xcconfig */,
+				573A71070DB348678F8D1DDB /* Pods-ParsimmonTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		B67005781807D79500CFF860 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B67005771807D79500CFF860 /* Parsimmon.app */,
+				B67005771807D79500CFF860 /* ParsimmonSample.app */,
 				B67005981807D79500CFF860 /* ParsimmonTests.xctest */,
 			);
 			name = Products;
@@ -154,10 +125,11 @@
 		B67005791807D79500CFF860 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B67005B21808595600CFF860 /* UIKit.framework */,
 				B670057A1807D79500CFF860 /* Foundation.framework */,
 				B670057C1807D79500CFF860 /* CoreGraphics.framework */,
 				B67005991807D79500CFF860 /* XCTest.framework */,
+				89EA72EF97D2465D88980DDF /* libPods-ParsimmonSample.a */,
+				ED2D5B71225F48349024B6BF /* libPods-ParsimmonTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,46 +162,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B67005AD1807D7F600CFF860 /* Parsimmon */ = {
-			isa = PBXGroup;
-			children = (
-				B6700608180A2A5A00CFF860 /* Parsimmon.h */,
-				B67005AE1807D80E00CFF860 /* ParsimmonTokenizer.h */,
-				B67005AF1807D80E00CFF860 /* ParsimmonTokenizer.m */,
-				B67005B91809CD5600CFF860 /* ParsimmonTagger.h */,
-				B67005BA1809CD5600CFF860 /* ParsimmonTagger.m */,
-				B67005BF180A05FC00CFF860 /* ParsimmonLemmatizer.h */,
-				B67005C0180A05FC00CFF860 /* ParsimmonLemmatizer.m */,
-				B6B05E05180A858000D7F34F /* Classifiers */,
-				B67005C6180A19BD00CFF860 /* Seedlings */,
-			);
-			path = Parsimmon;
-			sourceTree = "<group>";
-		};
-		B67005C6180A19BD00CFF860 /* Seedlings */ = {
-			isa = PBXGroup;
-			children = (
-				B67005BC1809CE2F00CFF860 /* ParsimmonTaggedToken.h */,
-				B67005BD1809CE2F00CFF860 /* ParsimmonTaggedToken.m */,
-				B67005C2180A0A1D00CFF860 /* ParsimmonSeed.h */,
-				B67005C3180A0A1D00CFF860 /* ParsimmonSeed.m */,
-			);
-			name = Seedlings;
-			sourceTree = "<group>";
-		};
-		B6B05E05180A858000D7F34F /* Classifiers */ = {
-			isa = PBXGroup;
-			children = (
-				B6B05E06180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.h */,
-				B6B05E07180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m */,
-				B6A43FD118837077000F61BA /* ParsimmonDecisionTree.h */,
-				B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */,
-				B6A43FD418837CF6000F61BA /* ParsimmonNode.h */,
-				B6A43FD518837CF6000F61BA /* ParsimmonNode.m */,
-			);
-			name = Classifiers;
-			sourceTree = "<group>";
-		};
 		B6B05E1E180B620100D7F34F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,35 +172,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B67005761807D79500CFF860 /* Parsimmon */ = {
+		B67005761807D79500CFF860 /* ParsimmonSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Parsimmon" */;
+			buildConfigurationList = B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "ParsimmonSample" */;
 			buildPhases = (
+				9919979590AF4405A7200178 /* Check Pods Manifest.lock */,
 				B67005731807D79500CFF860 /* Sources */,
 				B67005741807D79500CFF860 /* Frameworks */,
 				B67005751807D79500CFF860 /* Resources */,
+				E8F09080A64843A286775E72 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Parsimmon;
+			name = ParsimmonSample;
 			productName = Example;
-			productReference = B67005771807D79500CFF860 /* Parsimmon.app */;
+			productReference = B67005771807D79500CFF860 /* ParsimmonSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B67005971807D79500CFF860 /* ParsimmonTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B67005AA1807D79500CFF860 /* Build configuration list for PBXNativeTarget "ParsimmonTests" */;
 			buildPhases = (
+				4C165997C13E4724BD3FD6AD /* Check Pods Manifest.lock */,
 				B67005941807D79500CFF860 /* Sources */,
 				B67005951807D79500CFF860 /* Frameworks */,
 				B67005961807D79500CFF860 /* Resources */,
+				537017DD6ADF4920B63E4CE7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B670059E1807D79500CFF860 /* PBXTargetDependency */,
 			);
 			name = ParsimmonTests;
 			productName = ExampleTests;
@@ -301,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B67005761807D79500CFF860 /* Parsimmon */,
+				B67005761807D79500CFF860 /* ParsimmonSample */,
 				B67005971807D79500CFF860 /* ParsimmonTests */,
 			);
 		};
@@ -329,23 +264,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C165997C13E4724BD3FD6AD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		537017DD6ADF4920B63E4CE7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ParsimmonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9919979590AF4405A7200178 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F09080A64843A286775E72 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ParsimmonSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B67005731807D79500CFF860 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67005B01807D80E00CFF860 /* ParsimmonTokenizer.m in Sources */,
-				B67005C4180A0A1D00CFF860 /* ParsimmonSeed.m in Sources */,
-				B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */,
 				B67005911807D79500CFF860 /* TaggerViewController.m in Sources */,
-				B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */,
 				B670058B1807D79500CFF860 /* AppDelegate.m in Sources */,
 				B67005871807D79500CFF860 /* main.m in Sources */,
-				B67005C1180A05FC00CFF860 /* ParsimmonLemmatizer.m in Sources */,
-				B67005BE1809CE2F00CFF860 /* ParsimmonTaggedToken.m in Sources */,
 				B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */,
-				B6B05E08180A85B500D7F34F /* ParsimmonNaiveBayesClassifier.m in Sources */,
-				B67005BB1809CD5600CFF860 /* ParsimmonTagger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,14 +353,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B670059E1807D79500CFF860 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B67005761807D79500CFF860 /* Parsimmon */;
-			targetProxy = B670059D1807D79500CFF860 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B63E18BC18E618160006BD3E /* InfoPlist.strings */ = {
@@ -419,6 +401,7 @@
 		};
 		B67005A81807D79500CFF860 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970011C4F728421780A2C70E /* Pods-ParsimmonSample.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -468,6 +451,7 @@
 		};
 		B67005A91807D79500CFF860 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970011C4F728421780A2C70E /* Pods-ParsimmonSample.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -511,9 +495,9 @@
 		};
 		B67005AB1807D79500CFF860 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573A71070DB348678F8D1DDB /* Pods-ParsimmonTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -560,9 +544,9 @@
 		};
 		B67005AC1807D79500CFF860 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 573A71070DB348678F8D1DDB /* Pods-ParsimmonTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -613,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "Parsimmon" */ = {
+		B67005A71807D79500CFF860 /* Build configuration list for PBXNativeTarget "ParsimmonSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67005A81807D79500CFF860 /* Debug */,
