@@ -23,6 +23,31 @@
 #import <Foundation/Foundation.h>
 
 @class ParsimmonNode;
+
+/**
+ ## Sample usage
+
+    ParsimmonDecisionTree *decisionTree = [[ParsimmonDecisionTree alloc] init];
+    [decisionTree setFeatureNames:@[@"A", @"B"]];
+    [decisionTree setClassificationNames:@[@"zero", @"one"]];
+    [decisionTree addSample:@[@1, @1] forClassification:@0];
+    [decisionTree addSample:@[@0, @0] forClassification:@0];
+    [decisionTree addSample:@[@1, @0] forClassification:@1];
+    [decisionTree addSample:@[@0, @1] forClassification:@1];
+    [decisionTree build];
+
+    NSLog(@"%@", [decisionTree classify:@[@0, @0]]);
+    NSLog(@"%@", [decisionTree classify:@[@0, @1]]);
+    NSLog(@"%@", [decisionTree classify:@[@1, @0]]);
+    NSLog(@"%@", [decisionTree classify:@[@1, @1]]);
+
+ Output:
+    zero
+    one
+    one
+    zero
+
+ */
 @interface ParsimmonDecisionTree : NSObject
 
 @property (strong, nonatomic) ParsimmonNode *root;
