@@ -135,13 +135,6 @@ NSLog(@"'%@' => %@", secondExample, [classifier classify:secondExample]);
 'what does the fish say?' => spam
 ```
 
-
-Version
-----
-
-0.3.0
-
-
 License
 ----
 
