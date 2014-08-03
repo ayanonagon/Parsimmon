@@ -31,7 +31,7 @@ Examples
 
 To start using Parsimmon:
 ```obj-c
-#import "Parsimmon.h"
+#import <Parsimmon/Parsimmon.h>
 ```
 
 
