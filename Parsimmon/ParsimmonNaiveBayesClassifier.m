@@ -88,8 +88,8 @@
         CGFloat pCategory = [self pCategory:category]; // P(C=cat)
         currentCategoryScore += log(pCategory); // log(P(C=cat))
         for (NSString *token in tokens) { // sum_token
-            // P(W=token|C=cat) = P(C=cat|W=token) * P(W=token) / P(C=cat) [Bayes Theorem]
-            CGFloat numerator = [self pCategory:category givenWord:token] * [self pWord:token];
+            // P(W=token|C=cat) = P(C=cat, W=token) / P(C=cat)
+            CGFloat numerator = [self pCategory:category andWord:token];
             // Do some smoothing
             CGFloat pWordGivenCategory = (numerator + kParsimmonSmoothingParameter) /
                     (pCategory + kParsimmonSmoothingParameter * self.wordCount);
@@ -108,27 +108,17 @@
 #pragma mark - Probabilities
 
 /**
- Returns P(C=category|W=word).
+ Returns P(C=category, W=word).
  @param category The category
  @param word The word
- @return P(C=category|W=word)
+ @return P(C=category, W=word)
  */
-- (CGFloat)pCategory:(NSString *)category givenWord:(NSString *)word
+- (CGFloat)pCategory:(NSString *)category andWord:(NSString *)word
 {
     if (!self.wordOccurrences[word] || !self.wordOccurrences[word][category]) {
         return 0;
     }
-    return ([self.wordOccurrences[word][category] floatValue]) / [self totalOccurrencesOfWord:word];
-}
-
-/**
- Returns P(W=word).
- @param word The word
- @return P(W=word)
- */
-- (CGFloat)pWord:(NSString *)word
-{
-    return [self totalOccurrencesOfWord:word] / self.wordCount;
+    return ([self.wordOccurrences[word][category] floatValue]) / self.trainingCount;
 }
 
 /**
