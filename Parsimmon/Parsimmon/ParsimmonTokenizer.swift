@@ -22,31 +22,21 @@
 
 import Foundation
 
-// Unfortunate extension that is needed to convert an NSRange to Range
-// This also deals with UTF16 encoding
-extension String.Index {
-	init(utf16Offset: Int, string: String) {
-		self = String.Index(String.UnicodeScalarView.IndexType(utf16Offset, string.core)) // Note: string.core is a private API...
-	}
-}
-
 class ParsimmonTokenizer : ParsimmonSeed {
 
-	func tokenize(text: String) -> String[] {
+	func tokenize(text: String) -> [String] {
 		return self.tokenize(text, options:self.defaultLinguisticTaggerOptions())
 	}
 
-	func tokenize(text: String, options: NSLinguisticTaggerOptions) -> String[] {
-		var tokens = String[]()
+	func tokenize(text: String, options: NSLinguisticTaggerOptions) -> [String] {
+		var tokens = [String]()
 		let tagger = self.linguisticTaggerWithOptions(options)
 		tagger.string = text
-		tagger.enumerateTagsInRange(NSRange(location:0, length:countElements(text)),
+		tagger.enumerateTagsInRange(NSRange(location:0, length:count(text)),
 			scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass,
 			options:options) {
-				(tag: String!, tokenRange: NSRange, sentenceRange: NSRange, stop: CMutablePointer) -> Void in
-				let startIndex = String.Index(utf16Offset:tokenRange.location, string:text)
-				let endIndex = String.Index(utf16Offset:tokenRange.location + tokenRange.length, string:text);
-				let token = text[startIndex..endIndex]
+				(tag: String!, tokenRange: NSRange, sentenceRange: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+				let token = (text as NSString).substringWithRange(tokenRange)
 				tokens.append(token)
 		}
 		return tokens

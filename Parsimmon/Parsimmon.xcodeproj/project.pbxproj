@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45166BDE1A94265800D0E013 /* ParsimmonTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6919442FB700FC6CAA /* ParsimmonTokenizer.swift */; };
 		B6139F6A19442FB700FC6CAA /* ParsimmonTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6919442FB700FC6CAA /* ParsimmonTokenizer.swift */; };
 		B6139F701944D59F00FC6CAA /* ParsimmonTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6E194433BA00FC6CAA /* ParsimmonTokenizerTests.swift */; };
 		B63E18C418E618160006BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BC18E618160006BD3E /* InfoPlist.strings */; };
@@ -277,7 +278,7 @@
 		B670056D1807D77000CFF860 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					B67005971807D79500CFF860 = {
 						TestTargetID = B67005761807D79500CFF860;
@@ -352,6 +353,7 @@
 				B6139F701944D59F00FC6CAA /* ParsimmonTokenizerTests.swift in Sources */,
 				B63E18CC18E6196D0006BD3E /* ParsimmonLemmatizerTests.m in Sources */,
 				B63E18CD18E619710006BD3E /* ParsimmonTaggerTests.m in Sources */,
+				45166BDE1A94265800D0E013 /* ParsimmonTokenizer.swift in Sources */,
 				B63E18CB18E6196A0006BD3E /* ParsimmonDecisionTreeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -412,7 +415,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -465,7 +467,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -511,7 +512,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -564,7 +564,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Parsimmon.app/Parsimmon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
