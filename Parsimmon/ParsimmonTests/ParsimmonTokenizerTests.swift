@@ -42,12 +42,12 @@ class ParsimmonTokenizerTests : XCTestCase {
 		let tokenizer = ParsimmonTokenizer();
 		let tokens = tokenizer.tokenize(testStringOne);
 
-		XCTAssertEqualObjects(tokens, expectedTokens, "Failed to tokenize words in text")
+		XCTAssertEqual(tokens, expectedTokens, "Failed to tokenize words in text")
 	}
 
 	func testTokenizeAllWhitespace() {
 		let tokenizer = ParsimmonTokenizer();
 		let tokens = tokenizer.tokenize("               ");
-		XCTAssertEqualObjects(tokens, [], "Failed to tokenize all whitespace")
+		XCTAssertEqual(tokens, [], "Failed to tokenize all whitespace")
 	}
 }

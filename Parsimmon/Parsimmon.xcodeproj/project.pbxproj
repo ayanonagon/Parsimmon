@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45166BDE1A94265800D0E013 /* ParsimmonTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6919442FB700FC6CAA /* ParsimmonTokenizer.swift */; };
 		B6139F6A19442FB700FC6CAA /* ParsimmonTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6919442FB700FC6CAA /* ParsimmonTokenizer.swift */; };
 		B6139F701944D59F00FC6CAA /* ParsimmonTokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6E194433BA00FC6CAA /* ParsimmonTokenizerTests.swift */; };
 		B63E18C418E618160006BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BC18E618160006BD3E /* InfoPlist.strings */; };
@@ -352,6 +353,7 @@
 				B6139F701944D59F00FC6CAA /* ParsimmonTokenizerTests.swift in Sources */,
 				B63E18CC18E6196D0006BD3E /* ParsimmonLemmatizerTests.m in Sources */,
 				B63E18CD18E619710006BD3E /* ParsimmonTaggerTests.m in Sources */,
+				45166BDE1A94265800D0E013 /* ParsimmonTokenizer.swift in Sources */,
 				B63E18CB18E6196A0006BD3E /* ParsimmonDecisionTreeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
