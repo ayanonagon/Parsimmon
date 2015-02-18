@@ -8,11 +8,12 @@
 
 #import "ClassifierViewController.h"
 #import "Parsimmon.h"
+#import "Parsimmon-Swift.h"
 
 @interface ClassifierViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-@property (strong, nonatomic) ParsimmonNaiveBayesClassifier *classifier;
+@property (strong, nonatomic) NaiveBayesClassifier *classifier;
 @end
 
 @implementation ClassifierViewController
@@ -64,10 +65,10 @@
 
 #pragma mark - Properties
 
-- (ParsimmonNaiveBayesClassifier *)classifier
+- (NaiveBayesClassifier *)classifier
 {
     if (!_classifier) {
-        _classifier = [[ParsimmonNaiveBayesClassifier alloc] init];
+        _classifier = [[NaiveBayesClassifier alloc] init];
     }
     return _classifier;
 }
