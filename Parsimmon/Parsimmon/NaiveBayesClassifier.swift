@@ -9,7 +9,7 @@
 /**
 ## Sample usage
 
-let NaiveBayesClassifier classifier = NaiveBayesClassifier
+let NaiveBayesClassifier classifier = NaiveBayesClassifier()
 
 Train the classifier with some ham examples.
 
