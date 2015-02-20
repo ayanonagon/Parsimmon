@@ -1,6 +1,6 @@
-// Tokenizer.swift
+//  TokenizerTests.swift
 //
-// Copyright (c) 2015 Ayaka Nonaka
+// Copyright (c) 2014 Ayaka Nonaka
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,24 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import XCTest
+import Parsimmon
 
-public class Lemmatizer: NSObject, Analyzer {
-    let seed: Seed
+class TaggedTokenizerTests : XCTestCase {
+    func testTagWordsInText() {
+        let expectedTaggedTokens = [
+            ("The", "Determiner"),
+            ("quick", "Adjective"),
+            ("brown", "Adjective"),
+            ("fox", "Noun"),
+            ("jumps", "Noun"),
+            ("over", "Preposition"),
+            ("the", "Determiner"),
+            ("lazy", "Adjective"),
+            ("dog", "Noun"),
+        ].map { (token, tag) in TaggedToken(token: token, tag: tag) }
 
-    var scheme: String {
-        return NSLinguisticTagSchemeLemma
-    }
+        let tagger = Tagger()
+        let testStringOne = "The quick brown fox jumps over the lazy dog"
+        let taggedTokens = tagger.tagWordsInText(testStringOne)
 
-    init(seed: Seed = Seed()) {
-        self.seed = seed
-    }
-
-    func lemmatizeWordsInText(text: String) -> [String] {
-        return lemmatizeText(text, options: nil)
-    }
-
-    func lemmatizeText(text: String, options: NSLinguisticTaggerOptions?) -> [String] {
-        return analyze(self, text, options).map { (token, lemma) in lemma }
+        XCTAssertEqual(taggedTokens, expectedTaggedTokens, "Failed to tagged words in text")
     }
 }
