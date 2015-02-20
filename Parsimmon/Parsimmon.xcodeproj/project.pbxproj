@@ -20,6 +20,8 @@
 		452C8BB61A96E5DC003D7441 /* TaggedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8BB51A96E5DC003D7441 /* TaggedToken.swift */; };
 		452C8BB81A97B944003D7441 /* Lemmatizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8BB31A96E58F003D7441 /* Lemmatizer.swift */; };
 		452C8BB91A97B94E003D7441 /* TaggedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8BB51A96E5DC003D7441 /* TaggedToken.swift */; };
+		4537FBFE1A97E2F6001634FD /* TaggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537FBFD1A97E2F6001634FD /* TaggerViewController.swift */; };
+		4537FC001A97E6E0001634FD /* ClassifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537FBFF1A97E6E0001634FD /* ClassifierViewController.swift */; };
 		459B01491A9534B0000859A1 /* NaiveBayesClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B01481A9534B0000859A1 /* NaiveBayesClassifier.swift */; };
 		459B014B1A954B98000859A1 /* NaiveBayesClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B014A1A954B98000859A1 /* NaiveBayesClassifierTests.swift */; };
 		459B014D1A955E3D000859A1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B014C1A955E3D000859A1 /* Functions.swift */; };
@@ -34,14 +36,12 @@
 		B67005871807D79500CFF860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005861807D79500CFF860 /* main.m */; };
 		B670058B1807D79500CFF860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B670058A1807D79500CFF860 /* AppDelegate.m */; };
 		B670058E1807D79500CFF860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B670058C1807D79500CFF860 /* Main.storyboard */; };
-		B67005911807D79500CFF860 /* TaggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67005901807D79500CFF860 /* TaggerViewController.m */; };
 		B67005931807D79500CFF860 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67005921807D79500CFF860 /* Images.xcassets */; };
 		B670059A1807D79500CFF860 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005991807D79500CFF860 /* XCTest.framework */; };
 		B670059B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
 		B67005B31808595600CFF860 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67005B21808595600CFF860 /* UIKit.framework */; };
 		B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */; };
 		B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A43FD518837CF6000F61BA /* ParsimmonNode.m */; };
-		B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B05E35180B633F00D7F34F /* ClassifierViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,8 @@
 		452C8BB11A96E589003D7441 /* Tagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tagger.swift; sourceTree = "<group>"; };
 		452C8BB31A96E58F003D7441 /* Lemmatizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lemmatizer.swift; sourceTree = "<group>"; };
 		452C8BB51A96E5DC003D7441 /* TaggedToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedToken.swift; sourceTree = "<group>"; };
+		4537FBFD1A97E2F6001634FD /* TaggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggerViewController.swift; sourceTree = "<group>"; };
+		4537FBFF1A97E6E0001634FD /* ClassifierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierViewController.swift; sourceTree = "<group>"; };
 		459B01481A9534B0000859A1 /* NaiveBayesClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaiveBayesClassifier.swift; sourceTree = "<group>"; };
 		459B014A1A954B98000859A1 /* NaiveBayesClassifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaiveBayesClassifierTests.swift; sourceTree = "<group>"; };
 		459B014C1A955E3D000859A1 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -82,8 +84,6 @@
 		B67005891807D79500CFF860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B670058A1807D79500CFF860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B670058D1807D79500CFF860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B670058F1807D79500CFF860 /* TaggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaggerViewController.h; sourceTree = "<group>"; };
-		B67005901807D79500CFF860 /* TaggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaggerViewController.m; sourceTree = "<group>"; };
 		B67005921807D79500CFF860 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67005981807D79500CFF860 /* ParsimmonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParsimmonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67005991807D79500CFF860 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -92,8 +92,6 @@
 		B6A43FD218837077000F61BA /* ParsimmonDecisionTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonDecisionTree.m; sourceTree = "<group>"; };
 		B6A43FD418837CF6000F61BA /* ParsimmonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsimmonNode.h; sourceTree = "<group>"; };
 		B6A43FD518837CF6000F61BA /* ParsimmonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsimmonNode.m; sourceTree = "<group>"; };
-		B6B05E34180B633F00D7F34F /* ClassifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierViewController.h; sourceTree = "<group>"; };
-		B6B05E35180B633F00D7F34F /* ClassifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifierViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,10 +170,8 @@
 				B67005891807D79500CFF860 /* AppDelegate.h */,
 				B670058A1807D79500CFF860 /* AppDelegate.m */,
 				B670058C1807D79500CFF860 /* Main.storyboard */,
-				B670058F1807D79500CFF860 /* TaggerViewController.h */,
-				B67005901807D79500CFF860 /* TaggerViewController.m */,
-				B6B05E34180B633F00D7F34F /* ClassifierViewController.h */,
-				B6B05E35180B633F00D7F34F /* ClassifierViewController.m */,
+				4537FBFD1A97E2F6001634FD /* TaggerViewController.swift */,
+				4537FBFF1A97E6E0001634FD /* ClassifierViewController.swift */,
 				B67005921807D79500CFF860 /* Images.xcassets */,
 				B67005811807D79500CFF860 /* Supporting Files */,
 			);
@@ -336,7 +332,8 @@
 				452C8BB61A96E5DC003D7441 /* TaggedToken.swift in Sources */,
 				452C8BA51A96B19D003D7441 /* Seed.swift in Sources */,
 				B6A43FD618837CF6000F61BA /* ParsimmonNode.m in Sources */,
-				B67005911807D79500CFF860 /* TaggerViewController.m in Sources */,
+				4537FBFE1A97E2F6001634FD /* TaggerViewController.swift in Sources */,
+				4537FC001A97E6E0001634FD /* ClassifierViewController.swift in Sources */,
 				B6A43FD318837077000F61BA /* ParsimmonDecisionTree.m in Sources */,
 				452C8BB41A96E58F003D7441 /* Lemmatizer.swift in Sources */,
 				452C8BB21A96E589003D7441 /* Tagger.swift in Sources */,
@@ -344,7 +341,6 @@
 				459B014D1A955E3D000859A1 /* Functions.swift in Sources */,
 				B67005871807D79500CFF860 /* main.m in Sources */,
 				452C8BA71A96B557003D7441 /* Tokenizer.swift in Sources */,
-				B6B05E36180B633F00D7F34F /* ClassifierViewController.m in Sources */,
 				459B01491A9534B0000859A1 /* NaiveBayesClassifier.swift in Sources */,
 				452C8BAF1A96C27F003D7441 /* Analyzer.swift in Sources */,
 			);
