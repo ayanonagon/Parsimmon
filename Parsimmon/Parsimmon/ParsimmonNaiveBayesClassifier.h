@@ -1,4 +1,4 @@
-// ParsimmonTagger.h
+// ParsimmonNaiveBayesClassifier.h
 // 
 // Copyright (c) 2013 Ayaka Nonaka
 //
@@ -21,23 +21,43 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
 
-@interface ParsimmonTagger : ParsimmonSeed
-
-/**
- Returns the tagged tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tag
- @return The tagged tokens
- */
-- (NSArray *)tagWordsInText:(NSString *)text;
+@class Tokenizer;
+@interface ParsimmonNaiveBayesClassifier : NSObject
 
 /**
- Returns the tagged tokens for the input text using the specified linguistic tagger options.
- @param text Text to tag
- @param options Linguistic tagger options
- @return The tagged tokens
+ Creates a parsimmon naive bayes classifier instance that uses the default tokenizer.
+ @return The initialized classifier
  */
-- (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+- (instancetype)init;
+
+/**
+ Trains the classifier with text and its category.
+ @param text The text
+ @param category The category of the text
+ */
+- (void)trainWithText:(NSString *)text category:(NSString *)category;
+
+/**
+ Trains the classifier with tokenized text and its category.
+ This is useful if you wish to use your own tokenization method.
+ @param tokens The tokenized text
+ @param category The category of the text
+ */
+- (void)trainWithTokens:(NSArray *)tokens category:(NSString *)category;
+
+/**
+ Classifies the given text based on its training data.
+ @param text The text to classify
+ @return The category classification
+ */
+- (NSString *)classify:(NSString *)text;
+
+/**
+ Classifies the given tokenized text based on its training data.
+ @param text The tokenized text to classify
+ @return The category classification
+*/
+- (NSString *)classifyTokens:(NSArray *)tokens;
 
 @end

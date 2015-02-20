@@ -7,7 +7,6 @@
 //
 
 #import "ClassifierViewController.h"
-#import "Parsimmon.h"
 #import "Parsimmon-Swift.h"
 
 @interface ClassifierViewController ()
