@@ -8,16 +8,6 @@
 
 import Foundation
 
-//
-//  ParsimmonTaggedToken.swift
-//  Parsimmon
-//
-//  Created by Jordan Kay on 2/17/15.
-//
-//
-
-import Foundation
-
 class TaggedToken: NSObject, Equatable {
     let token: String
     let tag: String
