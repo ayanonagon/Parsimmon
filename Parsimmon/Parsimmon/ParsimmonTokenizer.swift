@@ -22,7 +22,7 @@
 
 import Foundation
 
-class ParsimmonTokenizer : ParsimmonSeed {
+public class ParsimmonTokenizer : ParsimmonSeed {
 
 	func tokenize(text: String) -> [String] {
 		return self.tokenize(text, options:self.defaultLinguisticTaggerOptions())

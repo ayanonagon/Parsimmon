@@ -22,4 +22,3 @@
 
 #import "ParsimmonTagger.h"
 #import "ParsimmonLemmatizer.h"
-#import "ParsimmonNaiveBayesClassifier.h"
