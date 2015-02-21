@@ -45,19 +45,19 @@ public class NaiveBayesClassifier: NSObject {
     public typealias Word = String
     public typealias Category = String
 
-    private let tokenizer: ParsimmonTokenizer
+    private let tokenizer: Tokenizer
 
     private var categoryOccurrences: [Category: Int] = [:]
     private var wordOccurrences: [Word: [Category: Int]] = [:]
     private var trainingCount = 0
     private var wordCount = 0
 
-    public init(tokenizer: ParsimmonTokenizer) {
+    public init(tokenizer: Tokenizer) {
         self.tokenizer = tokenizer
     }
 
     public convenience override init() {
-        self.init(tokenizer: ParsimmonTokenizer())
+        self.init(tokenizer: Tokenizer())
     }
 
     // MARK: - Training

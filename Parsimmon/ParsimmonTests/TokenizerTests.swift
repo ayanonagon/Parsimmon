@@ -1,4 +1,4 @@
-// ParsimmonTokenizer.swift
+//  TokenizerTests.swift
 //
 // Copyright (c) 2014 Ayaka Nonaka
 //
@@ -20,25 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import XCTest
+import Parsimmon
 
-public class ParsimmonTokenizer : ParsimmonSeed {
+class TokenizerTests : XCTestCase {
 
-	func tokenize(text: String) -> [String] {
-		return self.tokenize(text, options:self.defaultLinguisticTaggerOptions())
+	func testTokenizeWords() {
+		let expectedTokens = ["I",
+			"the",
+			"quick",
+			"brown",
+			"fox",
+			"jumped",
+			"over",
+			"the",
+			"lazy",
+			"dog"]
+
+		let testStringOne = "I, the quick  brown fox jumped over the lazy dog..."
+
+		let tokenizer = Tokenizer();
+		let tokens = tokenizer.tokenize(testStringOne);
+
+		XCTAssertEqual(tokens, expectedTokens, "Failed to tokenize words in text")
 	}
 
-	func tokenize(text: String, options: NSLinguisticTaggerOptions) -> [String] {
-		var tokens = [String]()
-		let tagger = self.linguisticTaggerWithOptions(options)
-		tagger.string = text
-		tagger.enumerateTagsInRange(NSRange(location:0, length:count(text)),
-			scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass,
-			options:options) {
-				(tag: String!, tokenRange: NSRange, sentenceRange: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
-				let token = (text as NSString).substringWithRange(tokenRange)
-				tokens.append(token)
-		}
-		return tokens
+	func testTokenizeAllWhitespace() {
+		let tokenizer = Tokenizer();
+		let tokens = tokenizer.tokenize("               ");
+		XCTAssertEqual(tokens, [], "Failed to tokenize all whitespace")
 	}
 }

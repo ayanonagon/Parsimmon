@@ -1,6 +1,6 @@
-// ParsimmonTagger.h
-// 
-// Copyright (c) 2013 Ayaka Nonaka
+// Tokenizer.swift
+//
+// Copyright (c) 2015 Ayaka Nonaka
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,24 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "ParsimmonSeed.h"
+import Foundation
 
-@interface ParsimmonTagger : ParsimmonSeed
+public class Tokenizer: NSObject, Analyzer {
+    let seed: Seed
 
-/**
- Returns the tagged tokens for the input text, omitting any whitespace, punctuation, and other symbols.
- @param text The text to tag
- @return The tagged tokens
- */
-- (NSArray *)tagWordsInText:(NSString *)text;
+    var scheme: String {
+        return NSLinguisticTagSchemeNameTypeOrLexicalClass
+    }
 
-/**
- Returns the tagged tokens for the input text using the specified linguistic tagger options.
- @param text Text to tag
- @param options Linguistic tagger options
- @return The tagged tokens
- */
-- (NSArray *)tagText:(NSString *)text options:(NSLinguisticTaggerOptions)options;
+    init(seed: Seed) {
+        self.seed = seed
+    }
 
-@end
+    override convenience init() {
+        self.init(seed: Seed())
+    }
+
+    func tokenize(text: String) -> [String] {
+        return tokenize(text, options: nil)
+    }
+
+    func tokenize(text: String, options: NSLinguisticTaggerOptions?) -> [String] {
+        return analyze(self, text, options).map { (token, tag) in token }
+    }
+}

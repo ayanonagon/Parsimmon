@@ -1,5 +1,5 @@
 //
-//  ParsimmonLemmatizerTests.m
+//  LemmatizerTests.m
 //  Parsimmon
 //
 //  Created by Hector Zarate on 10/24/13.
@@ -7,14 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ParsimmonLemmatizer.h"
+#import "ParsimmonTests-Swift.h"
 
-
-@interface ParsimmonLemmatizerTests : XCTestCase
+@interface LemmatizerTests : XCTestCase
 
 @end
 
-@implementation ParsimmonLemmatizerTests
+@implementation LemmatizerTests
 
 - (void)setUp
 {
@@ -45,7 +44,7 @@
                                 @"chocolate",
                                 @"bunny"];
     
-    ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
+    Lemmatizer *lemmatizer = [[Lemmatizer alloc] init];
     
     NSArray *lemmatizedTokenStrings = [lemmatizer lemmatizeWordsInText:testString];
     

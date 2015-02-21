@@ -1,6 +1,6 @@
-//  ParsimmonTokenizerTests.swift
+// Tokenizer.swift
 //
-// Copyright (c) 2014 Ayaka Nonaka
+// Copyright (c) 2015 Ayaka Nonaka
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,34 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import XCTest
-import Parsimmon
+import Foundation
 
-class ParsimmonTokenizerTests : XCTestCase {
+public class Tagger: NSObject, Analyzer {
+    let seed: Seed
 
-	func testTokenizeWords() {
-		let expectedTokens = ["I",
-			"the",
-			"quick",
-			"brown",
-			"fox",
-			"jumped",
-			"over",
-			"the",
-			"lazy",
-			"dog"]
+    var scheme: String {
+        return NSLinguisticTagSchemeNameTypeOrLexicalClass
+    }
 
-		let testStringOne = "I, the quick  brown fox jumped over the lazy dog..."
+    init(seed: Seed) {
+        self.seed = seed
+    }
 
-		let tokenizer = ParsimmonTokenizer();
-		let tokens = tokenizer.tokenize(testStringOne);
+    override convenience init() {
+        self.init(seed: Seed())
+    }
 
-		XCTAssertEqual(tokens, expectedTokens, "Failed to tokenize words in text")
-	}
+    func tagWordsInText(text: String) -> [TaggedToken] {
+        return tagText(text, options: nil)
+    }
 
-	func testTokenizeAllWhitespace() {
-		let tokenizer = ParsimmonTokenizer();
-		let tokens = tokenizer.tokenize("               ");
-		XCTAssertEqual(tokens, [], "Failed to tokenize all whitespace")
-	}
+    func tagText(text: String, options: NSLinguisticTaggerOptions?) -> [TaggedToken] {
+        return analyze(self, text, options).map { (token, tag) in
+            TaggedToken(token: token, tag: tag)
+        }
+    }
 }

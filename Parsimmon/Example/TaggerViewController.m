@@ -7,13 +7,13 @@
 //
 
 #import "TaggerViewController.h"
-#import "Parsimmon.h"
+#import "Parsimmon-Swift.h"
 
 @interface TaggerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UITextView *outputTextView;
 
-@property (strong, nonatomic) ParsimmonTagger *tagger;
+@property (strong, nonatomic) Tagger *tagger;
 @end
 
 @implementation TaggerViewController
@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.tagger = [[ParsimmonTagger alloc] init];
+    self.tagger = [[Tagger alloc] init];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
