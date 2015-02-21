@@ -1,4 +1,4 @@
-// Tokenizer.swift
+//  TokenizerTests.swift
 //
 // Copyright (c) 2015 Ayaka Nonaka
 //
@@ -20,20 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import XCTest
+import Parsimmon
 
-public struct Tokenizer: Analyzer {
-    let seed: Seed
-
-    var scheme: String {
-        return NSLinguisticTagSchemeNameTypeOrLexicalClass
-    }
-
-    init(seed: Seed = Seed()) {
-        self.seed = seed
-    }
-
-    func tokenize(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
-        return analyze(self, text, options).map { (token, tag) in token }
+class LemmatizerTests : XCTestCase {
+    func testLemmatizeWordsInText() {
+        let testString = "Diane, I'm holding in my hand a small box of chocolate bunnies."
+        let expectedOutput = [
+            "diane",
+            "i",
+            "hold",
+            "in",
+            "my",
+            "hand",
+            "a",
+            "small",
+            "box",
+            "of",
+            "chocolate",
+            "bunny"
+        ]
+        
+        let lemmatizer = Lemmatizer()
+        let lemmatizedTokenStrings = lemmatizer.lemmatizeWordsInText(testString)
+        
+        XCTAssertEqual(expectedOutput, lemmatizedTokenStrings, "Failed to lematize words in text")
     }
 }

@@ -22,26 +22,18 @@
 
 import Foundation
 
-public class Tagger: NSObject, Analyzer {
+public struct Tagger: Analyzer {
     let seed: Seed
 
     var scheme: String {
         return NSLinguisticTagSchemeNameTypeOrLexicalClass
     }
 
-    init(seed: Seed) {
+    init(seed: Seed = Seed()) {
         self.seed = seed
     }
 
-    override convenience init() {
-        self.init(seed: Seed())
-    }
-
-    func tagWordsInText(text: String) -> [TaggedToken] {
-        return tagText(text, options: nil)
-    }
-
-    func tagText(text: String, options: NSLinguisticTaggerOptions?) -> [TaggedToken] {
+    func tagWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [TaggedToken] {
         return analyze(self, text, options).map { (token, tag) in
             TaggedToken(token: token, tag: tag)
         }
