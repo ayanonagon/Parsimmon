@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class Lemmatizer: NSObject, Analyzer {
+public struct Lemmatizer: Analyzer {
     let seed: Seed
 
     var scheme: String {
@@ -33,11 +33,7 @@ public class Lemmatizer: NSObject, Analyzer {
         self.seed = seed
     }
 
-    func lemmatizeWordsInText(text: String) -> [String] {
-        return lemmatizeText(text, options: nil)
-    }
-
-    func lemmatizeText(text: String, options: NSLinguisticTaggerOptions?) -> [String] {
+    func lemmatizeWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
         return analyze(self, text, options).map { (token, lemma) in lemma }
     }
 }
