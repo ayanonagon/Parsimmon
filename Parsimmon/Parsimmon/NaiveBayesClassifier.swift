@@ -107,9 +107,9 @@ public class NaiveBayesClassifier: NSObject {
     public func classifyTokens(tokens: [Word]) -> Category? {
         // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]
         return argmax(map(categoryOccurrences) { (category, count) -> (Category, Double) in
-            let pCategory = P(category)
-            let score = tokens.reduce(log(pCategory)) { [wordCount] (total, token) in
-                total + log((self.P(category, token) + smoothingParameter) / (pCategory + smoothingParameter + Double(wordCount)))
+            let pCategory = self.P(category)
+            let score = tokens.reduce(log(pCategory)) { (total, token) in
+                total + log((self.P(category, token) + smoothingParameter) / (pCategory + smoothingParameter + Double(self.wordCount)))
             }
             return (category, score)
         })
