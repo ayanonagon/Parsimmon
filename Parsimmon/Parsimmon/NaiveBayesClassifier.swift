@@ -41,7 +41,7 @@ import Foundation
 
 private let smoothingParameter = 1.0
 
-public class NaiveBayesClassifier: NSObject {
+public class NaiveBayesClassifier {
     public typealias Word = String
     public typealias Category = String
 
@@ -52,12 +52,8 @@ public class NaiveBayesClassifier: NSObject {
     private var trainingCount = 0
     private var wordCount = 0
 
-    public init(tokenizer: Tokenizer) {
+    public init(tokenizer: Tokenizer = Tokenizer()) {
         self.tokenizer = tokenizer
-    }
-
-    public convenience override init() {
-        self.init(tokenizer: Tokenizer())
     }
 
     // MARK: - Training
