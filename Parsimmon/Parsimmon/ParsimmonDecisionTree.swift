@@ -23,8 +23,8 @@
 import Foundation
 
 public struct Datum {
-    let featureValues: (Bit, Bit)
-    let classification: Bit
+    public let featureValues: (Bit, Bit)
+    public let classification: Bit
     
     public init(featureValues: (Bit, Bit), classification: Bit) {
         self.featureValues = featureValues
