@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42FA0A8D1AD213C4006F7B70 /* ParsimmonDecisionTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0A8C1AD213C4006F7B70 /* ParsimmonDecisionTree.swift */; };
+		42FA0A8D1AD213C4006F7B70 /* DecisionTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0A8C1AD213C4006F7B70 /* DecisionTree.swift */; };
 		452631151A97CCD900F51473 /* LemmatizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E18C118E618160006BD3E /* LemmatizerTests.swift */; };
 		452631161A97CCDC00F51473 /* TaggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E18C218E618160006BD3E /* TaggerTests.swift */; };
 		452C8BA51A96B19D003D7441 /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C8BA41A96B19D003D7441 /* Seed.swift */; };
@@ -30,7 +30,7 @@
 		B6139F701944D59F00FC6CAA /* TokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6139F6E194433BA00FC6CAA /* TokenizerTests.swift */; };
 		B63E18C418E618160006BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BC18E618160006BD3E /* InfoPlist.strings */; };
 		B63E18C518E618160006BD3E /* ParsimmonTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B63E18BE18E618160006BD3E /* ParsimmonTests-Info.plist */; };
-		B63E18CB18E6196A0006BD3E /* ParsimmonDecisionTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E18C018E618160006BD3E /* ParsimmonDecisionTreeTests.swift */; };
+		B63E18CB18E6196A0006BD3E /* DecisionTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E18C018E618160006BD3E /* DecisionTreeTests.swift */; };
 		B670057B1807D79500CFF860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057A1807D79500CFF860 /* Foundation.framework */; };
 		B670057D1807D79500CFF860 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670057C1807D79500CFF860 /* CoreGraphics.framework */; };
 		B67005851807D79500CFF860 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67005831807D79500CFF860 /* InfoPlist.strings */; };
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42FA0A8C1AD213C4006F7B70 /* ParsimmonDecisionTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsimmonDecisionTree.swift; sourceTree = "<group>"; };
+		42FA0A8C1AD213C4006F7B70 /* DecisionTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionTree.swift; sourceTree = "<group>"; };
 		452C8BA41A96B19D003D7441 /* Seed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 		452C8BA61A96B557003D7441 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		452C8BAE1A96C27F003D7441 /* Analyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analyzer.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		B61BB186194429CF003E7B7B /* Parsimmon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parsimmon-Bridging-Header.h"; sourceTree = "<group>"; };
 		B63E18BD18E618160006BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B63E18BE18E618160006BD3E /* ParsimmonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ParsimmonTests-Info.plist"; sourceTree = "<group>"; };
-		B63E18C018E618160006BD3E /* ParsimmonDecisionTreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsimmonDecisionTreeTests.swift; sourceTree = "<group>"; };
+		B63E18C018E618160006BD3E /* DecisionTreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionTreeTests.swift; sourceTree = "<group>"; };
 		B63E18C118E618160006BD3E /* LemmatizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LemmatizerTests.swift; sourceTree = "<group>"; };
 		B63E18C218E618160006BD3E /* TaggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggerTests.swift; sourceTree = "<group>"; };
 		B67005771807D79500CFF860 /* Parsimmon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parsimmon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 				459B014A1A954B98000859A1 /* NaiveBayesClassifierTests.swift */,
 				B6139F6B1944318F00FC6CAA /* ParsimmonTests-Bridging-Header.h */,
 				B63E18BE18E618160006BD3E /* ParsimmonTests-Info.plist */,
-				B63E18C018E618160006BD3E /* ParsimmonDecisionTreeTests.swift */,
+				B63E18C018E618160006BD3E /* DecisionTreeTests.swift */,
 				B63E18C218E618160006BD3E /* TaggerTests.swift */,
 				B6139F6E194433BA00FC6CAA /* TokenizerTests.swift */,
 			);
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				459B01481A9534B0000859A1 /* NaiveBayesClassifier.swift */,
-				42FA0A8C1AD213C4006F7B70 /* ParsimmonDecisionTree.swift */,
+				42FA0A8C1AD213C4006F7B70 /* DecisionTree.swift */,
 			);
 			name = Classifiers;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 				4537FBFE1A97E2F6001634FD /* TaggerViewController.swift in Sources */,
 				4537FC001A97E6E0001634FD /* ClassifierViewController.swift in Sources */,
 				452C8BB41A96E58F003D7441 /* Lemmatizer.swift in Sources */,
-				42FA0A8D1AD213C4006F7B70 /* ParsimmonDecisionTree.swift in Sources */,
+				42FA0A8D1AD213C4006F7B70 /* DecisionTree.swift in Sources */,
 				452C8BB21A96E589003D7441 /* Tagger.swift in Sources */,
 				B670058B1807D79500CFF860 /* AppDelegate.m in Sources */,
 				459B014D1A955E3D000859A1 /* Functions.swift in Sources */,
@@ -348,7 +348,7 @@
 				452C8BB91A97B94E003D7441 /* TaggedToken.swift in Sources */,
 				452631161A97CCDC00F51473 /* TaggerTests.swift in Sources */,
 				45B4EC5B1A97C65900B7B038 /* Tagger.swift in Sources */,
-				B63E18CB18E6196A0006BD3E /* ParsimmonDecisionTreeTests.swift in Sources */,
+				B63E18CB18E6196A0006BD3E /* DecisionTreeTests.swift in Sources */,
 				452C8BAB1A96BCBB003D7441 /* Seed.swift in Sources */,
 				452631151A97CCD900F51473 /* LemmatizerTests.swift in Sources */,
 				452C8BAA1A96BC81003D7441 /* Tokenizer.swift in Sources */,

@@ -1,4 +1,4 @@
-//  ParsimmonDecisionTree.swift
+//  DecisionTree.swift
 //
 // Copyright (c) 2015 Ayaka Nonaka
 //
@@ -50,7 +50,7 @@ public class Node<T> {
     }
 }
 
-public class ParsimmonDecisionTree {
+public class DecisionTree {
     public var root: Node<Bit>?
     public var maxDepth: Int = 5
     private let featureNames: (String, String)

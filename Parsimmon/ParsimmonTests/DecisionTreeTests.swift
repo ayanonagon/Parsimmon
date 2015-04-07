@@ -23,16 +23,16 @@
 import XCTest
 import Parsimmon
 
-class ParsimmonDecisionTreeTests : XCTestCase {
+class DecisionTreeTests : XCTestCase {
     func testXOR() {
-        let decisionTree = ParsimmonDecisionTree(featureNames: ("A", "B"), classificationNames: ("zero", "one"))
-        
+        let decisionTree = DecisionTree(featureNames: ("A", "B"), classificationNames: ("zero", "one"))
+
         decisionTree.addSample(Datum(featureValues: (Bit.One, Bit.One), classification: Bit.Zero))
         decisionTree.addSample(Datum(featureValues: (Bit.Zero, Bit.Zero), classification: Bit.Zero))
         decisionTree.addSample(Datum(featureValues: (Bit.One, Bit.Zero), classification: Bit.One))
         decisionTree.addSample(Datum(featureValues: (Bit.Zero, Bit.One), classification: Bit.One))
         decisionTree.build()
-        
+
         XCTAssertEqual(0, decisionTree.root!.leftChild!.leftChild!.value.rawValue, "Failed 0 XOR 0 case.")
         XCTAssertEqual(1, decisionTree.root!.leftChild!.rightChild!.value.rawValue, "Failed 0 XOR 1 case.")
         XCTAssertEqual(1, decisionTree.root!.rightChild!.leftChild!.value.rawValue, "Failed 1 XOR 0 case.")
