@@ -25,31 +25,29 @@ import Parsimmon
 
 class ParsimmonDecisionTreeTests : XCTestCase {
     func testXOR() {
-        let decisionTree = ParsimmonDecisionTree()
-
-        decisionTree.setFeatureNames(["A", "B"])
-        decisionTree.setClassificationNames(["zero", "one"])
-        decisionTree.addSample([1, 1], forClassification: 0)
-        decisionTree.addSample([0, 0], forClassification: 0)
-        decisionTree.addSample([1, 0], forClassification: 1)
-        decisionTree.addSample([0, 1], forClassification: 1)
+        let decisionTree = ParsimmonDecisionTree(featureNames: ("A", "B"), classificationNames: ("zero", "one"))
+        
+        decisionTree.addSample(Datum(featureValues: (Bit.One, Bit.One), classification: Bit.Zero))
+        decisionTree.addSample(Datum(featureValues: (Bit.Zero, Bit.Zero), classification: Bit.Zero))
+        decisionTree.addSample(Datum(featureValues: (Bit.One, Bit.Zero), classification: Bit.One))
+        decisionTree.addSample(Datum(featureValues: (Bit.Zero, Bit.One), classification: Bit.One))
         decisionTree.build()
-
-        XCTAssertEqual(0, decisionTree.root.leftChild.leftChild.value, "Failed 0 XOR 0 case.");
-        XCTAssertEqual(1, decisionTree.root.leftChild.rightChild.value, "Failed 0 XOR 1 case.");
-        XCTAssertEqual(1, decisionTree.root.rightChild.leftChild.value, "Failed 1 XOR 0 case.");
-        XCTAssertEqual(0, decisionTree.root.rightChild.rightChild.value, "Failed 1 XOR 1 case.");
-
+        
+        XCTAssertEqual(0, decisionTree.root!.leftChild!.leftChild!.value.rawValue, "Failed 0 XOR 0 case.")
+        XCTAssertEqual(1, decisionTree.root!.leftChild!.rightChild!.value.rawValue, "Failed 0 XOR 1 case.")
+        XCTAssertEqual(1, decisionTree.root!.rightChild!.leftChild!.value.rawValue, "Failed 1 XOR 0 case.")
+        XCTAssertEqual(0, decisionTree.root!.rightChild!.rightChild!.value.rawValue, "Failed 1 XOR 1 case.")
+        
         let zeroZero = decisionTree.classify([0, 0])
-        XCTAssertEqual("zero", zeroZero, "Failed 0 XOR 0 case classification.");
-
+        XCTAssertEqual("zero", zeroZero!, "Failed 0 XOR 0 case classification.")
+        
         let zeroOne = decisionTree.classify([0, 1])
-        XCTAssertEqual("one", zeroOne, "Failed 0 XOR 1 case classification.");
-
+        XCTAssertEqual("one", zeroOne!, "Failed 0 XOR 1 case classification.")
+        
         let oneZero = decisionTree.classify([1, 0])
-        XCTAssertEqual("one", oneZero, "Failed 1 XOR 0 case classification.");
-
+        XCTAssertEqual("one", oneZero!, "Failed 1 XOR 0 case classification.")
+        
         let oneOne = decisionTree.classify([1, 1])
-        XCTAssertEqual("zero", oneOne, "Failed 1 XOR 1 case classification.");
+        XCTAssertEqual("zero", oneOne!, "Failed 1 XOR 1 case classification.")
     }
 }
