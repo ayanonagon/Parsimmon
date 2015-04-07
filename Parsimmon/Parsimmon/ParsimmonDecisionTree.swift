@@ -40,9 +40,9 @@ public struct Datum {
     }
 }
 
-public class ParsimmonNode<T> {
-    public var leftChild: ParsimmonNode<T>?
-    public var rightChild: ParsimmonNode<T>?
+public class Node<T> {
+    public var leftChild: Node<T>?
+    public var rightChild: Node<T>?
     public var value: T
     
     init(value: T) {
@@ -51,7 +51,7 @@ public class ParsimmonNode<T> {
 }
 
 public class ParsimmonDecisionTree {
-    public var root: ParsimmonNode<Bit>?
+    public var root: Node<Bit>?
     public var maxDepth: Int = 5
     private let featureNames: (String, String)
     private let classificationNames: (String, String)
@@ -91,8 +91,8 @@ public class ParsimmonDecisionTree {
         return nil
     }
     
-    private func decisionTree(data: [Datum], remainingFeatures: [Bit], maxDepth: Int) -> ParsimmonNode<Bit> {
-        let tree = ParsimmonNode<Bit>(value: Bit.Zero)
+    private func decisionTree(data: [Datum], remainingFeatures: [Bit], maxDepth: Int) -> Node<Bit> {
+        let tree = Node<Bit>(value: Bit.Zero)
         if data.first == nil {
             return tree
         }
