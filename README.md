@@ -35,12 +35,12 @@ To start using Parsimmon:
 ```
 
 
-###Tokenizer
+### Tokenizer
 
-```obj-c
-ParsimmonTokenizer *tokenizer = [[ParsimmonTokenizer alloc] init];
-NSArray *tokens = [tokenizer tokenizeWordsInText:@"The quick brown fox jumps over the lazy dog"];
-NSLog(@"%@", tokens);
+```swift
+let tokenizer = Tokenizer()
+let tokens = tokenizer.tokenize("The quick brown fox jumps over the lazy dog")
+println(tokens)
 ```
 
 ```
@@ -60,10 +60,10 @@ dog
 
 ### Tagger
 
-```obj-c
-ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
-NSArray *taggedTokens = [tagger tagWordsInText:@"The quick brown fox jumps over the lazy dog"];
-NSLog(@"%@", taggedTokens);
+```swift
+let tagger = Tagger()
+let taggedTokens = tagger.tagWordsInText("The quick brown fox jumps over the lazy dog")
+println(taggedTokens)
 ```
 
 ```
@@ -83,10 +83,10 @@ NSLog(@"%@", taggedTokens);
 
 ### Lemmatizer
 
-```obj-c
-ParsimmonLemmatizer *lemmatizer = [[ParsimmonLemmatizer alloc] init];
-NSArray *lemmatizedTokens = [lemmatizer lemmatizeWordsInText:@"Diane, I'm holding in my hand a small box of chocolate bunnies."];
-NSLog(@"%@", lemmatizedTokens);
+```swift
+let lemmatizer = Lemmatizer()
+let lemmatizedTokens = lemmatizer.lemmatizeWordsInText("Diane, I'm holding in my hand a small box of chocolate bunnies.")
+println(lemmatizedTokens)
 ```
 
 ```
@@ -109,25 +109,26 @@ bunny
 
 ### Naive Bayes Classifier
 
-```obj-c
-ParsimmonNaiveBayesClassifier *classifier = [[ParsimmonNaiveBayesClassifier alloc] init];
+```swift
+let classifier = NaiveBayesClassifier()
 
 // Train the classifier with some ham examples.
-[classifier trainWithText:@"nom nom ham" category:@"ham"];
-[classifier trainWithText:@"make sure to get the ham" category:@"ham"];
-[classifier trainWithText:@"please put the eggs in the fridge" category:@"ham"];
+classifier.trainWithText("nom nom ham", category: "ham")
+classifier.trainWithText("make sure to get the ham", category: "ham")
+classifier.trainWithText("please put the eggs in the fridge", category: "ham")
 
 // Train the classifier with some spam examples.
-[classifier trainWithText:@"spammy spam spam" category:@"spam"];
-[classifier trainWithText:@"what does the fox say?" category:@"spam"];
-[classifier trainWithText:@"and fish go blub" category:@"spam"];
+classifier.trainWithText("spammy spam spam", category: "spam")
+classifier.trainWithText("what does the fox say?", category: "spam")
+classifier.trainWithText("and fish go blub", category: "spam")
 
 // Classify some new text. Is it ham or spam?
 // In practice, you'd want to train with more examples first.
-NSString *firstExample = @"use the eggs in the fridge.";
-NSString *secondExample = @"what does the fish say?";
-NSLog(@"'%@' => %@", firstExample, [classifier classify:firstExample]);
-NSLog(@"'%@' => %@", secondExample, [classifier classify:secondExample]);
+let firstExample = "use the eggs in the fridge."
+let secondExample = "what does the fish say?"
+
+println("\(firstExample) => \(classifier.classify(firstExample))")
+println("\(secondExample) => \(classifier.classify(secondExample))")
 ```
 
 ```
