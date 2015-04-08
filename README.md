@@ -1,6 +1,9 @@
 Parsimmon
 =========
 
+[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
+[![Coverage Status](https://coveralls.io/repos/ayanonagon/Parsimmon/badge.svg?branch=master)](https://coveralls.io/r/ayanonagon/Parsimmon?branch=master)
+
 Parsimmon is a wee Objective-C linguistics toolkit for iOS.
 
 
@@ -20,7 +23,7 @@ Installation
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Just add the following line to your Podfile:
 
 ```ruby
-pod 'Parsimmon'
+pod 'Parsimmon', '~> 0.3'
 ```
 
 Examples
@@ -28,7 +31,7 @@ Examples
 
 To start using Parsimmon:
 ```obj-c
-#import "Parsimmon.h"
+#import <Parsimmon/Parsimmon.h>
 ```
 
 
@@ -55,7 +58,7 @@ dog
 ```
 
 
-###Tagger
+### Tagger
 
 ```obj-c
 ParsimmonTagger *tagger = [[ParsimmonTagger alloc] init];
@@ -87,6 +90,7 @@ NSLog(@"%@", lemmatizedTokens);
 ```
 
 ```
+(
 diane,
 i,
 hold,
@@ -131,14 +135,14 @@ NSLog(@"'%@' => %@", secondExample, [classifier classify:secondExample]);
 'what does the fish say?' => spam
 ```
 
-
-Version
-----
-
-0.3.0
-
-
 License
 ----
 
 MIT
+
+Contributing
+----
+
+We’d love to see your ideas for improving this library! The best way to contribute is by submitting a pull request. We’ll do our best to respond to your patch as soon as possible. You can also submit a [new GitHub issue](https://github.com/ayanonagon/parsimmon/issues/new) if you find bugs or have questions. :octocat:
+
+Please make sure to follow our general coding style and add test coverage for new features!

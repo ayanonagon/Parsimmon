@@ -1,0 +1,14 @@
+PODS:
+  - Parsimmon (0.3.4)
+
+DEPENDENCIES:
+  - Parsimmon (from `.`)
+
+EXTERNAL SOURCES:
+  Parsimmon:
+    :path: .
+
+SPEC CHECKSUMS:
+  Parsimmon: 7d8491f7e2c91b837424ac8fc3ebaeacd9f06c7f
+
+COCOAPODS: 0.36.3

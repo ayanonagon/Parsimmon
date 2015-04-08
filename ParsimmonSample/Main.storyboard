@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dv8-Xo-2tx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="t3D-jb-iKN">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="dv8-Xo-2tx" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5f9-cV-ioZ">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="lYY-rS-2gi"/>
+                        <segue destination="kZO-iL-zml" kind="relationship" relationship="viewControllers" id="KEf-kl-epU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5f-fB-G7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-676" y="-52"/>
+        </scene>
+        <!--Naive Bayes-->
+        <scene sceneID="oyk-B0-XjC">
+            <objects>
+                <viewController id="kZO-iL-zml" customClass="ClassifierViewController" customModule="ParsimmonSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FaN-XK-fhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Xb-e2-xyG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6dt-P7-KX9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-rv-bfg">
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uc-yz-yYy">
+                                <rect key="frame" x="20" y="96" width="280" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aAd-Ln-90l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbY-ny-9VI">
+                                <rect key="frame" x="93" y="58" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="qb4-dg-veH"/>
+                                </constraints>
+                                <state key="normal" title="Spam or Ham?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parsimmonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZII-hu-FwW"/>
+                                    <action selector="spamOrHamAction:" destination="kZO-iL-zml" eventType="touchUpInside" id="yo0-T3-dzh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="MbY-ny-9VI" secondAttribute="centerX" id="3a7-4P-BtJ"/>
+                            <constraint firstItem="Cbs-rv-bfg" firstAttribute="leading" secondItem="6dt-P7-KX9" secondAttribute="leadingMargin" constant="4" id="4q0-pd-MO6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cbs-rv-bfg" secondAttribute="trailing" constant="4" id="CXX-xO-OS9"/>
+                            <constraint firstItem="6uc-yz-yYy" firstAttribute="top" secondItem="MbY-ny-9VI" secondAttribute="bottom" constant="8" id="KEF-J4-x3t"/>
+                            <constraint firstItem="MbY-ny-9VI" firstAttribute="top" secondItem="Cbs-rv-bfg" secondAttribute="bottom" constant="8" id="q5e-fz-9Vl"/>
+                            <constraint firstItem="6uc-yz-yYy" firstAttribute="leading" secondItem="6dt-P7-KX9" secondAttribute="leadingMargin" constant="4" id="rlg-8t-Ar3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6uc-yz-yYy" secondAttribute="trailing" constant="4" id="sd8-zx-Q3m"/>
+                            <constraint firstItem="Cbs-rv-bfg" firstAttribute="top" secondItem="FaN-XK-fhc" secondAttribute="bottom" id="vuf-9R-YqK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Naive Bayes" id="O0M-RU-xs9"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="Cbs-rv-bfg" id="ecc-18-kze"/>
+                        <outlet property="resultLabel" destination="6uc-yz-yYy" id="lB8-66-txb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nN7-dV-UTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="284"/>
+        </scene>
+        <!--Tagger-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="TaggerViewController" customModule="ParsimmonSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qHp-tg-JiL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qet-rt-xAI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ducks say quack and fish go blub." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-MD-Hi4">
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lF0-1I-8uz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-b3-SFq">
+                                <rect key="frame" x="20" y="96" width="280" height="203"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="yme-Aa-pnn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-Ll-Had">
+                                <rect key="frame" x="93" y="58" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="UPf-q5-ibP"/>
+                                    <constraint firstAttribute="height" constant="30" id="jrM-yx-7Mp"/>
+                                </constraints>
+                                <state key="normal" title="Parsimmon!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parsimmonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sWr-Pw-pmO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ukM-MD-Hi4" firstAttribute="top" secondItem="qHp-tg-JiL" secondAttribute="bottom" id="AVE-cG-UjF"/>
+                            <constraint firstAttribute="centerX" secondItem="yGJ-Ll-Had" secondAttribute="centerX" id="Dlf-l7-G0B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ukM-MD-Hi4" secondAttribute="trailing" constant="4" id="EPI-tC-Oof"/>
+                            <constraint firstItem="yGJ-Ll-Had" firstAttribute="top" secondItem="ukM-MD-Hi4" secondAttribute="bottom" constant="8" id="KJx-Vy-t0g"/>
+                            <constraint firstItem="SZw-b3-SFq" firstAttribute="top" secondItem="yGJ-Ll-Had" secondAttribute="bottom" constant="8" id="TEy-EJ-ata"/>
+                            <constraint firstItem="ukM-MD-Hi4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="d3c-XI-i6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SZw-b3-SFq" secondAttribute="trailing" constant="4" id="dfE-ri-GK2"/>
+                            <constraint firstItem="SZw-b3-SFq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="wrE-qO-f92"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tagger" id="HiV-2T-TZb"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="ukM-MD-Hi4" id="QWH-V1-Inj"/>
+                        <outlet property="outputTextview" destination="SZw-b3-SFq" id="7cN-0l-Qjp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="-385"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
