@@ -1,14 +1,13 @@
-Parsimmon
-=========
+# Parsimmon
 
 [![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
 [![Coverage Status](https://coveralls.io/repos/ayanonagon/Parsimmon/badge.svg?branch=master)](https://coveralls.io/r/ayanonagon/Parsimmon?branch=master)
 
-Parsimmon is a wee Objective-C linguistics toolkit for iOS.
+Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
 
-Toolkit
-----
+## Toolkit
+
 Currently available tools:
 - Tokenizer
 - Tagger
@@ -17,8 +16,7 @@ Currently available tools:
 - Decision Tree (alpha)
 
 
-Installation
-----
+## Installation
 
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Just add the following line to your Podfile:
 
@@ -26,12 +24,12 @@ The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Jus
 pod 'Parsimmon', '~> 0.3'
 ```
 
-Examples
-----
+
+## Examples
 
 To start using Parsimmon:
-```obj-c
-#import <Parsimmon/Parsimmon.h>
+```swift
+import Parsimmon
 ```
 
 
