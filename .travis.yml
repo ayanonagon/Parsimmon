@@ -1,7 +1,6 @@
 language: objective-c
 before_install:
 - gem i cocoapods --no-ri --no-rdoc
-- brew uninstall xctool; brew install xctool --HEAD;
-xcode_project: Parsimmon/Parsimmon.xcodeproj
-xcode_scheme: Parsimmon
-xcode_sdk: iphonesimulator
+- gem i xcpretty  --no-ri --no-rdoc
+script:
+- xcodebuild -workspace ParsimmonSample.xcworkspace -scheme ParsimmonSample -sdk iphonesimulator test | xcpretty -c
