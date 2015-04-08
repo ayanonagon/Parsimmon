@@ -1,5 +1,5 @@
 PODS:
-  - Parsimmon (0.3.4)
+  - Parsimmon (0.4.0)
 
 DEPENDENCIES:
   - Parsimmon (from `.`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  Parsimmon: 7d8491f7e2c91b837424ac8fc3ebaeacd9f06c7f
+  Parsimmon: 9fe1f416f5d0c63c28ba14bd4f1bbbfec458a7d3
 
 COCOAPODS: 0.36.3

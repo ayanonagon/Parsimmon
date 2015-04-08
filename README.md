@@ -1,9 +1,10 @@
 # Parsimmon
 
 [![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
-[![Coverage Status](https://coveralls.io/repos/ayanonagon/Parsimmon/badge.svg?branch=master)](https://coveralls.io/r/ayanonagon/Parsimmon?branch=master)
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
+
+We currently support Swift 1.2. If you are looking for Objective-C, please use version 0.3.4 or earlier.
 
 
 ## Toolkit
@@ -18,10 +19,10 @@ Currently available tools:
 
 ## Installation
 
-The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Just add the following line to your Podfile:
+The easiest way to get started is to use [CocoaPods](http://cocoapods.org/) version 0.36 or higher. Just add the following line to your Podfile:
 
 ```ruby
-pod 'Parsimmon', '~> 0.3'
+pod 'Parsimmon', '~> 0.4.0'
 ```
 
 
