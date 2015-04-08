@@ -73,9 +73,10 @@ public class NaiveBayesClassifier {
     // MARK: - Training
 
     /**
-     Trains the classifier with text and its category.
-     @param text The text
-     @param category The category of the text
+        Trains the classifier with text and its category.
+
+        @param text The text
+        @param category The category of the text
     */
     public func trainWithText(text: String, category: Category) {
         let tokens = tokenizer.tokenize(text)
@@ -83,10 +84,11 @@ public class NaiveBayesClassifier {
     }
 
     /**
-     Trains the classifier with tokenized text and its category.
-     This is useful if you wish to use your own tokenization method.
-     @param tokens The tokenized text
-     @param category The category of the text
+        Trains the classifier with tokenized text and its category.
+        This is useful if you wish to use your own tokenization method.
+
+        @param tokens The tokenized text
+        @param category The category of the text
     */
     public func trainWithTokens(tokens: [Word], category: Category) {
         let words = Set(tokens)
@@ -100,9 +102,10 @@ public class NaiveBayesClassifier {
     // MARK: - Classifying
 
     /**
-     Classifies the given text based on its training data.
-     @param text The text to classify
-     @return The category classification
+        Classifies the given text based on its training data.
+
+        @param text The text to classify
+        @return The category classification
     */
     public func classify(text: String) -> Category? {
         let tokens = tokenizer.tokenize(text)
@@ -110,9 +113,10 @@ public class NaiveBayesClassifier {
     }
 
     /**
-     Classifies the given tokenized text based on its training data.
-     @param text The tokenized text to classify
-     @return The category classification if one was found, or nil if one wasn’t
+        Classifies the given tokenized text based on its training data.
+
+        @param text The tokenized text to classify
+        @return The category classification if one was found, or nil if one wasn’t
     */
     public func classifyTokens(tokens: [Word]) -> Category? {
         // Compute argmax_cat [log(P(C=cat)) + sum_token(log(P(W=token|C=cat)))]

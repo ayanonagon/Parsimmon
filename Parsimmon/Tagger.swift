@@ -33,6 +33,13 @@ public struct Tagger: Analyzer {
         self.seed = seed
     }
 
+    /**
+        Returns the tagged tokens for the input text using the specified linguistic tagger options.
+
+        @param text Text to tag
+        @param options Linguistic tagger options
+        @return The tagged tokens
+    */
     public func tagWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [TaggedToken] {
         return analyze(self, text, options).map { (token, tag) in
             TaggedToken(token: token, tag: tag)

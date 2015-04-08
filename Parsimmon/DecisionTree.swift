@@ -61,11 +61,19 @@ public class DecisionTree {
         self.featureNames = featureNames
         self.classificationNames = classificationNames
     }
-    
+
+    /**
+        Adds a data point to the decision tree.
+
+        @param datum A data point
+    */
     public func addSample(datum: Datum) {
         self.data.append(datum)
     }
-    
+
+    /**
+        Builds the decision tree based on the data it has.
+    */
     public func build() {
         let features = [ Bit.Zero, Bit.One ]
         self.root = self.decisionTree(self.data, remainingFeatures: features, maxDepth: self.maxDepth)

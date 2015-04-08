@@ -33,6 +33,13 @@ public struct Lemmatizer: Analyzer {
         self.seed = seed
     }
 
+    /**
+        Returns the lemmatized tokens for the input text using the specified linguistic tagger options.
+
+        @param text Text to lemmatized
+        @param options Linguistic tagger options
+        @return The lemmatized tokens
+    */
     public func lemmatizeWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
         return analyze(self, text, options).map { (token, lemma) in lemma }
     }
