@@ -37,6 +37,7 @@ internal func analyze(analyzer: Analyzer, text: String, options: NSLinguisticTag
     let tagger = analyzer.seed.linguisticTaggerWithOptions(options)
 
     tagger.string = text
+    tagger.setOrthography(analyzer.seed.orthography, range: range)
     tagger.enumerateTagsInRange(range, scheme: analyzer.scheme, options: options) { (tag: String?, tokenRange, range, stop) in
         if let tag = tag {
             let token = (text as NSString).substringWithRange(tokenRange)
