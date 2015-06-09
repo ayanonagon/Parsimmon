@@ -41,6 +41,6 @@ public struct Lemmatizer: Analyzer {
         @return The lemmatized tokens
     */
     public func lemmatizeWordsInText(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
-        return analyze(self, text, options).map { (token, lemma) in lemma }
+        return analyze(self, text: text, options: options).map { (token, lemma) in lemma }
     }
 }
