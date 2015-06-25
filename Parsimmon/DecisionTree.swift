@@ -83,7 +83,7 @@ public class DecisionTree {
         var node = self.root
         while (node != nil) {
             let unwrappedNode = node!
-            if let leftChild = unwrappedNode.leftChild {
+            if let _ = unwrappedNode.leftChild {
                 let pathToTake = sample[unwrappedNode.value.rawValue]
                 if pathToTake == 0 {
                     node = unwrappedNode.leftChild
@@ -143,7 +143,7 @@ public class DecisionTree {
             }
             let splitData = self.splitData(data, onFeature: bestFeature)
             var newRemainingFeatures = remainingFeatures
-            if let bestFeatureIndex = find(newRemainingFeatures, bestFeature) {
+            if let bestFeatureIndex = newRemainingFeatures.indexOf(bestFeature) {
                 newRemainingFeatures.removeAtIndex(bestFeatureIndex)
                 tree.leftChild = self.decisionTree(splitData.0, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)
                 tree.rightChild = self.decisionTree(splitData.1, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)

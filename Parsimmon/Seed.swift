@@ -26,7 +26,7 @@ public struct Seed {
     typealias Language = String
 
     private let language: Language = "en"
-    let linguisticTaggerOptions: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .OmitOther
+    let linguisticTaggerOptions: NSLinguisticTaggerOptions = [.OmitWhitespace, .OmitPunctuation, .OmitOther]
     let orthography = NSOrthography(dominantScript: "Latn", languageMap: ["Latn" : ["en"]])
 
     func linguisticTaggerWithOptions(options: NSLinguisticTaggerOptions) -> NSLinguisticTagger {

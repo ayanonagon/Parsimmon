@@ -6,9 +6,9 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Parsimmon:
-    :path: .
+    :path: "."
 
 SPEC CHECKSUMS:
   Parsimmon: 9fe1f416f5d0c63c28ba14bd4f1bbbfec458a7d3
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.37.2
