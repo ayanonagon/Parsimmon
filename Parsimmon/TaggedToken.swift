@@ -25,14 +25,14 @@ import Foundation
 public struct TaggedToken: Equatable {
     let token: String
     let tag: String
-
+    
     public init(token: String, tag: String) {
         self.token = token
         self.tag = tag
     }
 }
 
-extension TaggedToken: Printable {
+extension TaggedToken: CustomStringConvertible {
     public var description: String {
         return "('\(token)' \(tag))"
     }

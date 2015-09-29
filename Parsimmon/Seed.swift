@@ -24,11 +24,11 @@ import Foundation
 
 public struct Seed {
     typealias Language = String
-
+    
     private let language: Language = "en"
-    let linguisticTaggerOptions: NSLinguisticTaggerOptions = .OmitWhitespace | .OmitPunctuation | .OmitOther
+    let linguisticTaggerOptions: NSLinguisticTaggerOptions = NSLinguisticTaggerOptions.OmitWhitespace.union(NSLinguisticTaggerOptions.OmitPunctuation).union(NSLinguisticTaggerOptions.OmitOther)
     let orthography = NSOrthography(dominantScript: "Latn", languageMap: ["Latn" : ["en"]])
-
+    
     func linguisticTaggerWithOptions(options: NSLinguisticTaggerOptions) -> NSLinguisticTagger {
         let tagSchemes = NSLinguisticTagger.availableTagSchemesForLanguage(self.language)
         return NSLinguisticTagger(tagSchemes: tagSchemes, options: Int(options.rawValue))

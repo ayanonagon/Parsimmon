@@ -24,23 +24,23 @@ import Foundation
 
 public struct Tokenizer: Analyzer {
     let seed: Seed
-
+    
     var scheme: String {
         return NSLinguisticTagSchemeNameTypeOrLexicalClass
     }
-
+    
     public init(seed: Seed = Seed()) {
         self.seed = seed
     }
-
+    
     /**
-        Returns the tokens for the input text using the specified linguistic tagger options.
-        @param text Text to tokenize
-        @param options Linguistic tagger options
-
-        @return The tokens
+    Returns the tokens for the input text using the specified linguistic tagger options.
+    @param text Text to tokenize
+    @param options Linguistic tagger options
+    
+    @return The tokens
     */
     public func tokenize(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
-        return analyze(self, text, options).map { (token, tag) in token }
+        return analyze(self, text: text, options: options).map { (token, tag) in token }
     }
 }
