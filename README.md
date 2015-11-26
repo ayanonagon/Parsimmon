@@ -39,7 +39,7 @@ import Parsimmon
 ```swift
 let tokenizer = Tokenizer()
 let tokens = tokenizer.tokenize("The quick brown fox jumps over the lazy dog")
-println(tokens)
+print(tokens)
 ```
 
 ```
@@ -62,7 +62,7 @@ dog
 ```swift
 let tagger = Tagger()
 let taggedTokens = tagger.tagWordsInText("The quick brown fox jumps over the lazy dog")
-println(taggedTokens)
+print(taggedTokens)
 ```
 
 ```
@@ -85,7 +85,7 @@ println(taggedTokens)
 ```swift
 let lemmatizer = Lemmatizer()
 let lemmatizedTokens = lemmatizer.lemmatizeWordsInText("Diane, I'm holding in my hand a small box of chocolate bunnies.")
-println(lemmatizedTokens)
+print(lemmatizedTokens)
 ```
 
 ```
@@ -126,8 +126,8 @@ classifier.trainWithText("and fish go blub", category: "spam")
 let firstExample = "use the eggs in the fridge."
 let secondExample = "what does the fish say?"
 
-println("\(firstExample) => \(classifier.classify(firstExample))")
-println("\(secondExample) => \(classifier.classify(secondExample))")
+print("\(firstExample) => \(classifier.classify(firstExample))")
+print("\(secondExample) => \(classifier.classify(secondExample))")
 ```
 
 ```
