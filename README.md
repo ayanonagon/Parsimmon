@@ -1,6 +1,6 @@
 # Parsimmon
 
-[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon) (:warning: The build is going to be :apple: until Travis supports the latest Xcode. Promise the tests pass locally!)
+[![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
