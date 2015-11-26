@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # pod customization goes in here
   s.name     = 'Parsimmon'
-  s.version  = '0.4.0'
+  s.version  = '0.5.0'
   s.platform = :ios, '8.0'
   s.ios.deployment_target = '8.0'
   s.license  = { :type => 'MIT' }
