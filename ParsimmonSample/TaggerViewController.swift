@@ -35,7 +35,8 @@ class TaggerViewController: UIViewController {
     }
 
     @IBAction private func parsimmonAction(sender: UIButton) {
-        let taggedTokens = tagger.tagWordsInText(inputTextField.text)
+        guard let text = inputTextField.text else { return }
+        let taggedTokens = tagger.tagWordsInText(text)
         outputTextview.text = "\(taggedTokens)"
         dismissKeyboard()
     }

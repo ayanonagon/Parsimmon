@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D47ED5DE340DDD01EBB99E1 /* Pods_ParsimmonSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA8C11825D41385B73DB /* Pods_ParsimmonSample.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		DFE6B5C127F2F4B301DE3D61 /* Pods_ParsimmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC471E95CCAF79111B1F28DC /* Pods_ParsimmonTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0D47ED5DE340DDD01EBB99E1 /* Pods_ParsimmonSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA8C11825D41385B73DB /* Pods_ParsimmonSample.framework */; };
+		DFE6B5C127F2F4B301DE3D61 /* Pods_ParsimmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC471E95CCAF79111B1F28DC /* Pods_ParsimmonTests.framework */; };
 		E0DA52F51AD3A94000F3A28F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA52F41AD3A94000F3A28F /* AppDelegate.swift */; };
 		E0DA52FE1AD3A94000F3A28F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DA52FD1AD3A94000F3A28F /* Images.xcassets */; };
 		E0DA53011AD3A94000F3A28F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DA52FF1AD3A94000F3A28F /* LaunchScreen.xib */; };
@@ -217,6 +217,7 @@
 		E0DA52E71AD3A94000F3A28F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Ayaka Nonaka";
 				TargetAttributes = {

@@ -32,7 +32,7 @@ protocol Analyzer {
 internal func analyze(analyzer: Analyzer, text: String, options: NSLinguisticTaggerOptions?) -> [Pair] {
     var pairs: [Pair] = []
 
-    let range = NSRange(location: 0, length: count(text))
+    let range = NSRange(location: 0, length: text.characters.count)
     let options = options ?? analyzer.seed.linguisticTaggerOptions
     let tagger = analyzer.seed.linguisticTaggerWithOptions(options)
 

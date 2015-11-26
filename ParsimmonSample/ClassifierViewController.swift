@@ -31,7 +31,8 @@ class ClassifierViewController: UIViewController {
     private lazy var classifier = NaiveBayesClassifier()
 
     @IBAction private func spamOrHamAction(sender: UIButton) {
-        let category = classifier.classify(messageTextField.text)
+        guard let text = messageTextField.text else { return }
+        let category = classifier.classify(text)
         resultLabel.text = category
     }
 
