@@ -4,7 +4,7 @@
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
-We currently support Swift 1.2. If you are looking for Objective-C, please use version 0.3.4 or earlier.
+We currently support Swift 2.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
 
 
 ## Toolkit
@@ -22,7 +22,7 @@ Currently available tools:
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/) version 0.36 or higher. Just add the following line to your Podfile:
 
 ```ruby
-pod 'Parsimmon', '~> 0.4.0'
+pod 'Parsimmon', '~> 0.5.0'
 ```
 
 
