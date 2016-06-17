@@ -31,7 +31,7 @@ class LemmatizerTests : XCTestCase {
             "i",
             "hold",
             "in",
-            "my",
+            "i",
             "hand",
             "a",
             "small",
