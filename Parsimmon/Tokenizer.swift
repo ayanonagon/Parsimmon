@@ -40,7 +40,7 @@ public struct Tokenizer: Analyzer {
 
         @return The tokens
     */
-    public func tokenize(text: String, options: NSLinguisticTaggerOptions? = nil) -> [String] {
+    public func tokenize(_ text: String, options: NSLinguisticTagger.Options? = nil) -> [String] {
         return analyze(self, text: text, options: options).map { (token, tag) in token }
     }
 }
