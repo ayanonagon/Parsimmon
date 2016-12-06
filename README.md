@@ -1,10 +1,10 @@
-# Parsimmon
+# Parsimmon Swift 3
 
 [![Build Status](https://travis-ci.org/ayanonagon/Parsimmon.svg?branch=master)](https://travis-ci.org/ayanonagon/Parsimmon)
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
-We currently support Swift 2.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
+We currently support Swift 3.0.1 If you are looking for Objective-C, please use version 0.3.4 or earlier.
 
 
 ## Toolkit
