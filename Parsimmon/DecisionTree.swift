@@ -23,16 +23,16 @@
 import Foundation
 
 public struct Datum {
-    public let featureValues: (Bit, Bit)
-    public let classification: Bit
+    public let featureValues: (Int, Int)
+    public let classification: Int
     
-    public init(featureValues: (Bit, Bit), classification: Bit) {
+    public init(featureValues: (Int, Int), classification: Int) {
         self.featureValues = featureValues
         self.classification = classification
     }
     
-    public func featureValueAtPosition(position: Bit) -> Bit {
-        if position.rawValue == 0 {
+    public func featureValueAtPosition(position: Int) -> Int {
+        if position == 0 {
             return self.featureValues.0
         } else {
             return self.featureValues.1
@@ -51,7 +51,7 @@ public class Node<T> {
 }
 
 public class DecisionTree {
-    public var root: Node<Bit>?
+    public var root: Node<Int>?
     public var maxDepth: Int = 5
     private let featureNames: (String, String)
     private let classificationNames: (String, String)
@@ -75,8 +75,8 @@ public class DecisionTree {
         Builds the decision tree based on the data it has.
     */
     public func build() {
-        let features = [ Bit.Zero, Bit.One ]
-        self.root = self.decisionTree(self.data, remainingFeatures: features, maxDepth: self.maxDepth)
+        let features = [ 0, 1 ]
+        self.root = self.decisionTree(data: self.data, remainingFeatures: features, maxDepth: self.maxDepth)
     }
     
     public func classify(sample: [Int]) -> String? {
@@ -84,23 +84,23 @@ public class DecisionTree {
         while (node != nil) {
             let unwrappedNode = node!
             if let _ = unwrappedNode.leftChild {
-                let pathToTake = sample[unwrappedNode.value.rawValue]
+                let pathToTake = sample[unwrappedNode.value]
                 if pathToTake == 0 {
                     node = unwrappedNode.leftChild
                 } else {
                     node = unwrappedNode.rightChild
                 }
-            } else if unwrappedNode.value.rawValue == 0 {
+            } else if unwrappedNode.value == 0 {
                 return self.classificationNames.0
-            } else if unwrappedNode.value.rawValue == 1 {
+            } else if unwrappedNode.value == 1 {
                 return self.classificationNames.1
             }
         }
         return nil
     }
     
-    private func decisionTree(data: [Datum], remainingFeatures: [Bit], maxDepth: Int) -> Node<Bit> {
-        let tree = Node<Bit>(value: Bit.Zero)
+    private func decisionTree(data: [Datum], remainingFeatures: [Int], maxDepth: Int) -> Node<Int> {
+        let tree = Node<Int>(value: 0)
         if data.first == nil {
             return tree
         }
@@ -123,30 +123,30 @@ public class DecisionTree {
             if firstDatumFeatureValues != datumFeatureValues {
                 allSameFeatureValues = false
             }
-            count += datumClassification.rawValue
+            count += datumClassification
         }
         
         if allSameClassification == true {
             tree.value = firstDatum.classification
         } else if allSameFeatureValues == true || maxDepth == 0 {
-            tree.value = count > (data.count / 2) ? Bit.One : Bit.Zero
+            tree.value = count > (data.count / 2) ? 1 : 0
         } else {
             // Find the best feature to split on and recurse.
             var maxInformationGain = -Float.infinity
-            var bestFeature = Bit.Zero
+            var bestFeature = 0
             for feature in remainingFeatures {
-                let informationGain = self.informationGain(feature, data: data)
+                let informationGain = self.informationGain(feature: feature, data: data)
                 if informationGain >= maxInformationGain {
                     maxInformationGain = informationGain
                     bestFeature = feature
                 }
             }
-            let splitData = self.splitData(data, onFeature: bestFeature)
+            let splitData = self.splitData(data: data, onFeature: bestFeature)
             var newRemainingFeatures = remainingFeatures
-            if let bestFeatureIndex = newRemainingFeatures.indexOf(bestFeature) {
-                newRemainingFeatures.removeAtIndex(bestFeatureIndex)
-                tree.leftChild = self.decisionTree(splitData.0, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)
-                tree.rightChild = self.decisionTree(splitData.1, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)
+            if let bestFeatureIndex = newRemainingFeatures.index(of: bestFeature) {
+                newRemainingFeatures.remove(at: bestFeatureIndex)
+                tree.leftChild = self.decisionTree(data: splitData.0, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)
+                tree.rightChild = self.decisionTree(data: splitData.1, remainingFeatures: newRemainingFeatures, maxDepth: maxDepth - 1)
                 tree.value = bestFeature
             }
         }
@@ -154,11 +154,11 @@ public class DecisionTree {
         return tree
     }
     
-    private func splitData(data: [Datum], onFeature: Bit) -> ([Datum], [Datum]) {
+    private func splitData(data: [Datum], onFeature: Int) -> ([Datum], [Datum]) {
         var first = [Datum]()
         var second = [Datum]()
         for datum in data {
-            if datum.featureValueAtPosition(onFeature).rawValue == 0 {
+            if datum.featureValueAtPosition(position: onFeature) == 0 {
                 first.append(datum)
             } else {
                 second.append(datum)
@@ -169,55 +169,55 @@ public class DecisionTree {
     
     // MARK: Entropy
     
-    private func informationGain(feature: Bit, data: [Datum]) -> Float {
-        return self.HY(data) - self.HY(data, X: feature)
+    private func informationGain(feature: Int, data: [Datum]) -> Float {
+        return self.HY(data: data) - self.HY(data: data, X: feature)
     }
     
     private func HY(data: [Datum]) -> Float {
-        let pY0: Float = self.pY(data, Y: 0)
+        let pY0: Float = self.pY(data: data, Y: 0)
         let pY1 = 1.0 - pY0
         return -1.0 * (pY0 * log2(pY0) + pY1 * log2(pY1))
     }
     
-    private func HY(data: [Datum], X: Bit) -> Float {
+    private func HY(data: [Datum], X: Int) -> Float {
         var result = Float(0.0)
         for x in [0, 1] {
             for y in [0, 1] {
-                result -= self.pX(data, X: x, Y: y, feature: X) * log2(self.pY(data, Y: y, X: x, feature: X))
+                result -= self.pX(data: data, X: x, Y: y, feature: X) * log2(self.pY(data: data, Y: y, X: x, feature: X))
             }
         }
         return result
     }
-    
+
     private func pY(data: [Datum], Y: Int) -> Float {
         var count = 0
         for datum in data {
-            if datum.classification.rawValue == Y {
-                count++
+            if datum.classification == Y {
+                count += 1
             }
         }
         return Float(count) / Float(data.count)
     }
     
-    private func pY(data: [Datum], Y: Int, X: Int, feature: Bit) -> Float {
+    private func pY(data: [Datum], Y: Int, X: Int, feature: Int) -> Float {
         var yCount = 0
         var xCount = 0
         for datum in data {
-            if datum.featureValueAtPosition(feature).rawValue == X {
-                xCount++
-                if datum.classification.rawValue == Y {
-                    yCount++
+            if datum.featureValueAtPosition(position: feature) == X {
+                xCount += 1
+                if datum.classification == Y {
+                    yCount += 1
                 }
             }
         }
         return Float(yCount) / Float(xCount)
     }
     
-    private func pX(data: [Datum], X: Int, Y: Int, feature: Bit) -> Float {
+    private func pX(data: [Datum], X: Int, Y: Int, feature: Int) -> Float {
         var count = 0
         for datum in data {
-            if datum.classification.rawValue == Y && datum.featureValueAtPosition(feature).rawValue == X {
-                count++
+            if datum.classification == Y && datum.featureValueAtPosition(position: feature) == X {
+                count += 1
             }
         }
         return Float(count) / Float(data.count)

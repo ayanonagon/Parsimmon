@@ -25,18 +25,18 @@ import UIKit
 import Parsimmon
 
 class TaggerViewController: UIViewController {
-    @IBOutlet private weak var inputTextField: UITextField!
-    @IBOutlet private weak var outputTextview: UITextView!
+    @IBOutlet fileprivate weak var inputTextField: UITextField!
+    @IBOutlet fileprivate weak var outputTextview: UITextView!
     
-    private lazy var tagger = Tagger()
+    fileprivate lazy var tagger: Tagger = Tagger()
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
 
-    @IBAction private func parsimmonAction(sender: UIButton) {
+    @IBAction fileprivate func parsimmonAction(_ sender: UIButton) {
         guard let text = inputTextField.text else { return }
-        let taggedTokens = tagger.tagWordsInText(text)
+        let taggedTokens = tagger.tagWordsInText(text: text)
         outputTextview.text = "\(taggedTokens)"
         dismissKeyboard()
     }
@@ -46,7 +46,7 @@ extension TaggerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(TaggerViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
 }

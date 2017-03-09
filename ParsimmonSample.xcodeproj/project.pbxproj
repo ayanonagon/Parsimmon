@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D47ED5DE340DDD01EBB99E1 /* Pods_ParsimmonSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA8C11825D41385B73DB /* Pods_ParsimmonSample.framework */; };
-		DFE6B5C127F2F4B301DE3D61 /* Pods_ParsimmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC471E95CCAF79111B1F28DC /* Pods_ParsimmonTests.framework */; };
+		5894FE6CE2E94931F0FA5A3A /* Pods_ParsimmonSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492771696BACCD51EA735BD1 /* Pods_ParsimmonSample.framework */; };
+		63166A0005B2522C6C2403C3 /* Pods_ParsimmonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417FB08421E7947CD0460350 /* Pods_ParsimmonTests.framework */; };
 		E0DA52F51AD3A94000F3A28F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA52F41AD3A94000F3A28F /* AppDelegate.swift */; };
 		E0DA52FE1AD3A94000F3A28F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DA52FD1AD3A94000F3A28F /* Images.xcassets */; };
 		E0DA53011AD3A94000F3A28F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0DA52FF1AD3A94000F3A28F /* LaunchScreen.xib */; };
@@ -33,15 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E7F66326D3D745776350560 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		399C69D5D6BD8A3C833FA1E1 /* Pods-ParsimmonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample.debug.xcconfig"; sourceTree = "<group>"; };
-		4FB1F6F7E1D519F7D1D4A99B /* Pods-ParsimmonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5A90578CE89463108050AD1D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1A21B77037370972BDD2BB70 /* Pods-ParsimmonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests.release.xcconfig"; sourceTree = "<group>"; };
+		28825E444BE57A98378FFBE8 /* Pods-ParsimmonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample.release.xcconfig"; sourceTree = "<group>"; };
+		417FB08421E7947CD0460350 /* Pods_ParsimmonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsimmonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4368FAFC25CC42096DC41F7C /* Pods-ParsimmonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		492771696BACCD51EA735BD1 /* Pods_ParsimmonSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsimmonSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D04F735CEDE891B1C4DD856 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		890ECA8C11825D41385B73DB /* Pods_ParsimmonSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsimmonSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC471E95CCAF79111B1F28DC /* Pods_ParsimmonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParsimmonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7B462917BABEC6E696B91D3 /* Pods-ParsimmonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests.release.xcconfig"; sourceTree = "<group>"; };
-		DFF81E04E7388BF31EF1CEBF /* Pods-ParsimmonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample.release.xcconfig"; sourceTree = "<group>"; };
+		B0820A29C217FB9010233AD3 /* Pods-ParsimmonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParsimmonSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E0DA52EF1AD3A94000F3A28F /* ParsimmonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParsimmonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0DA52F31AD3A94000F3A28F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0DA52F41AD3A94000F3A28F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D47ED5DE340DDD01EBB99E1 /* Pods_ParsimmonSample.framework in Frameworks */,
+				5894FE6CE2E94931F0FA5A3A /* Pods_ParsimmonSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,22 +71,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE6B5C127F2F4B301DE3D61 /* Pods_ParsimmonTests.framework in Frameworks */,
+				63166A0005B2522C6C2403C3 /* Pods_ParsimmonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43545B9A653D24D91C071FE1 /* Pods */ = {
+		6990A79AB0459518D45B707D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				399C69D5D6BD8A3C833FA1E1 /* Pods-ParsimmonSample.debug.xcconfig */,
-				DFF81E04E7388BF31EF1CEBF /* Pods-ParsimmonSample.release.xcconfig */,
-				1E7F66326D3D745776350560 /* Pods.debug.xcconfig */,
-				5A90578CE89463108050AD1D /* Pods.release.xcconfig */,
-				4FB1F6F7E1D519F7D1D4A99B /* Pods-ParsimmonTests.debug.xcconfig */,
-				D7B462917BABEC6E696B91D3 /* Pods-ParsimmonTests.release.xcconfig */,
+				B0820A29C217FB9010233AD3 /* Pods-ParsimmonSample.debug.xcconfig */,
+				28825E444BE57A98378FFBE8 /* Pods-ParsimmonSample.release.xcconfig */,
+				4368FAFC25CC42096DC41F7C /* Pods-ParsimmonTests.debug.xcconfig */,
+				1A21B77037370972BDD2BB70 /* Pods-ParsimmonTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -97,9 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				E0DA53331AD42F3700F3A28F /* Parsimmon.framework */,
-				890ECA8C11825D41385B73DB /* Pods_ParsimmonSample.framework */,
 				7D04F735CEDE891B1C4DD856 /* Pods.framework */,
-				BC471E95CCAF79111B1F28DC /* Pods_ParsimmonTests.framework */,
+				492771696BACCD51EA735BD1 /* Pods_ParsimmonSample.framework */,
+				417FB08421E7947CD0460350 /* Pods_ParsimmonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +106,8 @@
 				E0DA52F11AD3A94000F3A28F /* ParsimmonSample */,
 				E0DA531F1AD3AA4C00F3A28F /* ParsimmonTests */,
 				E0DA52F01AD3A94000F3A28F /* Products */,
-				43545B9A653D24D91C071FE1 /* Pods */,
 				CA8B2C5F09A33011FBC4A93D /* Frameworks */,
+				6990A79AB0459518D45B707D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,12 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0DA53101AD3A94000F3A28F /* Build configuration list for PBXNativeTarget "ParsimmonSample" */;
 			buildPhases = (
-				BEF59A36D7DE258BC6271E50 /* Check Pods Manifest.lock */,
+				A7D37231F9391C377D40075C /* [CP] Check Pods Manifest.lock */,
 				E0DA52EB1AD3A94000F3A28F /* Sources */,
 				E0DA52EC1AD3A94000F3A28F /* Frameworks */,
 				E0DA52ED1AD3A94000F3A28F /* Resources */,
-				73D50AF8118CAED73AA5F114 /* Embed Pods Frameworks */,
-				B51E12897A1FDFE2BD0D9E84 /* Copy Pods Resources */,
+				9CFABC3E92C4D539309F0034 /* [CP] Embed Pods Frameworks */,
+				8A33263A1D9EAE820A4CE6C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,12 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0DA53261AD3AA4C00F3A28F /* Build configuration list for PBXNativeTarget "ParsimmonTests" */;
 			buildPhases = (
-				0B1B1D0952B94D41EB78580F /* Check Pods Manifest.lock */,
+				F49BBF98C7D2D5AC0CA78F8B /* [CP] Check Pods Manifest.lock */,
 				E0DA531A1AD3AA4C00F3A28F /* Sources */,
 				E0DA531B1AD3AA4C00F3A28F /* Frameworks */,
 				E0DA531C1AD3AA4C00F3A28F /* Resources */,
-				949162FA7A81D693C7543A13 /* Embed Pods Frameworks */,
-				C9901806001566AB2C9F5564 /* Copy Pods Resources */,
+				7A782FFD78B61B0ADCD264E7 /* [CP] Embed Pods Frameworks */,
+				EB4DCB4F891CB95098F3DFBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,14 +214,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ayaka Nonaka";
 				TargetAttributes = {
 					E0DA52EE1AD3A94000F3A28F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = G3K8GX9926;
+						LastSwiftMigration = 0820;
 					};
 					E0DA531D1AD3AA4C00F3A28F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = G3K8GX9926;
+						LastSwiftMigration = 0820;
 						TestTargetID = E0DA52EE1AD3A94000F3A28F;
 					};
 				};
@@ -270,44 +270,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B1B1D0952B94D41EB78580F /* Check Pods Manifest.lock */ = {
+		7A782FFD78B61B0ADCD264E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		73D50AF8118CAED73AA5F114 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		949162FA7A81D693C7543A13 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,14 +285,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B51E12897A1FDFE2BD0D9E84 /* Copy Pods Resources */ = {
+		8A33263A1D9EAE820A4CE6C6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,34 +300,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BEF59A36D7DE258BC6271E50 /* Check Pods Manifest.lock */ = {
+		9CFABC3E92C4D539309F0034 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParsimmonSample/Pods-ParsimmonSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C9901806001566AB2C9F5564 /* Copy Pods Resources */ = {
+		A7D37231F9391C377D40075C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4DCB4F891CB95098F3DFBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParsimmonTests/Pods-ParsimmonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F49BBF98C7D2D5AC0CA78F8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -420,8 +420,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -465,8 +467,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -485,39 +489,45 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		E0DA53111AD3A94000F3A28F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 399C69D5D6BD8A3C833FA1E1 /* Pods-ParsimmonSample.debug.xcconfig */;
+			baseConfigurationReference = B0820A29C217FB9010233AD3 /* Pods-ParsimmonSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3K8GX9926;
 				INFOPLIST_FILE = ParsimmonSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E0DA53121AD3A94000F3A28F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFF81E04E7388BF31EF1CEBF /* Pods-ParsimmonSample.release.xcconfig */;
+			baseConfigurationReference = 28825E444BE57A98378FFBE8 /* Pods-ParsimmonSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3K8GX9926;
 				INFOPLIST_FILE = ParsimmonSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E0DA53271AD3AA4C00F3A28F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FB1F6F7E1D519F7D1D4A99B /* Pods-ParsimmonTests.debug.xcconfig */;
+			baseConfigurationReference = 4368FAFC25CC42096DC41F7C /* Pods-ParsimmonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G3K8GX9926;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -530,15 +540,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParsimmonSample.app/ParsimmonSample";
 			};
 			name = Debug;
 		};
 		E0DA53281AD3AA4C00F3A28F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7B462917BABEC6E696B91D3 /* Pods-ParsimmonTests.release.xcconfig */;
+			baseConfigurationReference = 1A21B77037370972BDD2BB70 /* Pods-ParsimmonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G3K8GX9926;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -548,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParsimmonSample.app/ParsimmonSample";
 			};
 			name = Release;

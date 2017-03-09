@@ -25,18 +25,18 @@ import UIKit
 import Parsimmon
 
 class ClassifierViewController: UIViewController {
-    @IBOutlet private weak var messageTextField: UITextField!
-    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet fileprivate weak var messageTextField: UITextField!
+    @IBOutlet fileprivate weak var resultLabel: UILabel!
     
-    private lazy var classifier = NaiveBayesClassifier()
+    fileprivate lazy var classifier: NaiveBayesClassifier = NaiveBayesClassifier()
 
-    @IBAction private func spamOrHamAction(sender: UIButton) {
+    @IBAction fileprivate func spamOrHamAction(_ sender: UIButton) {
         guard let text = messageTextField.text else { return }
-        let category = classifier.classify(text)
+        let category = classifier.classify(text: text)
         resultLabel.text = category
     }
 
-    private func train() {
+    fileprivate func train() {
         let hams = [
             "Hi, how was work?",
             "What's the weather like tomorrow?",
@@ -51,15 +51,15 @@ class ClassifierViewController: UIViewController {
         feedSpams(spams)
     }
 
-    private func feedHams(hams: [String]) {
+    fileprivate func feedHams(_ hams: [String]) {
         for ham in hams {
-            classifier.trainWithText(ham, category: "ham")
+            classifier.trainWithText(text: ham, category: "ham")
         }
     }
 
-    private func feedSpams(spams: [String]) {
+    fileprivate func feedSpams(_ spams: [String]) {
         for spam in spams {
-            classifier.trainWithText(spam, category: "spam")
+            classifier.trainWithText(text: spam, category: "spam")
         }
     }
 }
