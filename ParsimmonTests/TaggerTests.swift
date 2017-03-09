@@ -39,7 +39,7 @@ class TaggedTokenizerTests : XCTestCase {
 
         let tagger = Tagger()
         let testStringOne = "The quick brown fox jumps over the lazy dog"
-        let taggedTokens = tagger.tagWordsInText(testStringOne)
+        let taggedTokens = tagger.tagWordsInText(text: testStringOne)
 
         XCTAssertEqual(taggedTokens, expectedTaggedTokens, "Failed to tagged words in text")
     }

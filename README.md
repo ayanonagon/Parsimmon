@@ -4,7 +4,7 @@
 
 Parsimmon is a wee linguistics toolkit for iOS written in Swift.
 
-We currently support Swift 2.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
+We currently support Swift 3.0. If you are looking for Objective-C, please use version 0.3.4 or earlier.
 
 
 ## Toolkit
@@ -22,7 +22,7 @@ Currently available tools:
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/) version 0.36 or higher. Just add the following line to your Podfile:
 
 ```ruby
-pod 'Parsimmon', '~> 0.5.0'
+pod 'Parsimmon', :git => 'https://github.com/ludovic-coder/Parsimmon.git'
 ```
 
 
@@ -38,7 +38,7 @@ import Parsimmon
 
 ```swift
 let tokenizer = Tokenizer()
-let tokens = tokenizer.tokenize("The quick brown fox jumps over the lazy dog")
+let tokens = tokenizer.tokenize(text: "The quick brown fox jumps over the lazy dog")
 print(tokens)
 ```
 
@@ -61,7 +61,7 @@ dog
 
 ```swift
 let tagger = Tagger()
-let taggedTokens = tagger.tagWordsInText("The quick brown fox jumps over the lazy dog")
+let taggedTokens = tagger.tagWordsInText(text: "The quick brown fox jumps over the lazy dog")
 print(taggedTokens)
 ```
 
@@ -84,7 +84,7 @@ print(taggedTokens)
 
 ```swift
 let lemmatizer = Lemmatizer()
-let lemmatizedTokens = lemmatizer.lemmatizeWordsInText("Diane, I'm holding in my hand a small box of chocolate bunnies.")
+let lemmatizedTokens = lemmatizer.lemmatizeWordsInText(text: "Diane, I'm holding in my hand a small box of chocolate bunnies.")
 print(lemmatizedTokens)
 ```
 
@@ -92,6 +92,7 @@ print(lemmatizedTokens)
 (
 diane,
 i,
+be,
 hold,
 in,
 my,
@@ -112,22 +113,22 @@ bunny
 let classifier = NaiveBayesClassifier()
 
 // Train the classifier with some ham examples.
-classifier.trainWithText("nom nom ham", category: "ham")
-classifier.trainWithText("make sure to get the ham", category: "ham")
-classifier.trainWithText("please put the eggs in the fridge", category: "ham")
+classifier.trainWithText(text: "nom nom ham", category: "ham")
+classifier.trainWithText(text: "make sure to get the ham", category: "ham")
+classifier.trainWithText(text: "please put the eggs in the fridge", category: "ham")
 
 // Train the classifier with some spam examples.
-classifier.trainWithText("spammy spam spam", category: "spam")
-classifier.trainWithText("what does the fox say?", category: "spam")
-classifier.trainWithText("and fish go blub", category: "spam")
+classifier.trainWithText(text: "spammy spam spam", category: "spam")
+classifier.trainWithText(text: "what does the fox say?", category: "spam")
+classifier.trainWithText(text: "and fish go blub", category: "spam")
 
 // Classify some new text. Is it ham or spam?
 // In practice, you'd want to train with more examples first.
 let firstExample = "use the eggs in the fridge."
 let secondExample = "what does the fish say?"
 
-print("\(firstExample) => \(classifier.classify(firstExample))")
-print("\(secondExample) => \(classifier.classify(secondExample))")
+print("\(firstExample) => \(classifier.classify(text: firstExample))")
+print("\(secondExample) => \(classifier.classify(text: secondExample))")
 ```
 
 ```

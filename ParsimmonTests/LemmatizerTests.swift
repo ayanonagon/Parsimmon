@@ -29,6 +29,7 @@ class LemmatizerTests : XCTestCase {
         let expectedOutput = [
             "diane",
             "i",
+            "be",
             "hold",
             "in",
             "i",
@@ -42,7 +43,7 @@ class LemmatizerTests : XCTestCase {
         ]
         
         let lemmatizer = Lemmatizer()
-        let lemmatizedTokenStrings = lemmatizer.lemmatizeWordsInText(testString)
+        let lemmatizedTokenStrings = lemmatizer.lemmatizeWordsInText(text: testString)
         
         XCTAssertEqual(expectedOutput, lemmatizedTokenStrings, "Failed to lematize words in text")
     }
